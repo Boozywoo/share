@@ -1,0 +1,347 @@
+/* -- ticketPage -- */
+body > .ticketPage{
+	padding-top: 0;
+}
+.ticketMainBlock{
+	padding-top: 49px;
+}
+.ticketMainBlock .title{
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+}
+.ticketMainBlock .enterStntCodeForm{
+	width: 331px;
+	height: 42px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border: 1px solid #898989;
+	position: relative;
+	border-radius: 10px;
+	margin-top: 40px;	
+}
+.ticketMainBlock .enterStntCodeForm input.forCode{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding-left: 121px;
+	box-sizing: border-box;
+	font-size: 18px;
+	line-height: 40px;
+	padding-left: 17px;
+	color: #404040;
+}
+.ticketMainBlock .enterStntCodeForm button.send{
+	position: absolute;
+	right: -1px;
+	top: -1px;
+	border: none;
+	bottom: -1px;
+	width: 122px;
+	font-size: 18px;
+	background-color: #009746;
+	color: white;	
+	border-radius: 10px;	
+	font-weight: bold;
+	cursor: pointer;
+}
+.ticketMainBlock .ticketWidth{
+	width: 940px;	
+}
+.ticketMainBlock .savePrintBlock{
+	overflow: hidden;
+	margin-top: 65px;	
+	margin: 65px auto 0;
+}
+.ticketMainBlock .savePrintBlock > a{
+	display: block;
+	float: right;
+	background-repeat: no-repeat;
+	background-position: center center;	
+	cursor: pointer;
+}
+.ticketMainBlock .savePrintBlock > a:nth-of-type(1){
+	width: 28px;
+	height: 27px;	
+	background-image: url('../images/printPict.png');
+	margin-left: 26px;
+}
+.ticketMainBlock .savePrintBlock > a:nth-of-type(2){
+	width: 26px;
+	height: 27px;	
+	background-image: url('../images/savePict.png');	
+}
+.ticketMainBlock .ticket{
+	border: 2px solid white;
+	box-sizing: border-box;
+	margin: 14px auto 0;
+	margin-bottom: 125px;
+	border-radius: 10px;
+	background-color: #555d69fa;
+}
+.ticketMainBlock .ticket > div{
+	box-sizing: border-box;
+}
+.ticketMainBlock .ticket > .right{
+	width: 259px;
+	border-left: 2px solid #626262;
+	color: #404040;
+	padding-bottom: 17px;	
+}
+.ticketMainBlock .ticket > .left{
+	width: 677px;
+	padding-left: 21px;
+	padding-top: 83px;
+	padding-bottom: 17px;	
+}
+.ticketMainBlock .ticket > .left .date{
+	color: #535353;
+	font-size: 24px;
+}
+.ticketMainBlock .ticket > .left ul.routePoints{
+	margin-top: 27px;
+}
+.ticketMainBlock .ticket > .left ul.routePoints > li > p:first-of-type{
+	color: #535353;
+	font-size: 24px;
+}
+.ticketMainBlock .ticket > .left ul.routePoints > li > p:nth-of-type(2){
+	font-size: 33px;
+	color: #282828;
+	padding-left: 14px;
+}
+.ticketMainBlock .ticket > .left ul.routePoints > li:nth-of-type(1n + 2){
+	margin-top: 10px;
+}
+.ticketMainBlock .ticket > .left ul.routePoints span.round{
+	font-size: 17px;
+	display: inline-block;
+	line-height: normal;
+	vertical-align: 5px;
+	margin-right: 7px;
+}
+.ticketMainBlock .ticket > .right .cost{
+	font-size: 33px;	
+}
+.ticketMainBlock .ticket > .right .cost span{
+	vertical-align: baseline;
+	line-height: 1em;
+	display: inline-block;
+}
+.ticketMainBlock .ticket > .right .cost span.sizeOne{
+	font-size: 37px;
+}
+.ticketMainBlock .ticket > .right .cost span.sizeTwo{
+	font-size: 24px;
+}
+.ticketMainBlock .ticket > .right{
+	text-align: center;
+	padding-top: 10px;
+}
+.ticketMainBlock .ticket > .right .ticketNumInscription,
+.ticketMainBlock .ticket > .right .ticketNum,
+.ticketMainBlock .ticket > .right .place{
+	line-height: 1em;	
+}
+.ticketMainBlock .ticket > .right .ticketNumInscription{
+	margin-top: 19px;
+	font-size: 22px;
+}
+.ticketMainBlock .ticket > .right .ticketNum{
+	margin-top: 10px;
+	font-size: 23px;
+}	
+.ticketMainBlock .ticket > .right .place{
+	margin-top: 20px;
+	font-size: 22px;
+}
+.ticketMainBlock .ticket > .right .ticetLine{
+	width: 170px;
+	margin: 50px auto 0;
+	border-top: 1px dashed #404040;
+}
+.ticketMainBlock .ticket > .right .requisites{
+	font-size: 23px;
+	line-height: 1.3em;
+	padding-top: 14px;
+}
+/* -- ticketPage end-- */
+.innerPagesTitle{
+	font-size: 30px;
+	color: #292929;
+	font-weight: bold;
+}
+.myAccountLinkWrapper{
+	color: white;
+	font-size: 16px;
+	font-family: raleway, sans-serif;
+	margin-top: 19px;	
+	height: 21px;
+	padding-left: 29px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: auto 100%;
+	background-image: url('../images/accountPhoto.png');	
+}
+.myAccountLinkWrapper > a{
+	display: inline-block;
+	line-height: 28px;
+	vertical-align: bottom;	
+}
+/*-- personal cabinet -- */
+
+
+/*-- personal cabinet end-- */
+
+/*-- reviewsSlider --*/
+.clientsAboutUs .reviewsSlider{
+	width: 1330px;
+	position: relative;
+	margin: 0 auto;
+}
+.clientsAboutUs .silesList{
+	width: 1155px;
+	margin: 0 auto;
+	position: relative;
+}	
+.clientsAboutUs .silesList > li{
+	width: 385px;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left;
+	color: #727272;
+	font-size: 16px;
+	box-sizing: border-box;
+	text-align: center;
+	position: relative;	
+}
+.clientsAboutUs .silesList > li > .review{
+	background-color: #f7f8fa;	
+	font-style: italic;	
+	line-height: 1.5em;
+	padding: 25px 22px 20px;
+	position: relative;	
+	border-bottom: 2px solid #e5e5e5;	
+	padding-top: 45px;
+	box-sizing: border-box;
+}
+.clientsAboutUs .silesList > li > .review .textBlock{
+	overflow: hidden;
+}
+.clientsAboutUs .silesList > li > .review .angleWrapper{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+}
+.clientsAboutUs .silesList > li > .review .angle{
+	width: 30px;
+	height: 19px;	
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('../images/reviewsSlider/sliderAngle.png');
+	position: relative;
+	top: 19px;
+}
+.clientsAboutUs .silesList > li .itemTopPartWrapp{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	text-align: center;
+}
+.clientsAboutUs .silesList > li .itemTopPart{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-color: #ffd200;
+	border-radius: 3px;
+	position: relative;
+	top: 9px;
+	background-image: url('../images/reviewsQuotes.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.clientsAboutUs .silesList > li .revAuthor{
+	color: #292929;
+	font-weight: bold;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 29px;
+}
+.clientsAboutUs .silesList > li .revDate{
+	font-size: 14px;
+}
+.clientsAboutUs .reviewsSlider .buttons{
+	width: 15px;
+	height: 23px;
+	position: absolute;
+	top: 98px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.clientsAboutUs .reviewsSlider .buttons.leftButton{
+	background-image: url('../images/reviewsSlider/leftArrow.png');
+	left: 40px;
+}
+.clientsAboutUs .reviewsSlider .buttons.leftButton:hover{
+	background-image: url('../images/reviewsSlider/leftArrowH.png');	
+}
+.clientsAboutUs .reviewsSlider .buttons.rightButton{
+	background-image: url('../images/reviewsSlider/rightArrow.png');
+	right: 40px;
+}
+.clientsAboutUs .reviewsSlider .buttons.rightButton:hover{
+	background-image: url('../images/reviewsSlider/rightArrowH.png');
+}
+.clientsAboutUs .reviewsSlider .moreButtonWrapp{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: right;
+	padding-right: 10px;
+}
+/*-- reviewsSlider end --*/
+
+
+/*-- different additional changes --*/
+footer .blocksWrapper .operators img, .topBlock .contacts .clarification img{
+	height: 17px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+footer .blocksWrapper .operators img:first-of-type,
+.topBlock .contacts .clarification img:first-of-type{
+	margin-left: 0;
+}
+footer .blocksWrapper .operators img, 
+footer .blocksWrapper .operators span,
+.topBlock .contacts .clarification img,
+.topBlock .contacts .clarification span{
+	vertical-align: middle;
+} 
+/*-- different additional changes end --*/
+
+/*-- --*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

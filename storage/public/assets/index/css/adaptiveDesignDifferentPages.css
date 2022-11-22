@@ -1,0 +1,868 @@
+
+.personalCabinet.myTickets .gradeStars{
+	position: relative;
+	top: 2px;
+}
+/*---------- different pages -------*/
+@media (max-width: 1390px){
+.registrationFormWrapperPU{
+	left: -200px;
+}
+}
+@media (max-width: 1364px){
+.clientsAboutUs{
+	display: none;
+}	
+}
+@media (max-width: 1279px){
+.personalCabinet .gradeStars > li{
+	width: 18px;
+	height: 18px;
+	background-size: contain;
+}
+.personalCabinet.reviews .reviewsTable colgroup col:nth-of-type(1){width: 4%}
+.personalCabinet.reviews .reviewsTable colgroup col:nth-of-type(2){width: 20%}
+.personalCabinet.reviews .reviewsTable colgroup col:nth-of-type(3){width: 16%}
+.personalCabinet.reviews .reviewsTable colgroup col:nth-of-type(4){width: 40%}
+.personalCabinet.reviews .reviewsTable tbody,
+.personalCabinet.reviews .reviewsTable thead{
+	font-size: 18px;
+}
+.personalCabinet > div > .left:first-of-type{
+	float: none;
+	width: auto;
+	padding-right: 0;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right.customerData
+{
+	float: none;
+	width: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	padding-right: 19px;
+}
+.personalCabinet.myTickets > div > .right{
+	float: none;
+	width: auto;
+	margin-top: 10px;	
+	padding-right: 100px;
+}
+.personalCabinet.reviews > div > .right{
+	margin-top: 20px;
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList{
+	text-align: center;
+	padding-left: 100px;	
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li{
+	display: inline-block;
+	float: none;
+}
+.personalCabinet.myTickets table.userRoutsShedule{
+	width: 100%;
+}
+ul#personalCabinetMenu{
+	text-align: center;
+}
+ul#personalCabinetMenu > li{
+	display: inline-block;
+}
+ul#personalCabinetMenu > li > a, ul#personalCabinetMenu > li > span{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+ul#personalCabinetMenu > li:nth-of-type(1n + 1){
+	margin-left: 10px;
+}
+.personalCabinet > div > .title{
+	padding-left: 0;
+	text-align: center;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li{
+	float: none;
+	display: inline-block;
+	margin-top: 40px	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser{
+	text-align: center;
+	padding-top: 10px;
+	margin-top: 0;
+	border-top: 1px solid #d9d9d9;
+	margin-top: 20px;
+}
+.personalCabinet > div > .right{
+	float: none;
+	width: auto;
+}
+.personalCabinet.minibusLocation .completedTrip{
+	text-align: center;
+	margin-top: 20px;
+}
+.personalCabinet.rewardPoints .pointsCount{
+	text-align: center;
+	padding-top: 10px;
+}
+.personalCabinet.rewardPoints table.pointsInfo col:nth-of-type(1){
+	width: 17%;
+}
+.personalCabinet.rewardPoints table.pointsInfo col:nth-of-type(2){
+	width: 61%;
+}
+.personalCabinet.rewardPoints table.pointsInfo col:nth-of-type(3){
+	width: 22%;
+}
+.personalCabinet > div > .title{
+	font-size: 26px;
+}
+.mainOrderBlock > .left ul.infoForUser > li{
+	display: inline-block;
+	margin-top: 40px;
+	float: none;
+}
+.mainOrderBlock > .left ul.infoForUser{
+	padding-top: 0;
+	text-align: center;
+}
+.sheduleBlock .mainTitle{
+	font-size: 25px;
+}
+.sheduleBlock .subTitleL1{
+	font-size: 19px;
+}
+.sheduleBlock .subTitleL2{
+	font-size: 17px;
+}
+.sheduleBlock iframe.map{
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.personalCabinet.myTickets .reviewPopup{
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (max-width: 1279px){
+.sheduleBlock{
+	width: auto;
+}
+.sheduleBlock div.shedule{
+	width: auto;
+	font-size: 20px;
+}
+.sheduleBlock div.shedule .reservationButton{
+	font-size: 14px;
+}
+}
+@media (max-width: 979px){
+.sheduleBlock div.shedule{
+	font-size: 18px;
+}
+.sheduleBlock div.shedule .reservationButton{
+	font-size: 12px;
+}
+}
+@media (max-width: 979px){
+.sheduleBlock table.shedule{
+	font-size: 20px;
+}	
+.sheduleBlock table.shedule > tbody > tr > td .reservationButton{
+	font-size: 13px;
+}
+}
+@media (max-width: 767px){
+.sheduleBlock div.shedule{
+	font-size: 16px;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div:nth-of-type(1) .title{
+	font-size: 22px;
+}
+}
+@media (max-width: 639px){
+.sheduleBlock div.shedule .reservationButton{
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0;
+	width: 32px;
+	height: 29px;
+	vertical-align: middle;
+	background-image: url('../images/shedulePurse.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}	
+.sheduleBlock div.shedule ul.thead > li:nth-of-type(n),
+.sheduleBlock div.shedule ul.sheduleRow > li:nth-of-type(n){
+	width: 22%
+}
+.sheduleBlock div.shedule ul.thead > li:last-of-type,
+.sheduleBlock div.shedule ul.sheduleRow > li:last-of-type{
+	width: 12%;
+}
+.sheduleBlock div.shedule ul.thead > li:nth-of-type(1),
+.sheduleBlock div.shedule ul.thead > li:nth-of-type(2){
+	white-space: nowrap;
+	overflow: hidden;
+	text-indent: 100%;
+}
+.sheduleBlock div.shedule ul.thead > li{
+	position: relative;
+}
+.sheduleBlock div.shedule ul.thead > li:nth-of-type(1)::before,
+.sheduleBlock div.shedule ul.thead > li:nth-of-type(2)::before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	text-indent: 0;
+}
+.sheduleBlock div.shedule ul.thead > li:nth-of-type(1)::before{
+	content: 'Отпр-е';
+}
+.sheduleBlock div.shedule ul.thead > li:nth-of-type(2)::before{
+	content: 'Приб-е';
+}
+}
+@media (max-width: 1279px) and (min-width: 768px){
+.mainOrderBlock{
+	width: auto;
+}	
+.mainOrderBlock > .left{
+	width: 43%;
+	padding-left: 20px;
+}
+.mainOrderBlock > .right{
+	width: 57%;
+	padding-right: 20px;
+}
+.mainOrderBlock > .left > .authorizationButtons > div{
+	float: none;
+}
+.mainOrderBlock > .left .registButWrapp{
+	margin-top: 10px;
+}
+}
+@media (max-width: 1050px){
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm > div, .mainOrderBlock > .right .unregisteredUserForm > div{
+	float: none;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm > div.right{
+	padding-left: 0;	
+}
+.ticketMainBlock .ticket,
+.ticketMainBlock .ticketWidth{
+	width: 100%;
+}
+.ticketMainBlock .ticket > .left{
+	width: 72%;
+}
+.ticketMainBlock .ticket > .right{
+	width: 28%;
+}
+.ticketMainBlock .ticket > .right .ticetLine{
+	width: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+}
+@media (max-width: 930px){
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList{
+	padding-left: 0;	
+}
+}
+@media (max-width: 979px) and (min-width: 768px){
+.topBlock .registrationContacts .contacts p.span.clarification{
+	display: block;
+	margin-top: 5px;
+	margin-left: 0;
+}	
+.topBlock .registrationContacts .contacts p.span:nth-of-type(1){
+	padding-top: 5px;
+}
+}
+@media (max-width: 767px){
+.personalCabinet.rewardPoints .pointsCount{
+	font-size: 20px;
+}	
+.personalCabinet.rewardPoints .pointsCount span{
+	font-size: 25px;
+}
+.personalCabinet.myTickets table.userRoutsShedule{
+	font-size: 14px;
+}	
+.personalCabinet.rewardPoints table.pointsInfo{
+	font-size: 18px;
+}
+.mainWidth{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.personalCabinet.rewardPoints table.pointsInfo{
+	font-size: 16px;
+}
+.sheduleBlock .mainTitle{
+	font-size: 24px;
+}
+.sheduleBlock .subTitleL1{
+	font-size: 18px;
+}
+.sheduleBlock .subTitleL2{
+	font-size: 17px;
+}
+.sheduleBlock div.shedule{
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+.sheduleBlock iframe.map{
+	margin-top: 0;
+}
+.personalCabinet.myTickets .reviewPopup{
+	left: 20px;
+	right: 20px;
+	width: auto;
+}
+}
+@media (max-width: 767px){
+.presonalCabinetMainBlock.personalCabinet > div > .right.customerData{
+	text-align: center;	
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData label {
+    float: none;
+    text-align: center;
+}	
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData input[type="text"], 
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData input[type="password"], 
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData select,
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData input[type="text"][disabled],
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData input[type="password"][disabled],
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData select[disabled]{
+    display: inline-block;
+    float: none;
+    padding-left: 0;
+    text-align: center;
+}	
+	
+.presonalCabinetMainBlock.personalCabinet > div > .right .saveChangeButton{
+	position: static;
+	display: inline-block;	
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData{
+	width: auto;
+	border-bottom: 0;
+}
+.personalCabinet.reviews .reviewsTable td:last-of-type{
+	padding-right: 10px;
+	text-align: justify;
+}
+.ticketMainBlock .ticket > .left ul.routePoints > li > p:nth-of-type(2){
+	font-size: 25px;
+}
+.ticketMainBlock .ticket > .left ul.routePoints > li > p:first-of-type{
+	font-size: 18px;
+}
+.ticketMainBlock .ticket > .left .date{
+	font-size: 18px;
+}
+.ticketMainBlock .ticket > .right .cost{
+	font-size: 18px;
+}
+.ticketMainBlock .ticket > .right .cost span.sizeOne{
+	font-size: 27px;
+}
+.ticketMainBlock .ticket > .right .cost span.sizeTwo{
+	font-size: 18px;
+}
+.ticketMainBlock .ticket > .right .ticketNumInscription{
+	font-size: 17px;
+}
+.ticketMainBlock .ticket > .right .ticketNum{
+	font-size: 17px;
+}
+.ticketMainBlock .ticket > .right .place{
+	font-size: 17px;
+}
+.ticketMainBlock .ticket > .right .requisites{
+	font-size: 18px;
+}
+.ticketMainBlock .ticket > .left{
+	padding-top: 53px;
+}
+.ticketMainBlock .title{
+	font-size: 18px;
+	line-height: 22px;
+}
+.ticketMainBlock .enterStntCodeForm{
+	margin-top: 20px;
+}
+.ticketMainBlock .savePrintBlock{
+	margin-top: 35px;
+}
+}
+@media (max-width: 767px){
+.mainOrderBlock{
+	width: auto;
+}	
+.mainOrderBlock > .left,
+.mainOrderBlock > .right{
+	width: auto;
+	float: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+.mainOrderBlock > .right .mainTitle{
+	margin-top: 5px;
+}
+.mainOrderBlock > .left ul.flightInfo{
+	display: inline-block;
+	text-align: left;
+	float: none;
+}
+.mainOrderBlock > .left > .authorizationButtons > div{
+	float: none;
+	width: auto;
+	text-align: center;
+}
+.mainOrderBlock > .left .authorizationButtons .popupButton{
+	display: inline-block;
+	font-size: 21px;
+}
+.mainOrderBlock > .left .authorizationButtons .enterBut{
+	width: 152px;
+}
+.mainOrderBlock > .left .authorizationButtons .registBut{
+	width: 248px;
+}
+.mainOrderBlock > .right .confirmReservations{
+	font-size: 21px;
+	padding: 0 30px;
+}
+.mainOrderBlock > .left .registButWrapp{
+	margin-top: 15px;
+}
+.mainOrderBlock{
+	padding-top: 20px;
+}
+.mainOrderBlock > .left .authorizationButtons{
+	padding-bottom: 0;
+}
+.mainOrderBlock .entrfFormWrapperPU,
+.mainOrderBlock .registrationFormWrapperPU{
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm > div,
+.mainOrderBlock > .right .unregisteredUserForm > div{
+	margin: 0 auto;
+}
+.mainOrderBlock > .right > .narrow ul.purse,
+.mainOrderBlock > .right > .narrow div.inTotal{
+	margin: 0 auto;
+}
+.mainOrderBlock > .right{
+	text-align: center;
+}
+.mainOrderBlock > .right ul.paymentMethod{
+	text-align: left;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm input[type="text"], 
+.mainOrderBlock > .right .unregisteredUserForm input[type="text"]{
+	width: 100%;
+}
+.mainOrderBlock > .right .installmentForm .inputWrapper{
+	margin: 0 auto;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .right,
+.mainOrderBlock > .right > .narrow div.inTotal > .right{
+	font-size: 23px;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .right .underInscription{
+	font-size: 17px;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .left .multipiler{
+	font-size: 23px;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .left .multipilerInscr{
+	font-size: 19px;
+}
+.mainOrderBlock > .right > .narrow div.inTotal > .left{
+	font-size: 22px;
+}
+}
+@media (max-width: 767px) and (min-width: 570px){
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li > a{
+	width: 130px;
+	font-size: 18px;
+}	
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li:nth-of-type(n+2){
+	margin-left: 5px;
+}
+.personalCabinet .gradeStars > li{
+	width: 15px;
+	height: 15px;
+	background-size: contain;
+}
+}
+@media (max-width: 699px){
+.personalCabinet .popupWrapper .popup{
+	width: 100%;
+}	
+}
+@media (max-width: 609px){
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification{
+	display: inline-block;
+	vertical-align: top;
+}	
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock{
+	clear: none;
+	display: inline-block;
+	margin-left: 20px;
+	vertical-align: top;	
+	padding-top: 20px;
+}
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .continue{}
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .pleaceNum,
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .continue{
+	display: block; 
+}
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .pleaceNum{
+	margin-top: 0;
+}
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .continue{
+	margin-left: 0;
+	font-size: 12px;
+	padding: 0 10px;
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification > li{
+	float: left;
+	clear: both;
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification > li:nth-of-type(n){
+	margin-left: 0;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div{
+	display: block;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div:nth-of-type(1n){
+	padding: 0;
+	border: none;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div:nth-of-type(2){
+	margin-top: 15px;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo{
+	margin-bottom: 10px;
+}
+}
+@media (max-width: 389px){
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification{
+	display: inline-block;	
+	overflow: hidden;
+}	
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock{
+	display: block;
+	margin-left: 0;
+	padding-top: 0;
+}
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .continue{
+	display: inline-block;
+	margin-top: 10px;
+}
+}
+@media (max-width: 569px){
+.personalCabinet.reviews .reviewsTable tbody,
+.personalCabinet.reviews .reviewsTable thead{
+	font-size: 16px;
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li > a{
+	font-size: 16px;	
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right.customerData{
+	text-align: center;
+}
+.personalCabinet > div > .left{
+	padding-right: 0;
+}
+ul#personalCabinetMenu > li:nth-of-type(1n){
+	display: block;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li:nth-of-type(1n){
+	display: block;
+	margin-left: 10%;
+	margin-right: 10%;	
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li > a{
+	width: auto;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right.customerData .userData input{
+	
+}
+ul#personalCabinetMenu > li > *{
+	box-shadow: 1px 1px 4px rgba(100, 100, 100, 0.45);
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li:nth-of-type(n+2){
+	margin-top: 5px;
+}
+.personalCabinet.myTickets .purse{
+	right: 1px;
+}
+.personalCabinet.myTickets .removeRow{
+	right: 45px;
+}
+.personalCabinet.myTickets .confirmation{
+	right: 89px;
+}
+.personalCabinet.myTickets table.userRoutsShedule td:last-of-type{
+	cursor: pointer;
+}
+.personalCabinet.myTickets table.userRoutsShedule td:last-of-type::before{
+	display: block;
+	content: '';
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	right: 3px;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	background-image: url('../images/tableArrow.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;	
+	animation-name: tableArrowMotion;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	opacity: 0.8;
+	transition-property: opacity;
+	transition-duration: 1s;
+}
+.personalCabinet.myTickets table.userRoutsShedule td:last-of-type:hover::before{
+	opacity: 0;
+}
+.personalCabinet.myTickets table.userRoutsShedule.canceled td:last-of-type::before{
+	display: none;
+}
+
+@keyframes tableArrowMotion{
+	from{
+		transform: translateY(0px);
+	}25%{
+		transform: translateY(5px);
+	}50%{
+		transform: translateY(0px);
+	}75%{
+		transform: translateY(-5px);
+	}to{
+		transform: translateY(0x);
+	}
+
+}
+.personalCabinet.myTickets .purse, 
+.personalCabinet.myTickets .removeRow, 
+.personalCabinet.myTickets .confirmation, 
+.personalCabinet.myTickets .giveReview{
+//	visibility: hidden;
+	opacity: 0.2;
+	transition-property: visibility, opacity;
+	transition-duration: 0.3s;
+}
+.personalCabinet.myTickets table.userRoutsShedule td:hover .purse, 
+.personalCabinet.myTickets table.userRoutsShedule td:hover .removeRow,
+.personalCabinet.myTickets table.userRoutsShedule td:hover .confirmation,
+.personalCabinet.myTickets table.userRoutsShedule td:hover .giveReview{
+//	visibility: visible;
+	opacity: 1;
+}
+.personalCabinet.myTickets > div > .right{
+	padding-right: 0;
+}
+.personalCabinet.myTickets .giveReview{
+	right: 1px;
+}
+.mainOrderBlock > .right ul.paymentMethod{
+	font-size: 16px;
+}
+}
+@media (max-width: 569px){
+.ticketMainBlock .ticket > .left,
+.ticketMainBlock .ticket > .right{
+	float: none;
+	width: auto;
+}	
+.ticketMainBlock .ticket > .right{
+	border-left: none;
+	border-top: 2px solid #626262;
+}
+.ticketMainBlock .ticket{
+	margin-bottom: 50px;
+}
+.ticketMainBlock .ticket > .left{
+	padding-top: 20px;
+}
+.ticketMainBlock .ticket > .left ul.routePoints{
+	margin-top: 17px;
+}
+.ticketMainBlock .ticket > .right .ticetLine{
+	margin-top: 30px;
+}
+}
+@media (max-width: 520px){
+.topBlock .registrationContacts > .registration{
+	display: block;
+	width: 100%;	
+}	
+.topBlock .registrationContacts > .registration > div > ul{
+	display: block;
+}
+.topBlock .registration > div > ul > li{
+	float: none;
+	display: inline-block;
+}
+.topBlock .registration > div > ul > li:nth-of-type(3){
+	display: block;
+	text-align: center;
+}
+.topBlock .registration > div > ul > li:nth-of-type(3) > a{
+	display: inline-block;
+}
+.topBlock .registrationContacts > .registration br{
+	display: none;
+}
+.topBlock .registrationFormWrapperPU,
+.mainOrderBlock .registrationFormWrapperPU{
+	left: 0;
+	right: 0;
+	width: auto;
+}
+.topBlock .registrationFormWrapperPU{
+	top: 36px !important;		
+}
+.topBlock .entrfFormWrapperPU{
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: 36px !important;	
+}
+.topBlock .entrfFormWrapperPU::before{
+	left: 164px;
+}
+.registrationFormWrapperPU .status{
+	float: none;
+	display: block;
+	text-align: center;
+}
+.registrationFormWrapperPU .status > li{
+	display: inline-block;
+	float: none;
+}
+.registrationFormWrapperPU input.register[type="submit"]{
+	float: none;
+}
+.registrationFormWrapperPU .bottomBlock{
+	text-align: center;
+}
+.registrationFormWrapperPU input.register[type="submit"]{
+	margin-top: 10px;
+}
+.topBlock .registrationFormWrapperPU::before{
+	left: 40%;
+}
+.mainOrderBlock .registrationFormWrapperPU::before{
+	left: 48%;
+}
+.sheduleBlock iframe.map{
+	height: 300px;
+}
+body.personalCabinet .topBlock .registration .custom.userInfo{
+	display: inline-block;
+}
+}
+@media (max-width: 459px){
+.personalCabinet.myTickets .evaluationTitle,.personalCabinet.myTickets .gradeStars{
+	display: inline-block;
+	float: none;
+	vertical-align: middle;
+}
+.personalCabinet.myTickets .gradeStars{
+	top: 0;
+}
+.personalCabinet.myTickets .reviewPopup{
+	padding-bottom: 55px;
+}	
+.personalCabinet.myTickets .reviewPopup .sendReviewButt{
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	width: 120px;
+	padding: 0;
+	text-align: center;
+}
+.personalCabinet.myTickets .reviewPopup{
+	text-align: center;
+}
+.personalCabinet.myTickets .reviewPopup textarea{
+	text-align: left;
+}
+.personalCabinet.myTickets .reviewPopup .title{
+	font-size: 20px;
+}
+}
+@media (max-width: 449px){
+.registrationFormWrapperPU .registraitonForm input[type="text"],
+.registrationFormWrapperPU .acceptanceOfConditions{
+	width: 48%;
+	font-size: 14px;
+}	
+.registrationFormWrapperPU .status > li:nth-of-type(n+2) > a{
+	border-left: 1px solid #f8c90f;
+}
+}
+@media (max-width: 419px){
+ul#personalCabinetMenu > li:nth-of-type(1n){
+	margin-left: 5%;
+	margin-right: 5%;
+}	
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li:nth-of-type(1n){
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.mainOrderBlock > .right .installmentForm .inputWrapper{
+	width: 100%;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm > div,
+.mainOrderBlock > .right .unregisteredUserForm > div{
+	width: 100%;
+}
+.mainOrderBlock > .right > .narrow ul.purse,
+.mainOrderBlock > .right > .narrow div.inTotal{
+	width: 100%;
+	box-sizing: border-box;
+}
+.ticketMainBlock .enterStntCodeForm{
+	width: 100%;
+}
+}
+@media (max-width: 340px){
+.personalCabinet.rewardPoints table.pointsInfo{
+	font-size: 14px;
+}	
+}
+/*---------- different pages end -------*/
+
+
+
+
+

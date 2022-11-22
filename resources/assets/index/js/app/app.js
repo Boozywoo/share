@@ -1,0 +1,5 @@
+import * as custom from './custom'
+import * as profile from './pages/profile'
+import * as schedule from './pages/schedule'
+import * as order from './pages/order'
+import * as home from './pages/home'

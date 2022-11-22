@@ -1,0 +1,40 @@
+.menu_profile__active {
+	background-color: #f8c90f!important;
+	color: white!important;;
+}
+
+.menu_active a {
+	color: #ff9000!important;
+}
+.menu_active a:before {
+	bottom: -8px!important;;
+	left: 10px!important;;
+	opacity: 1!important;;
+	right: 10px!important;;
+	transition-duration: 1s!important;;
+}
+
+.js_bus-overlay {
+	background-color: rgba(204, 204, 204, 0.5);
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+	display: none;
+}
+
+.js_get-bus-row-bus {
+	position: relative;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.js_orders-count_places {
+	width: 60px;
+	padding: 10px;
+	margin-top: 20px;
+}

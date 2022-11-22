@@ -1,0 +1,1 @@
+{{ $paginator->appends(request()->except('_pjax','mass_price_update'))->links() }}

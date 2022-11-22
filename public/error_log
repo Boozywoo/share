@@ -1,0 +1,4 @@
+[01-Jul-2017 23:16:20 Europe/Minsk] PHP Parse error:  syntax error, unexpected 'to' (T_STRING), expecting ',' or ';' in /home/asmebolt/vimi.asmebolt.ru/public_html/vimi/app/Services/AGI_AsteriskManager.php on line 270
+[02-Jul-2017 00:17:38 Europe/Minsk] PHP Parse error:  syntax error, unexpected '$manager' (T_VARIABLE) in /home/asmebolt/vimi.asmebolt.ru/public_html/vimi/app/Http/Controllers/Admin/CallController.php on line 18
+[02-Jul-2017 08:17:25 Europe/Minsk] PHP Parse error:  syntax error, unexpected ';' in /home/asmebolt/vimi.asmebolt.ru/public_html/vimi/app/Http/Controllers/Admin/CallController.php on line 19
+[02-Jul-2017 18:00:11 Europe/Minsk] PHP Fatal error:  Class 'log' not found in /home/asmebolt/vimi.asmebolt.ru/public_html/vimi/app/Http/Controllers/Admin/TourController.php on line 101

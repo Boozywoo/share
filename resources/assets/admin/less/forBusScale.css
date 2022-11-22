@@ -1,0 +1,105 @@
+.busLayoutBlock.little .busBodey .cell{
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 7px;
+	margin-top: 3px;
+	margin-right: 9px;
+}
+.busLayoutBlock.little .busBodey .cell.active .numElement, .busLayoutBlock.little .busBodey .cell.reserved .numElement{
+	line-height: 15px;
+}
+.busLayoutBlock.little .busBodey .cell .numElement{
+	line-height: 13px;
+}
+.busLayoutBlock.little .busBodey .cell.seat{
+	border-width: 1px;
+	border-radius: 4px;
+}
+.busLayoutBlock.little .busBodey .cell.driverCell::before{
+	line-height: 15px;
+}
+.busLayoutBlock.little .busBodey .cell.driverCell{
+	border-radius: 4px;
+}
+.busLayoutBlock.little .busBodey .seats{
+	padding-top: 8px;
+	padding-left: 82px;
+}
+.busLayoutBlock.little .busBodey{
+	height: 90px;
+	padding-right: 24px;
+}
+.busLayoutBlock.little .busBodey .backPart{
+	width: 24px;
+}
+.busLayoutBlock.little .busBodey .frontPart{
+	width: 111px;
+}
+.busLayoutBlock.little .busBodeyWrapp{
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+.busLayoutBlock.little .busBodey .mirror{
+	height: 9px;
+	width: 8px;
+	left: 60px;
+}
+.busLayoutBlock.little .busBodey .leftMirror{
+	bottom: -9px;
+}
+.busLayoutBlock.little .busBodey .rightMirror{
+	top: -9px;
+}
+.busLayoutBlock.little .busBodey .centralPart{
+	right: 13px;
+}
+/*- 5 rows of seats -*/
+.busLayoutBlock.little .busBodey.fiveRowsOfSeats{
+	height: 112px;
+	padding-right: 23px;
+}
+.busLayoutBlock.little .busBodey.fiveRowsOfSeats .seats{
+	padding-left: 98px;
+}
+.busLayoutBlock.little .busBodey.fiveRowsOfSeats .frontPart{
+	width: 132px;
+}
+.busLayoutBlock.little .busBodey.fiveRowsOfSeats .driver{
+	left: 114px;
+}
+.busLayoutBlock.little .busBodey.fiveRowsOfSeats .backPart{
+	width: 29px;
+}
+/*- 5 rows of seats end -*/
+	
+/*- 3 rows of seats -*/
+.busLayoutBlock.little .busBodey.threeRowsOfSeats{
+	height: 73px;
+	padding-right: 18px;
+}
+.busLayoutBlock.little .busBodey.threeRowsOfSeats .seats{
+	padding-left: 66px;
+}
+.busLayoutBlock.little .busBodey.threeRowsOfSeats .frontPart{
+	width: 89px;
+}
+.busLayoutBlock.little .busBodey.threeRowsOfSeats .driver{
+	left: 81px;
+	width: 34px;
+	font-size: 11px;
+}
+.busLayoutBlock.little .busBodey.threeRowsOfSeats .backPart{
+	width: 20px;
+}
+/*- 3 rows of seats end -*/
+
+
+
+
+
+
+
+
+
+

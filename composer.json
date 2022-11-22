@@ -1,0 +1,97 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/nikolaynesov/roles.git"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-json": "*",
+        "barryvdh/laravel-cors": "0.10.0",
+        "barryvdh/laravel-debugbar": "^2.2",
+        "barryvdh/laravel-dompdf": "^0.8.2",
+        "bican/roles": "dev-master#251443c",
+        "cviebrock/eloquent-sluggable": "4.*",
+        "davejamesmiller/laravel-breadcrumbs": "^3.0",
+        "denostr/binotel-api": "^0.1.3",
+        "doctrine/dbal": "^2.5",
+        "dompdf/dompdf": "0.8.4",
+        "graham-campbell/exceptions": "^9.0",
+        "guzzlehttp/guzzle": "^6.5",
+        "kylekatarnls/laravel-carbon-2": "^1.0.0",
+        "laravel/framework": "5.4.*",
+        "laravel/passport": "~4.0",
+        "laravel/tinker": "~1.0",
+        "laravelcollective/html": "5.4.*",
+        "lcobucci/jwt": "3.3.3",
+        "liqpay/liqpay": "^1.2",
+        "maatwebsite/excel": "^2.1",
+        "mariuzzo/laravel-js-localization": "^1.8",
+        "nesbot/carbon": "2.0.0-beta.2 as 1.25.0",
+        "openlss/lib-array2xml": "^0.0.10",
+        "phenx/php-svg-lib": "0.3.3",
+        "phpoffice/phpword": "^0.16.0",
+        "predis/predis": "^1.1",
+        "rmccue/requests": "^1.7",
+        "roumen/sitemap": "^2.6",
+        "vinkla/pusher": "*",
+        "voronkovich/sberbank-acquiring-client": "^2.3",
+        "websecret/panel": "2.*",
+        "yoomoney/yookassa-sdk-php": "^2.0",
+        "zadarma/user-api-v1": "^1.1"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.7",
+        "barryvdh/laravel-ide-helper": "^2.2",
+        "filp/whoops": "^2.1"
+    },
+    "autoload": {
+        "files": [
+            "app/Http/helpers.php"
+        ],
+        "psr-0": {
+            "Requests": "library/"
+        },
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize",
+            "php artisan ide-helper:generate",
+            "php artisan optimize"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

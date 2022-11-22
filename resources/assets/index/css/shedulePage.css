@@ -1,0 +1,576 @@
+/*
+формула для вычисления ширины .busBodey:
+49 + 165 + n(30 + 18) = 502;
+214+ n*48;
+*/
+.busLayoutBlock .busBodey{
+	width: 502px;
+}
+
+table, td{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+.shedule {
+	border-radius: 10px;
+}
+.sheduleBlock table.shedule .orange{
+	color: #ff4200;
+}
+.sheduleBlock iframe.map{
+	margin: 65px auto 0;
+	display: block;
+	margin-bottom: 57px;
+}
+.sheduleBlock{
+	width: 100%;
+	margin: 0 auto;
+}
+.sheduleBlock .mainTitle{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.sheduleBlock .subTitle{
+	color: #616161;
+	text-align: center;
+}
+.sheduleBlock .subTitleL1{
+	font-size: 22px;
+}
+.sheduleBlock .subTitleL2{
+	font-size: 20px;
+}
+.sheduleBlock .note {
+	display: block;
+	text-align: center;
+	font-style: italic;
+	margin-top: 5px;
+	font-size: 18px;
+}
+.sheduleBlock .note + div.shedule {
+	margin-top: 5px;
+}
+.sheduleBlock div.shedule{
+	font-size: 24px;
+    margin-bottom: 65px;
+    margin-top: 40px;
+	text-align: center;
+	border-bottom: 1px solid #d3d3d3;	
+}
+.sheduleBlock div.shedule > div.busRow{
+	display: none;
+	border-left: 1px solid #d3d3d3;
+	border-right: 1px solid #d3d3d3;	
+}
+.backg {
+	background: #555d69fa;
+	border-radius: 10px;
+	padding: 0.5em;
+	color: white;
+	border: white;
+}
+.js_orders-count_places {
+	background: #555d69fa;
+	border-radius: 10px;
+	color: white;
+}
+.sheduleBlock div.shedule ul.thead{
+	color: white;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: 60px;
+}
+.sheduleBlock div.shedule ul.sheduleRow{
+	display: flex;
+	align-items: center;
+	border-top: 1px solid white;
+	height: 65px;
+}
+.sheduleBlock div.shedule ul.thead > li,
+.sheduleBlock div.shedule ul.sheduleRow > li{
+	width: 100%;
+	max-width: 100%;
+	flex: 1 0 0%;
+	line-height: 1.25;
+	font-weight: bold;
+}
+.sheduleBlock .reservationButton {
+	background-color: #009746;
+	color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: raleway,sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 44px;
+    padding: 0 30px;
+	text-transform: uppercase;
+}
+.sheduleBlock .reservationButton.disabled {
+	background-color: #999;
+	pointer-events: none;
+}
+.shedule{
+	background-color: #555d69fa;
+	border: white solid 1px;
+	color: white;
+}
+.sheduleBlock div.shedule > div.busRow > div{
+	padding: 24px 0 20px 0;
+	text-align: center;
+}
+.sheduleBlock div.shedule > div.busRow > div .busAndInfoWrapp{
+	display: inline-block;
+	text-align: left;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo{
+	line-height: 1em;
+	color: #a0a0a0;
+	margin-bottom: 20px;	
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div:nth-of-type(1){
+	padding-right: 30px;
+	border-right: 1px solid #f8c90f;	
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div:nth-of-type(1) .title{
+	font-size: 24px;
+	font-weight: bold;
+	color: #434343;
+	text-transform: uppercase;
+	margin-bottom: 10px;	
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div:nth-of-type(1) .additInfo{
+	font-size: 16px;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div:nth-of-type(2){
+	padding-left: 30px;
+	font-size: 18px;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div:nth-of-type(2) > p:nth-of-type(1){
+	margin-bottom: 9px;
+}
+
+
+
+.sheduleBlock div.shedule > div.busRow > div .busBodeyWrapp{
+	padding-top: 17px;
+	padding-bottom: 17px;
+	float: left;
+	overflow: hidden;
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification{
+	float: left;
+	padding-top: 40px;
+	padding-left: 16px;
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification > li{
+    color: #8d8f93;
+    font-size: 20px;
+    line-height: 42px;
+    padding: 0;
+    text-transform: lowercase;	
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification > li::before{
+    border-radius: 7px;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 30px;
+    margin-right: 9px;
+    vertical-align: middle;
+    width: 30px;	
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification > li:nth-of-type(1)::before{
+	border: 2px solid #d0d0d0;
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification > li:nth-of-type(2)::before{
+	background-color: #6cd43e;
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification > li:nth-of-type(3)::before{
+	background-color: #f8c90f;
+}
+
+/*-- BUS --*/
+/*-- bus layouts -- */
+.busLayoutBlock .busBodeyWrapp{
+    float: left;
+    padding-bottom: 17px;
+    padding-top: 17px;	
+	text-align: left;
+	clear: both;
+}
+.busLayoutBlock .busBodey{
+    height: 180px;
+    padding-right: 49px;
+    position: relative;	
+	font-size: 16px;
+	box-sizing: border-box;
+}
+.busLayoutBlock .busBodey .driver{
+    background-color: #f8c90f;
+    border-radius: 6px;
+    bottom: 22px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    left: 195px;
+    line-height: 31px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: auto;
+    transform: rotate(-90deg);
+    transform-origin: left bottom 0;
+    width: 93px;
+    z-index: 2;	
+}
+.busLayoutBlock .busBodey .seats{
+    display: block;
+    float: right;
+    overflow: hidden;
+    padding-left: 165px;
+    padding-top: 18px;
+    position: relative;
+    z-index: 2;	
+}
+.busLayoutBlock .busBodey .frontPart{
+    background-image: url("../images/minibus/frontPart.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 222px;
+    z-index: 1;	
+}
+.busLayoutBlock .busBodey .backPart{
+    background-image: url("../images/minibus/backPart.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 49px;
+    z-index: 1;	
+}
+.busLayoutBlock .busBodey .centralPart{
+    background-image: url("../images/minibus/centralPart.png");
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    bottom: 0;
+    left: 56px;
+    position: absolute;
+    right: 27px;
+    top: 0;
+    z-index: 0;	
+}
+.busLayoutBlock .busBodey .mirror{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 17px;
+    left: 110px;
+    position: absolute;
+    width: 13px;	
+}
+.busLayoutBlock .busBodey.threeRowsOfSeats .mirror{
+	left: 89px;
+}
+.busLayoutBlock .busBodey.fiveRowsOfSeats .mirror{
+	left: 134px;
+}
+.busLayoutBlock .busBodey .leftMirror{
+    background-image: url("../images/minibus/leftMirror.png");
+    bottom: -16px;	
+}
+.busLayoutBlock .busBodey .rightMirror{
+    background-image: url("../images/minibus/rightMirror.png");
+    top: -16px;	
+}
+.busLayoutBlock .busBodey .cell{
+	width: 30px;
+	height: 30px;
+    margin: 5px 18px 0 0;
+	float: left;
+	border: 2px solid transparent;
+    box-sizing: border-box;
+}
+.busLayoutBlock .busBodey .cell.seat{
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 2px solid #d0d0d0;
+    border-radius: 7px;
+	background-color: #8d9094;
+}
+.busLayoutBlock .busBodey .cell.driverCell{
+	background-color: #ffb800;
+	border: none;
+	border-radius: 7px;
+}
+.busLayoutBlock .busBodey .cell.driverCell::before{
+	content: 'В';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	color: white;
+	line-height: 27px;
+	text-align: center;
+}
+
+/*- 5 rows of seats -*/
+.busLayoutBlock .busBodey.fiveRowsOfSeats{
+	height: 215px;
+	padding-right: 58px;
+}
+.busLayoutBlock .busBodey.fiveRowsOfSeats .seats{
+	padding-left: 197px;
+}
+.busLayoutBlock .busBodey.fiveRowsOfSeats .frontPart{
+	width: 265px;
+}
+.busLayoutBlock .busBodey.fiveRowsOfSeats .driver{
+	left: 228px;
+}
+.busLayoutBlock .busBodey.fiveRowsOfSeats .backPart{
+	width: 59px;
+}
+/*- 5 rows of seats end -*/
+	
+/*- 3 rows of seats -*/
+.busLayoutBlock .busBodey.threeRowsOfSeats{
+	height: 145px;
+	padding-right: 39px;
+}
+.busLayoutBlock .busBodey.threeRowsOfSeats .seats{
+	padding-left: 132px;
+}
+.busLayoutBlock .busBodey.threeRowsOfSeats .frontPart{
+	width: 178px;
+}
+.busLayoutBlock .busBodey.threeRowsOfSeats .driver{
+	left: 162px;
+	width: 67px;
+	font-size: 11px;
+}
+.busLayoutBlock .busBodey.threeRowsOfSeats .backPart{
+	width: 39px;
+}
+/*- 3 rows of seats end -*/
+.addRowColumnWrapp{
+	height: 36px;
+	line-height: 36px;
+}
+.addRowColumnWrapp > *{
+	display: inline-block;
+	line-height: 1em;
+	vertical-align: middle;
+	font-size: 18px;
+	color: #b5b5ba;
+}
+.addRowColumnWrapp .buttons{
+	position: relative;
+	margin-left: 8px;
+	height: 36px;
+	line-height: 36px;
+}
+.addRowColumnWrapp .buttons > li{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 0;
+	float: none;
+	vertical-align: middle;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.addRowColumnWrapp.rowOp .buttons li.addRow{
+	background-image: url('../images/cellsRowsButtons/addRow.png');
+}
+.addRowColumnWrapp.rowOp .buttons li.removeRow{
+	background-image: url('../images/cellsRowsButtons/removeRow.png');
+}
+.addRowColumnWrapp.columnOp .buttons li.addColumn{
+	background-image: url('../images/cellsRowsButtons/addCell.png');
+	position: relative;
+}
+.addRowColumnWrapp.columnOp .buttons li.removeColumn{
+	background-image: url('../images/cellsRowsButtons/removeCell.png');
+}
+.addRowColumnWrapp.rowOp .buttons li.addRow:hover{
+	background-image: url('../images/cellsRowsButtons/addRowH.png');
+}
+.addRowColumnWrapp.rowOp .buttons li.removeRow:hover{
+	background-image: url('../images/cellsRowsButtons/removeRowH.png');
+}
+.addRowColumnWrapp.columnOp .buttons li.addColumn:hover{
+	background-image: url('../images/cellsRowsButtons/addCellH.png');
+}
+.addRowColumnWrapp.columnOp .buttons li.removeColumn:hover{
+	background-image: url('../images/cellsRowsButtons/removeCellH.png');
+}
+.topFilter .addRowColumnWrapp .buttons > li{
+	float: none;
+}
+.topFilter .filterElements .addRowColumnWrapp .buttons > li{
+	margin: 0;
+}
+.addRowColumnWrapp .rowQuantity,
+.addRowColumnWrapp .cellQuantity{
+	color: #000000;
+}
+.addRowColumnWrapp.columnOp .buttons > li:nth-of-type(2){
+	margin-left: 1px;
+}
+.addRowColumnWrapp.rowOp ul.buttons{
+	height: 36px;
+	width: 32px;
+}
+.addRowColumnWrapp.rowOp  > ul > li{
+	display: block;
+}
+.addRowColumnWrapp.rowOp  > ul.buttons > li:nth-of-type(2){
+	margin-top: 4px;
+}
+.addRowColumnWrapp .buttons{
+	margin-left: 0;
+}
+.addRowColumnWrapp span.cellQuantity,
+.addRowColumnWrapp span.rowQuantity{
+	min-width: 22px;
+	text-align: center;
+}
+.busLayoutBlock .busBodey .seats{
+	overflow: visible;
+}
+.busLayoutBlock .busBodey .cell{
+	position: relative;
+	cursor: pointer;
+}
+.busLayoutBlock .busBodey .cell .numElement{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	text-align: center;
+	line-height: 26px;
+}
+.busLayoutBlock .busBodey .cell.active .numElement,
+.busLayoutBlock .busBodey .cell.reserved .numElement{
+	line-height: 30px;
+}
+/*-- bus layouts end -- */
+.sheduleBlock div.shedule div.busRow > div .busBodey .cell.reserved{
+	background-color: #f8c90f;
+	border: none;
+}
+.sheduleBlock div.shedule div.busRow > div .busBodey .cell.active{
+	background-color: #6cd43e;
+	border: none;
+}
+/*-- BUS end--*/
+
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock{
+	clear: both;		
+}
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .pleaceNum{
+	font-size: 18px;
+	float: left;
+	margin-top: 25px;
+	line-height: 53px;
+	color: #8d8f93;
+}
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .continue{
+	background-color: seagreen;
+	border-radius: 10px;
+    color: white;
+    float: right;
+    font-family: raleway,sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 53px;
+    margin-top: 25px;
+    padding: 0 48px;
+    text-transform: uppercase;	
+	cursor: pointer;
+}
+
+/*- bus block modification -*/
+.sheduleBlock div.shedule > div.busRow > div{
+	width: 100%;
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification{
+	clear: both;	
+	text-align: center;
+	float: none;
+	padding-left: 0;
+	padding-top: 20px;
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification > li{
+	display: inline-block;
+}
+.sheduleBlock div.shedule > div.busRow > div ul.seatsClarification > li:nth-of-type(1n + 2){
+	margin-left: 10px;
+}
+.sheduleBlock div.shedule > div.busRow > div .busAndInfoWrapp{
+	width: 100%;
+	overflow: auto;
+	display: block;
+	text-align: center;
+}
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock{
+	text-align: center;
+}
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .pleaceNum,
+.sheduleBlock div.shedule div.busRow > div .bottomBusInfoBlock .continue{
+	display: inline-block;
+	float: none;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo{
+	text-align: center;
+}
+.sheduleBlock div.shedule > div.busRow > div .timeInfo > div{
+	float: none;
+	display: inline-block;
+}
+.sheduleBlock div.shedule > div.busRow > div .busBodeyWrapp {
+	display: inline-block;
+	float: none;
+	max-width: 80%;	
+}
+
+.sheduleBlock div.shedule > div.busRow > div .busBodeyWrapp > .js_bus-wrap{
+	overflow: auto;
+}
+
+.sheduleBlock  .amenities{
+	margin-top: 10px;
+}
+.sheduleBlock  .amenities .amenity{
+	display: inline-block;
+	padding: 3px;
+}
+
+/*- bus block modification end -*/
+
+

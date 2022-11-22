@@ -1,0 +1,1391 @@
+{
+  "requests": [
+    {
+      "name": "Авторизация",
+      "url": "nortrans/auth/login",
+      "method": "POST",
+      "request": {
+        "email": "string|email",
+        "password": "string|min:6|max:20",
+        "remember_me": "boolean"
+      },
+      "response": {
+        "success": {
+          "data": {
+            "token": {
+              "token_type": "Bearer",
+              "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4",
+              "expires_at": "2022-02-14 15:06:08"
+            }
+          }
+        },
+        "need confirmation account": {
+          "result": "confirm_code",
+          "errors": [],
+          "data": {
+            "user_id": 108,
+            "token": []
+          },
+          "message": ""
+        },
+        "need to select company": {
+          "result": "step_companies",
+          "errors": [],
+          "data": {
+            "companies": {
+              "2": "ООО \"Нортранс-Норильск\"",
+              "3": "ГМК Норильский никель"
+            },
+            "user_id": 108,
+            "token": []
+          },
+          "message": ""
+        },
+        "need to select department": {
+          "result": "step_departments",
+          "errors": [],
+          "data": {
+            "departments": {
+              "1": "Колонна 3",
+              "2": "Колонна 1",
+              "4": "Колонна 2"
+            },
+            "user_id": 108,
+            "token": []
+          },
+          "message": ""
+        },
+        "error": {
+          "result": "error",
+          "errors": [],
+          "data": [],
+          "message": "Неверный логин или пароль"
+        }
+      }
+    },
+    {
+      "name": "Выход с аккаунта",
+      "url": "nortrans/auth/logout",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "message": "You are successfully logged out"
+      }
+    },
+    {
+      "name": "Проверка авторизации",
+      "url": "nortrans/auth/check",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "success": {
+          "result": true
+        },
+        "error": {
+          "result": false
+        }
+      }
+    },
+    {
+      "name": "Данные авторизированого пользователя",
+      "url": "nortrans/user",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "id": 104,
+        "client_id": null,
+        "first_name": "",
+        "middle_name": "",
+        "last_name": "",
+        "email": "email@gmail.com",
+        "phone": "89878534754-",
+        "sip": 0,
+        "company_id": 2,
+        "status": "active",
+        "date_change_password": "2022-01-13 11:02:36",
+        "created_at": "2021-12-01 09:43:33",
+        "updated_at": "2022-01-13 12:02:36",
+        "timezone": "Europe/Moscow",
+        "currency_id": 1,
+        "interface_setting_id": 3,
+        "bg_image_id": null,
+        "department_id": 2,
+        "superior_id": 0,
+        "position_id": null,
+        "user_status": "confirm",
+        "code_confirm": null,
+        "confirm": 1
+      }
+    },
+    {
+      "name": "Регистрация",
+      "url": "nortrans/auth/register",
+      "method": "POST",
+      "request": {
+        "email": "email@gmail.com",
+        "phone": "54354354354",
+        "first_name": "Dimon",
+        "password": "111111",
+        "last_name": "Test",
+        "middle_name": "Update",
+        "password_confirmation": "111111"
+      },
+      "response": {
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "user_id": 108,
+            "token": []
+          },
+          "message": ""
+        },
+        "error": {
+          "result": "error",
+          "errors": {
+            "phone": [
+              "Такое значение поля Телефон уже существует."
+            ],
+            "email": [
+              "Данный Email занят"
+            ]
+          },
+          "message": "Такое значение поля Телефон уже существует."
+        }
+      }
+    },
+    {
+      "name": "Подтверждение телефона проверочным кодом",
+      "url": "nortrans/auth/confirm-sms-code",
+      "method": "POST",
+      "request": {
+        "register_code": "100000"
+      },
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": [],
+          "message": ""
+        },
+        "success, but next step": {
+          "result": "step_companies",
+          "errors": [],
+          "data": {
+            "companies": {
+              "2": "ООО \"Нортранс-Норильск\"",
+              "3": "ГМК Норильский никель"
+            },
+            "user_id": 108,
+            "token": []
+          },
+          "message": ""
+        },
+        "error": {
+          "result": "error",
+          "errors": [],
+          "data": [],
+          "message": "Неверный код подтверждения!"
+        }
+      }
+    },
+    {
+      "name": "Регистрация: Выбор компании для пользователя",
+      "url": "nortrans/auth/register-company",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "company_id": 2
+      },
+      "response": {
+        "success": {
+          "result": "step_departments",
+          "errors": [],
+          "data": {
+            "departments": {
+              "1": "Колонна 3",
+              "2": "Колонна 1",
+              "4": "Колонна 2"
+            },
+            "user_id": 108,
+            "token": []
+          },
+          "message": ""
+        }
+      }
+    },
+    {
+      "name": "Регистрация: Выбор отдела для пользователя",
+      "url": "nortrans/auth/register-department",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "department_id": 1
+      },
+      "response": {
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "token": []
+          },
+          "message": ""
+        }
+      }
+    },
+    {
+      "name": "Список отделов компании",
+      "url": "nortrans/departments",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "company_id": 2
+      },
+      "response": {
+        "result": "success",
+        "errors": [],
+        "data": {
+          "departments": {
+            "1": "Колонна 3",
+            "2": "Колонна 1",
+            "4": "Колонна 2"
+          }
+        },
+        "message": ""
+      }
+    },
+    {
+      "name": "Список компаний",
+      "url": "nortrans/companies",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "result": "success",
+        "errors": [],
+        "data": {
+          "companies": {
+            "2": "ООО \"Нортранс-Норильск\"",
+            "3": "ГМК Норильский никель"
+          }
+        },
+        "message": ""
+      }
+    },
+    {
+      "name": "Список машин назначеных авторизированому пользователю",
+      "url": "nortrans/garage/cars",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "result": "success",
+        "errors": [],
+        "data": {
+          "cars": [
+            {
+              "id": 444,
+              "company_id": 2,
+              "template_id": 1,
+              "name": "Toyota Land Cruiser 300",
+              "name_tr": "Toyota Land Cruiser 300",
+              "number": "Е607СО124",
+              "places": 5,
+              "status": "active", // "active" - зеленый, "repair" - красный, "of_repair" - желтый
+              "comment": "",
+              "garage_longitude": null,
+              "garage_latitude": null,
+              "universal_field": null,
+              "universal_day": null,
+              "is_rent": 0,
+              "created_at": "2021-12-01 11:03:27",
+              "updated_at": "2022-01-19 22:11:18",
+              "insurance_day": "2021-12-03 00:00:00",
+              "revision_day": null,
+              "bus_type_id": 1,
+              "day_before_insurance": 1,
+              "day_before_revision": 1,
+              "garage_number": "1516",
+              "operating_mileage": 0,
+              "max_rent_time": null,
+              "diagnostic_card_template_id": null,
+              "repair_card_type_id": null,
+              "location_status": "on_line", // "on_line" - на линии(ключик), "in_garage" - в гараже(гараж)
+              "vin": "JTMABABJ704008003",
+              "driver_category": "B",
+              "year": 2021,
+              "color": "black",
+              "manufacturer": "Тойота Мотор Корпорейшн (Япония)",
+              "vehicle_passport": "164302031714645",
+              "vehicle_passport_date": "2021-08-02 00:00:00",
+              "registration_certificate": null,
+              "registration_certificate_date": "2021-12-03 00:00:00",
+              "insurance_policy": null,
+              "inventory_number": 153561,
+              "engine_model": "V35A-FTS",
+              "engine_number": "V35A 0043864",
+              "engine_power": "415 (305)",
+              "weight_allowed": 3230,
+              "weight_empty": null,
+              "balance_price": null,
+              "residual_price": null,
+              "transport_tax": null,
+              "property_tax": null,
+              "chassis_number": "JTMABABJ704008003",
+              "body_number": "отсутствует",
+              "diagnostic_card_number": null,
+              "diagnostic_card_date": "2021-12-03 00:00:00",
+              "owner_id": null,
+              "customer_id": null,
+              "commissioning_date": "2021-12-03 00:00:00",
+              "tires": "summer",
+              "structure_department": null,
+              "owner_legally": null,
+              "customer_company": "zapolyarnyy-filial",
+              "customer_department": "rukovodstvo-zf",
+              "customer_director": "zamestitel-direktora-zf-direktor-departamenta-bezopasnosti-avdeev-yui",
+              "fact_referral": "",
+              "odometer": 0, // Километраж
+              "fuel": 0, // Топливо
+              "pivot": {
+                "imageable_id": 108,
+                "bus_id": 444
+              },
+              "departments": [
+                {
+                  "id": 2,
+                  "name": "Колонна 1",
+                  "director_id": 1,
+                  "company_id": 2,
+                  "superdepartment_id": 0,
+                  "created_at": "2021-09-22 18:32:42",
+                  "updated_at": "2021-09-22 18:32:42",
+                  "pivot": {
+                    "bus_id": 444,
+                    "department_id": 2
+                  }
+                }
+              ],
+              "variables": []
+            },
+            {
+              "id": 456,
+              "company_id": 2,
+              "template_id": 1,
+              "name": "Toyota Land Cruiser 150",
+              "name_tr": "Toyota Land Cruiser 150",
+              "number": "М943СО124",
+              "places": 5,
+              "status": "active",
+              "comment": "",
+              "garage_longitude": null,
+              "garage_latitude": null,
+              "universal_field": null,
+              "universal_day": null,
+              "is_rent": 0,
+              "created_at": "2021-12-01 11:03:28",
+              "updated_at": "2021-12-03 11:58:58",
+              "insurance_day": "2021-12-03 00:00:00",
+              "revision_day": null,
+              "bus_type_id": 1,
+              "day_before_insurance": 1,
+              "day_before_revision": 1,
+              "garage_number": "1520",
+              "operating_mileage": 0,
+              "max_rent_time": null,
+              "diagnostic_card_template_id": null,
+              "repair_card_type_id": null,
+              "location_status": "in_garage",
+              "vin": "JTEBU3FJ00K203873",
+              "driver_category": "B",
+              "year": 2021,
+              "color": "black",
+              "manufacturer": "Тойота Мотор Корпорейшн (Япония)",
+              "vehicle_passport": "164302029642003",
+              "vehicle_passport_date": "2021-06-29 00:00:00",
+              "registration_certificate": null,
+              "registration_certificate_date": "2021-12-03 00:00:00",
+              "insurance_policy": null,
+              "inventory_number": 153556,
+              "engine_model": "1GR",
+              "engine_number": "1GR C338998",
+              "engine_power": "249(183)",
+              "weight_allowed": 2900,
+              "weight_empty": null,
+              "balance_price": null,
+              "residual_price": null,
+              "transport_tax": null,
+              "property_tax": null,
+              "chassis_number": "JTEBU3FJ00K203873",
+              "body_number": "отсутствует",
+              "diagnostic_card_number": null,
+              "diagnostic_card_date": "2021-12-03 00:00:00",
+              "owner_id": null,
+              "customer_id": null,
+              "commissioning_date": "2021-12-03 00:00:00",
+              "tires": "summer",
+              "structure_department": null,
+              "owner_legally": null,
+              "customer_company": "zapolyarnyy-filial",
+              "customer_department": "departament-bezopasnosti",
+              "customer_director": "direktor-departamentasazonov-vg",
+              "fact_referral": "",
+              "odometer": 0,
+              "fuel": 0,
+              "pivot": {
+                "imageable_id": 108,
+                "bus_id": 456
+              },
+              "departments": [
+                {
+                  "id": 2,
+                  "name": "Колонна 1",
+                  "director_id": 1,
+                  "company_id": 2,
+                  "superdepartment_id": 0,
+                  "created_at": "2021-09-22 18:32:42",
+                  "updated_at": "2021-09-22 18:32:42",
+                  "pivot": {
+                    "bus_id": 456,
+                    "department_id": 2
+                  }
+                }
+              ],
+              "variables": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Список диагностических карт автомобиля",
+      "url": "nortrans/garage/cars/{bus_id}/diagnostic_cards",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "empty": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "diagnostic_cards": null
+          },
+          "message": ""
+        },
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "diagnostic_cards": {
+              "current_page": 1,
+              "data": [
+                {
+                  "id": 9,
+                  "bus_id": 443,
+                  "created_at": "2022-02-10 12:02:00",
+                  "updated_at": "2022-02-10 12:02:00",
+                  "diagnostic_card_template_id": 0,
+                  "date_scheduled": null,
+                  "notes": null,
+                  "user_id": 108,
+                  "type": "review",
+                  "user_taken_bus": null,
+                  "bus_variable": {
+                    "id": 4,
+                    "odometer": 0,
+                    "fuel": 0,
+                    "imageable_id": 9,
+                    "imageable_type": "App\\Models\\DiagnosticCard",
+                    "bus_id": 3,
+                    "created_at": "2021-11-15 21:30:10",
+                    "updated_at": "2021-11-15 21:30:10"
+                  },
+                  "items": []
+                },
+                {
+                  "id": 10,
+                  "bus_id": 443,
+                  "created_at": "2022-02-10 12:05:41",
+                  "updated_at": "2022-02-10 12:05:41",
+                  "diagnostic_card_template_id": 0,
+                  "date_scheduled": null,
+                  "notes": null,
+                  "user_id": 108,
+                  "type": "review",
+                  "user_taken_bus": null,
+                  "bus_variable": {
+                    "id": 49,
+                    "odometer": 432423,
+                    "fuel": 43,
+                    "imageable_id": 10,
+                    "imageable_type": "App\\Models\\DiagnosticCard",
+                    "bus_id": 443,
+                    "created_at": "2022-02-10 12:05:41",
+                    "updated_at": "2022-02-10 12:05:41"
+                  },
+                  "items": []
+                },
+                {
+                  "id": 11,
+                  "bus_id": 443,
+                  "created_at": "2022-02-10 12:11:36",
+                  "updated_at": "2022-02-10 12:11:36",
+                  "diagnostic_card_template_id": 1,
+                  "date_scheduled": null,
+                  "notes": null,
+                  "user_id": 108,
+                  "type": "review",
+                  "user_taken_bus": null,
+                  "bus_variable": {
+                    "id": 50,
+                    "odometer": 432423,
+                    "fuel": 43,
+                    "imageable_id": 11,
+                    "imageable_type": "App\\Models\\DiagnosticCard",
+                    "bus_id": 443,
+                    "created_at": "2022-02-10 12:11:36",
+                    "updated_at": "2022-02-10 12:11:36"
+                  },
+                  "items": []
+                },
+                {
+                  "id": 12,
+                  "bus_id": 443,
+                  "created_at": "2022-02-10 12:15:01",
+                  "updated_at": "2022-02-10 12:15:01",
+                  "diagnostic_card_template_id": 1,
+                  "date_scheduled": null,
+                  "notes": null,
+                  "user_id": 108,
+                  "type": "review",
+                  "user_taken_bus": null,
+                  "bus_variable": {
+                    "id": 51,
+                    "odometer": 432423,
+                    "fuel": 43,
+                    "imageable_id": 12,
+                    "imageable_type": "App\\Models\\DiagnosticCard",
+                    "bus_id": 443,
+                    "created_at": "2022-02-10 12:15:01",
+                    "updated_at": "2022-02-10 12:15:01"
+                  },
+                  "items": []
+                },
+                {
+                  "id": 13,
+                  "bus_id": 443,
+                  "created_at": "2022-02-10 12:17:40",
+                  "updated_at": "2022-02-10 12:17:40",
+                  "diagnostic_card_template_id": 1,
+                  "date_scheduled": null,
+                  "notes": null,
+                  "user_id": 108,
+                  "type": "review",
+                  "user_taken_bus": null,
+                  "bus_variable": {
+                    "id": 52,
+                    "odometer": 432423,
+                    "fuel": 43,
+                    "imageable_id": 13,
+                    "imageable_type": "App\\Models\\DiagnosticCard",
+                    "bus_id": 443,
+                    "created_at": "2022-02-10 12:17:40",
+                    "updated_at": "2022-02-10 12:17:40"
+                  },
+                  "items": []
+                },
+                {
+                  "id": 14,
+                  "bus_id": 443,
+                  "created_at": "2022-02-10 12:17:58",
+                  "updated_at": "2022-02-10 12:17:58",
+                  "diagnostic_card_template_id": 1,
+                  "date_scheduled": null,
+                  "notes": null,
+                  "user_id": 108,
+                  "type": "review",
+                  "user_taken_bus": null,
+                  "bus_variable": {
+                    "id": 53,
+                    "odometer": 432423,
+                    "fuel": 43,
+                    "imageable_id": 14,
+                    "imageable_type": "App\\Models\\DiagnosticCard",
+                    "bus_id": 443,
+                    "created_at": "2022-02-10 12:17:58",
+                    "updated_at": "2022-02-10 12:17:58"
+                  },
+                  "items": []
+                },
+                {
+                  "id": 15,
+                  "bus_id": 443,
+                  "created_at": "2022-02-10 12:18:11",
+                  "updated_at": "2022-02-10 12:18:11",
+                  "diagnostic_card_template_id": 1,
+                  "date_scheduled": null,
+                  "notes": null,
+                  "user_id": 108,
+                  "type": "review",
+                  "user_taken_bus": null,
+                  "bus_variable": {
+                    "id": 54,
+                    "odometer": 432423,
+                    "fuel": 43,
+                    "imageable_id": 15,
+                    "imageable_type": "App\\Models\\DiagnosticCard",
+                    "bus_id": 443,
+                    "created_at": "2022-02-10 12:18:11",
+                    "updated_at": "2022-02-10 12:18:11"
+                  },
+                  "items": []
+                }
+              ],
+              "from": 1,
+              "last_page": 1,
+              "next_page_url": null,
+              "path": "https://transport.dev/nortrans/garage/cars/443/diagnostic_cards",
+              "per_page": 10,
+              "prev_page_url": null,
+              "to": 7,
+              "total": 7
+            }
+          },
+          "message": ""
+        },
+        "error": {
+          "result": "error",
+          "errors": [],
+          "data": [],
+          "message": "Нет данных о автобусе"
+        }
+      }
+    },
+    {
+      "name": "Список шаблонов диагностических карт",
+      "url": "nortrans/garage/diagnostic_card_templates",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "result": "success",
+        "errors": [],
+        "data": {
+          "templates": [
+            {
+              "id": 1,
+              "company_id": 2,
+              "name": "Автобус",
+              "status": "active",
+              "created_at": "2021-09-20 21:07:04",
+              "updated_at": "2021-10-19 17:50:46"
+            },
+            {
+              "id": 2,
+              "company_id": 2,
+              "name": "Легковой автомобиль",
+              "status": "active",
+              "created_at": "2021-11-16 02:03:59",
+              "updated_at": "2021-11-18 22:12:52"
+            }
+          ]
+        },
+        "message": ""
+      }
+    },
+    {
+      "name": "Шаблон диагностической карты",
+      "url": "nortrans/garage/diagnostic_card_templates/{template_id}",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "template": {
+              "id": 2,
+              "company_id": 2,
+              "name": "Автобус",
+              //Название карты
+              "status": "active",
+              "created_at": "2021-11-16 02:03:59",
+              "updated_at": "2022-01-19 22:41:43",
+              "items": [
+                {
+                  "id": 1,
+                  "company_id": 2,
+                  "name": "Внутри автомобиля",
+                  //Вкладка(отдел)
+                  "status": "active",
+                  "created_at": "2021-09-20 21:06:56",
+                  "updated_at": "2022-01-19 22:42:19",
+                  "diagnostic_card_template_id": 1,
+                  "pivot": {
+                    "diagnostic_card_template_id": 2,
+                    "review_act_template_id": 1
+                  },
+                  "items": [
+                    {
+                      "id": 1,
+                      // этот id надо передавать для созранения.
+                      "review_act_template_id": 1,
+                      "name": "Стекла",
+                      "status": "active",
+                      "created_at": "2021-09-20 21:07:13",
+                      "updated_at": "2022-01-19 22:43:32",
+                      "is_photo": 1,
+                      //Можно загружать фото
+                      "is_comment": 1
+                      // Можно писать коммент
+                    },
+                    {
+                      "id": 6,
+                      "review_act_template_id": 1,
+                      "name": "Коврики",
+                      "status": "active",
+                      "created_at": "2022-01-19 22:43:00",
+                      "updated_at": "2022-01-19 22:43:26",
+                      "is_photo": 1,
+                      "is_comment": 1
+                    },
+                    {
+                      "id": 7,
+                      "review_act_template_id": 1,
+                      "name": "Салон",
+                      "status": "active",
+                      "created_at": "2022-01-19 22:43:48",
+                      "updated_at": "2022-01-19 22:43:48",
+                      "is_photo": 1,
+                      "is_comment": 1
+                    },
+                    {
+                      "id": 8,
+                      "review_act_template_id": 1,
+                      "name": "Запах",
+                      "status": "active",
+                      "created_at": "2022-01-19 22:44:07",
+                      "updated_at": "2022-01-19 22:44:14",
+                      "is_photo": 0,
+                      "is_comment": 1
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "company_id": 2,
+                  "name": "Документы",
+                  "status": "active",
+                  "created_at": "2021-10-11 16:15:58",
+                  "updated_at": "2022-01-19 22:42:27",
+                  "diagnostic_card_template_id": 0,
+                  "pivot": {
+                    "diagnostic_card_template_id": 2,
+                    "review_act_template_id": 2
+                  },
+                  "items": [
+                    {
+                      "id": 2,
+                      "review_act_template_id": 2,
+                      "name": "Аптечка",
+                      "status": "active",
+                      "created_at": "2021-10-11 16:21:43",
+                      "updated_at": "2022-01-19 22:45:27",
+                      "is_photo": 1,
+                      "is_comment": 1
+                    },
+                    {
+                      "id": 3,
+                      "review_act_template_id": 2,
+                      "name": "Техосмотр",
+                      "status": "active",
+                      "created_at": "2021-10-11 16:21:47",
+                      "updated_at": "2022-01-19 22:45:15",
+                      "is_photo": 1,
+                      "is_comment": 1
+                    },
+                    {
+                      "id": 4,
+                      "review_act_template_id": 2,
+                      "name": "Тех. пасспорт",
+                      "status": "not_active",
+                      "created_at": "2021-10-11 16:21:52",
+                      "updated_at": "2022-01-19 22:45:01",
+                      "is_photo": 1,
+                      "is_comment": 1
+                    },
+                    {
+                      "id": 5,
+                      "review_act_template_id": 2,
+                      "name": "Страховка",
+                      "status": "active",
+                      "created_at": "2021-11-18 22:03:20",
+                      "updated_at": "2022-01-19 22:44:32",
+                      "is_photo": 0,
+                      "is_comment": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "message": ""
+        },
+        "error": {
+          "result": "error",
+          "errors": [],
+          "data": [],
+          "message": "Нет такого шаблона"
+        }
+      }
+    },
+    {
+      "name": "Взять автомобиль",
+      "url": "nortrans/garage/cars/{bus_id}/take",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "min_odometer": 123455,
+        // Актуальное значение километража автомобиля
+        "odometer": 123456,
+        "fuel": 25,
+        "condition": 0,
+        // Состояние[0 - есть неполадки, будем делать осмотр, 1 - все хорошо, создать автоматом]
+        "bus_id": 2
+      },
+      "response": {
+        "condition=1,error": {
+          "result": "error",
+          "errors": [],
+          "data": [],
+          "message": "Выберите шаблон диагностической карты по умолчанию для этого автомобиля"
+          // это bus->diagnostic_card_template_id
+        },
+        "condition=0,success": {
+          "result": "success",
+          "errors": [],
+          "data": [],
+          "message": {
+            "bus_id": "443",
+            "diagnostic_card": {
+              "bus_id": 443,
+              "user_id": 108,
+              "diagnostic_card_template_id": 1, // Шаблон диаг карты
+              "type": "take", // Есть 3 типа карт - review(осмотр), take(взять машину) и put(поставить машину)
+              "updated_at": "2022-02-10 12:11:36",
+              "created_at": "2022-02-10 12:11:36",
+              "id": 11
+            },
+            //Создана чистая диагностическая карты. Надо заполнить. Берем diagnostic_card_template_id
+            //и отправляем в запросе Шаблон диагностической карты
+            "user_taken_bus": {
+              "bus_id": "443",
+              "condition": "0",
+              "status": "created", // Есть 4 статуса created(заявка создана), taken(машина взята), returned(машина поставлена), canceled(заявка отменена)
+              "imageable_id": 108,
+              "imageable_type": "App\\Models\\User",
+              "updated_at": "2022-02-10 12:11:36",
+              "created_at": "2022-02-10 12:11:36",
+              "started_at": null,
+              // Время когда взял машину
+              "ended_at": null,
+              // Время когда вернул
+              "id": 7
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Поставить автомобиль",
+      "url": "nortrans/garage/cars/{bus_id}/put",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "min_odometer": 123455,
+        // Актуальное значение километража автомобиля
+        "odometer": 123456,
+        "fuel": 25,
+        "condition": 0,
+        // Состояние[0 - есть неполадки, будем делать осмотр, 1 - все хорошо, создать автоматом]
+        "bus_id": 2
+      },
+      "response": {
+        "condition=1,success": {
+          "result": "success",
+          "errors": [],
+          "data": [],
+          "message": {
+            "user_taken_bus": {
+              "id": 12,
+              "bus_id": 443,
+              "condition": 1,
+              //Состояние (0 - заполняли карту, 1 - заполнилась автоматом)
+              "status": "returned",
+              // Статус машина поставлена
+              "created_at": "2022-02-11 12:25:07",
+              "updated_at": "2022-02-11 12:25:54",
+              "imageable_id": 108,
+              "imageable_type": "App\\Models\\User",
+              "started_at": "2022-02-11 12:25:07",
+              // Взяли машину
+              "ended_at": "2022-02-11T09:25:54.178327Z"
+              // Поставили машину
+            }
+          }
+        },
+        "condition=0,success": {
+          "result": "success",
+          "errors": [],
+          "data": [],
+          "message": {
+            "bus_id": "443",
+            "diagnostic_card": {
+              "bus_id": 443,
+              "user_id": 108,
+              "diagnostic_card_template_id": 1,
+              // Шаблон диаг карты
+              "type": "put",
+              // Тип "поставить машину"
+              "updated_at": "2022-02-11 12:29:23",
+              "created_at": "2022-02-11 12:29:23",
+              "id": 19
+              // Дигностическая карта
+            },
+            //Создана чистая диагностическая карты. Надо заполнить. Берем diagnostic_card_template_id
+            //и отправляем в запросе Шаблон диагностической карты
+
+            "user_taken_bus": {
+              "id": 13,
+              "bus_id": 443,
+              "condition": 1,
+              "status": "taken",
+              // Статус "Машина взята"
+              "created_at": "2022-02-11 12:26:19",
+              "updated_at": "2022-02-11 12:26:19",
+              "imageable_id": 108,
+              "imageable_type": "App\\Models\\User",
+              "started_at": "2022-02-11 12:26:19",
+              // Взяли машину
+              "ended_at": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Диагностическая карта: сохранить вкладку",
+      "url": "nortrans/diagnostic_cards/{diagnostic_card_id}/save-tab",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "childs": [
+          "2",
+          "3",
+          "5"
+        ],
+        // Список выбранных елементов(передать id)
+        "2": {
+          // id: {images: фотки(массив), comment: коммент}
+          "images": [
+            {},
+            {}
+          ]
+        },
+        "5": {
+          "comment": "Не на месте"
+        },
+        "3": {
+          "comment": "Надо почистить",
+          "images": [
+            //Передаем массив файлов
+            {},
+            {}
+          ]
+        }
+      },
+      "response": {
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": [],
+          "message": ""
+        },
+        "error": {
+          "result": "error",
+          "errors": [],
+          "data": [],
+          "message": ""
+        },
+        "validation": {
+          "result": "error",
+          "errors": {
+            "2.images.1": [
+              "Поле Фото должно быть картинкой."
+            ]
+          },
+          "message": "Поле Фото должно быть картинкой."
+        }
+      }
+    },
+    {
+      "name": "Диагностическая карта: Сохранить карту",
+      "url": "nortrans/diagnostic_cards/{diagnostic_card_id}/save",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "comment": "Водитель неакуратный"
+      },
+      "response": {
+        "result": "success",
+        "errors": [],
+        "data": {
+          "diagnostic_card": {
+            "id": 33,
+            "bus_id": 443,
+            "created_at": "2022-02-16 08:46:11",
+            "updated_at": "2022-02-16 08:46:32",
+            "diagnostic_card_template_id": 1,
+            "date_scheduled": null,
+            "notes": "Водитель неакуратный",
+            "user_id": 108,
+            "type": "take",
+            "bus_variable": {
+              "id": 18,
+              "odometer": 423423, // Километраж
+              "fuel": 12, // Топливо
+              "imageable_id": 33,
+              "imageable_type": "App\\Models\\DiagnosticCard",
+              "bus_id": 443,
+              "created_at": "2021-11-24 23:10:03",
+              "updated_at": "2021-11-24 23:10:03"
+            }
+          }
+        },
+        "message": ""
+      }
+    },
+    {
+      "name": "Взять машину: подтверждение",
+      "url": "nortrans/garage/cars/{bus_id}/take/{user_taken_bus_id}/finish",
+      // user_taken_bus_id - возвращаеться в запросе Взять автомобиль user_taken_bus.id
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "condition": 1, // 1 - взять автомобиль, 0 - оставить автомобиль
+      },
+      "response": {
+        "condition = 0": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "user_taken_bus": {
+              "id": 18,
+              "bus_id": 443,
+              "is_card": 0,
+              "condition": 0,
+              "diagnostic_card_id": 0,
+              "status": "canceled", // Вернет статус Canceled
+              "created_at": "2022-02-16 08:51:59",
+              "updated_at": "2022-02-16 08:52:20",
+              "imageable_id": 108,
+              "imageable_type": "App\\Models\\User",
+              "started_at": null,
+              "ended_at": null,
+              "imageable": {  // Пользователь что взял машину
+                "id": 108,
+                "client_id": null,
+                "first_name": "Dimon Test Update",
+                "middle_name": "",
+                "last_name": "",
+                "sip": null,
+                "company_id": 2,
+                "status": "disable",
+                "date_change_password": "2022-02-02 01:27:17",
+                "created_at": "2022-01-14 14:55:58",
+                "updated_at": "2022-02-02 01:27:17",
+                "timezone": "Europe/Moscow",
+                "currency_id": 1,
+                "interface_setting_id": null,
+                "bg_image_id": null,
+                "department_id": 1,
+                "superior_id": null,
+                "position_id": null,
+                "user_status": null,
+                "code_confirm": "972865",
+                "confirm": 1
+              },
+              "bus": {} // Машина
+
+            }
+          },
+          "message": ""
+        },
+        "condition = 1": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "user_taken_bus": {
+              "id": 18,
+              "bus_id": 443,
+              "is_card": 0,
+              "condition": 0,
+              "diagnostic_card_id": 0,
+              "status": "taken", // Вернет статус Taken
+              "created_at": "2022-02-16 08:51:59",
+              "updated_at": "2022-02-16 08:52:20",
+              "imageable_id": 108,
+              "imageable_type": "App\\Models\\User",
+              "started_at": null,
+              "ended_at": null,
+              "imageable": {  // Пользователь что взял машину
+                "id": 108,
+                "client_id": null,
+                "first_name": "Dimon Test Update",
+                "middle_name": "",
+                "last_name": "",
+                "sip": null,
+                "company_id": 2,
+                "status": "disable",
+                "date_change_password": "2022-02-02 01:27:17",
+                "created_at": "2022-01-14 14:55:58",
+                "updated_at": "2022-02-02 01:27:17",
+                "timezone": "Europe/Moscow",
+                "currency_id": 1,
+                "interface_setting_id": null,
+                "bg_image_id": null,
+                "department_id": 1,
+                "superior_id": null,
+                "position_id": null,
+                "user_status": null,
+                "code_confirm": "972865",
+                "confirm": 1
+              },
+              "bus": {
+                "max_rent_time": 24 // Время оренды авто, часов
+              } // Машина
+
+            }
+          },
+          "message": ""
+        }
+      }
+    },
+    {
+      "name": "Поставить машину: подтверждение",
+      "url": "nortrans/garage/cars/{bus_id}/put/{user_taken_bus_id}/finish",
+      // user_taken_bus_id - возвращаеться в запросе Взять автомобиль user_taken_bus.id
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "response": {
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "user_taken_bus": {
+              "id": 18,
+              "bus_id": 443,
+              "is_card": 0,
+              "condition": 0,
+              "diagnostic_card_id": 0,
+              "status": "returned", // Вернет статус Returned
+              "created_at": "2022-02-16 08:51:59",
+              "updated_at": "2022-02-16 08:52:20",
+              "imageable_id": 108,
+              "imageable_type": "App\\Models\\User",
+              "started_at": null,
+              "ended_at": null,
+              "imageable": {  // Пользователь что вернул машину
+                "id": 108,
+                "client_id": null,
+                "first_name": "Dimon Test Update",
+                "middle_name": "",
+                "last_name": "",
+                "sip": null,
+                "company_id": 2,
+                "status": "disable",
+                "date_change_password": "2022-02-02 01:27:17",
+                "created_at": "2022-01-14 14:55:58",
+                "updated_at": "2022-02-02 01:27:17",
+                "timezone": "Europe/Moscow",
+                "currency_id": 1,
+                "interface_setting_id": null,
+                "bg_image_id": null,
+                "department_id": 1,
+                "superior_id": null,
+                "position_id": null,
+                "user_status": null,
+                "code_confirm": "972865",
+                "confirm": 1
+              },
+              "bus": {
+                "max_rent_time": 24 // Время оренды авто, часов
+              } // Машина
+
+            }
+          },
+          "message": ""
+        }
+      }
+    },
+    {
+      "name": "Осмотр автомобиля",
+      "url": "nortrans/garage/cars/{bus_id}/review",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "min_odometer": 123456,
+        "odometer": 123457,
+        "fuel": 12
+      },
+      "response": {
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "diagnostic_card": {
+              "bus_id": 443,
+              "user_id": 108,
+              "diagnostic_card_template_id": 1, // Шаблон карты
+              "type": "review",
+              "updated_at": "2022-02-16 13:09:53",
+              "created_at": "2022-02-16 13:09:53",
+              "id": 66,// Берем id, и заполняем карту как обычно
+              "bus_variable": {
+                "id": 107,
+                "odometer": 432423,
+                "fuel": 43,
+                "imageable_id": 66,
+                "imageable_type": "App\\Models\\DiagnosticCard",
+                "bus_id": 443,
+                "created_at": "2022-02-16 13:09:53",
+                "updated_at": "2022-02-16 13:09:53"
+              }
+            }
+          },
+          "message": ""
+        },
+        "error": {
+          "result": "error",
+          "errors": [],
+          "data": [],
+          "message": "Выберите шаблон диагностической карты по умолчанию для этого автомобиля"
+          // это bus->diagnostic_card_template_id
+        }
+      }
+    },
+    {
+      "name": "Востановление пароля",
+      "url": "nortrans/auth/password-forgot",
+      "method": "POST",
+      "request": {
+        "phone": 375000111222
+      },
+      "response": {
+        "error": {
+          "result": "error",
+          "errors": [],
+          "data": [],
+          "message": "Произошла ошибка с отправкой кода, попробуйте позже."
+        },
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": [],
+          "message": "Новый пароль был отправлен на телефон!"
+        }
+      }
+    },
+    {
+      "name": "Востановление пароля: Отправка кода",
+      "url": "nortrans/auth/password-forgot/{code}",
+      "method": "POST",
+      "response": {
+        "error": {
+          "result": "error",
+          "errors": [],
+          "data": [],
+          "message": "Код подтверждения неверный."
+        },
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": {
+            "token": {
+              "token_type": "Bearer",
+              "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0ZDliNTYzZGNmMGRmOGUxMzRiNjJkMjk5MDYyM2ZmNGQ5NzUxZDliZWI1OGMyYjI4YjIxM2YwYzI5YTdlYzM0ZjU1NDQ3YzI5N2MzODkzIn0.eyJhdWQiOiIxIiwianRpIjoiODRkOWI1NjNkY2YwZGY4ZTEzNGI2MmQyOTkwNjIzZmY0ZDk3NTFkOWJlYjU4YzJiMjhiMjEzZjBjMjlhN2VjMzRmNTU0NDdjMjk3YzM4OTMiLCJpYXQiOjE2NDM3NTM5MzAsIm5iZiI6MTY0Mzc1MzkzMCwiZXhwIjoxNjc1Mjg5OTMwLCJzdWIiOiIxMDgiLCJzY29wZXMiOltdfQ.qvXSaW4Tkgi8_ayhmNgaBtN7P_j_Bn2I7RfhUzjv8wjZZvpsvbyufm6_X7VBP65RAAjnDxBJdYhuPhohDU3SeAMk7Dj_TQDlxf_Q1kZOZn7zXBdz6rJuZOU6Y7vJ4oJ5Whiv6gqqFxk-O7aiuq_ikqWrfMbq4EUaFDNUNKX_py93RZkTvrQ98lCM1phT-wR681ONnWX1zMNd1lJngKLykt0_cyGfFOb0I2jt8Gs212wQKk5N65U0QMiu2p8LiqA1qOMmafLJ4MIpSNE4meayJhYj7D1vPkh4C9F61Hdu5YHMB-XvEx6HAnaIoHyWtFmh3DR7VDR6woKqw3_iJqHKkJ_ZVrV-yyZM32iAz60F0zkqIxUJdZlh06z6k3s0ZQ2pb7hsgka6r1XkJ71DxYVgnSwOTxb3HgYOWgPbrjFWWt7tGjqJXOGMqbYTfjqErOB94r74mlXzHbGiBGGNg7fcwDTJJgZNnlRhU6MYm7HoIfzUJL4YoI99ntQugcb2Y_EQslDBAnghEjDcUXoy57DoVP4ikZY2DUYS_wqsmeP4tkK-EltT7_aQqyhC1tQk0A7Ginl0leW4Ivu-5Wzw8foNXqrDihu79vMNPdogORhK8SDOa2ITQom_jVabsYNqYtGB2VS5F8iNM-VTUjZ_xPgpjw1PrxEkn6Mxf73YwpF_6Fc",
+              "expires_at": "2022-03-02 01:18:50"
+            }
+          },
+          "message": ""
+        },
+        "description": "В этом ответе токен, пользователь авторизирован после этого этапа"
+      }
+    },
+    {
+      "name": "Востановление пароля: Отправка пароля",
+      "url": "nortrans/auth/password-reset",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE4YmQ1NDY3NWQzMDM0NDkzMDI4ZjMxZjBhODMwZWEwYjc0MmVhMGZjOTJkMmM3NjQ2YTc4YjJkZjNmZDI2YjFhNzVmNDI1MTFlNGNiY2I3In0.eyJhdWQiOiIxIiwianRpIjoiMThiZDU0Njc1ZDMwMzQ0OTMwMjhmMzFmMGE4MzBlYTBiNzQyZWEwZmM5MmQyYzc2NDZhNzhiMmRmM2ZkMjZiMWE3NWY0MjUxMWU0Y2JjYjciLCJpYXQiOjE2NDIxNjE5NjgsIm5iZiI6MTY0MjE2MTk2OCwiZXhwIjoxNjczNjk3OTY4LCJzdWIiOiIxMDQiLCJzY29wZXMiOltdfQ.nKVILFmFhprESdRIP5TRGsXOvQ3q3NRXhXAtBLN2inS9HPgmxdntjFVbsT_WVArIuUCOvMo-yf4XnnM9ajXQJWlEUH9_0G3Xa1B4ym7oAZS77cTEcRIl0YsbD3NUNocnYoOvgExFlUiLmTDsa6cP93HHRqDxhVP684lXYAUDE7rMSU0qs85nxf9ZNSqdTiIy7Lyxe-2SHMmTJrov_F-NoZiZSmUyjDlyAiEJOj15OizTAl92B9iML4DC7VIsaza_Oq5tWcKOsNBcMEJwEqaymmaJ1kK6xCbVztQt_eHYhC1sRHmzNRYS0g0rD_vFGYkRb3Ugjxu_yTU9YrfGACY-PxJdCE7QCFdPRrmqWu1Ms8KL51lpNj94kZBxkBxdJywsUb6laVHYZvFAerQmvKmw57hM3Te1E7BVKrzt1nWj1rKiMOkqraCeOEdGd1pDUCFAIiyvfexm833JWgZ5B4Pqi9VEm40gheaON_Zy-g3rzTSxpAqqBzisp5jqYxVwswgsFX9dR1-KvhMgJENZLOHiY3Gqwci7RzkohSSgfKa9Nbdc4M7S1DJxpaUjexLVWFIU1ZUyjLWbpHkB4pgwr-3gU3DOhJY5dsUTA7mCGb5c-E5LoPtXTc1ssZVyoQWRLjYDjpTm7pj6n8rrWOovsmxwBhtopB4bG82bjsAsDGMSHb4"
+      },
+      "request": {
+        "password": "000000",
+        "password_confirmation": "000000"
+      },
+      "response": {
+        "success": {
+          "result": "success",
+          "errors": [],
+          "data": [],
+          "message": "Пароль успешно изменен!"
+        },
+        "error": {
+          "result": "error",
+          "errors": {
+            "password": [
+              "Длина пароля минимум 6 символов",
+              "Пароль не совпадает с подтверждением"
+            ]
+          },
+          "message": "Длина пароля минимум 6 символов"
+        }
+      }
+    }
+  ]
+}

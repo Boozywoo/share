@@ -1,0 +1,818 @@
+/*-- not for export-- */
+body{
+	font-family: calibri, sans-serif !important;
+	line-height: normal;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+input{
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+table.userRoutsShedule thead tr td{border-radius: 0 10px 10px 0}
+table.userRoutsShedule thead tr td {border-radius: 10px 0 0 10px}
+
+table.userRoutsShedule tbody tr td:last-child {border-radius: 0 10px 10px 0}
+table.userRoutsShedule tbody tr td:first-child {border-radius: 10px 0 0 10px}
+
+@media screen and (max-width: 568px) {
+	.personalCabinet.personalCabinetSM table.userRoutsShedule thead,
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td:first-child:not(.completedTrip) {
+		display: none;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule[style*="table"],
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody,
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td:not(:first-child) {
+		display: block!important;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr {
+		display: flex;
+		flex-wrap: wrap;
+		background: #555d69fa;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr:not(:first-child) {
+		margin-top: 10px;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td {
+		padding: 10px!important;
+		height: auto!important;
+		box-sizing: border-box;
+		width: 100%;
+		flex: 0 0 100%;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td.completedTrip {
+		background-color: #a83e3e;
+		color: white;
+		margin: 0;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td:nth-child(2) {
+		width: 100%;
+		flex: 0 0 100%;
+		border-bottom: 1px solid;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td:nth-child(3),
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td:nth-child(4) {
+		width: 50%;
+		flex: 0 0 50%;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td:nth-child(5) {
+		display: flex!important;
+		justify-content: space-between;
+		width: 100%;
+		flex: 0 0 100%;
+		border-top: 1px dashed;
+		border-bottom: 1px dashed;
+		padding: 5px 10px!important;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td .print_link {
+		width: 30%;
+		flex: 0 0 30%;
+		font-size: 0.8em;
+		line-height: 28px;
+		text-decoration: none;
+		border-radius: 5px;
+		border: none;
+		background-color: darkslateblue;
+		color: white;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td:nth-child(6) {
+		display: flex!important;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		flex: 1 0 0%;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td:nth-child(6) a {
+		width: 30%;
+		flex: 0 0 30%;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td .to-pay {
+		line-height: 26px;
+	}
+	.personalCabinet.personalCabinetSM table.userRoutsShedule tbody tr td:nth-child(7) {
+		width: 100%;
+		flex: 0 0 100%;
+	}
+}
+
+.custom_link {
+	text-decoration: underline;
+}
+
+.custom_link:hover {
+	text-decoration: none;
+}
+
+.print_link {
+	font-size: 0.8em;
+	color: #a83e3e;
+	text-decoration: underline;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+
+.print_link:hover {
+	text-decoration: none;
+}
+
+td {
+	width: 10%;
+}
+
+td:nth-of-type(2) {
+	width: 40%;
+}
+
+
+/*-- not gor export end -- */
+/*-- personalCabinet page --*/
+
+.menuAndLogo{
+	width: 95%;
+} 
+.personalCabinet > div > .title{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	padding-left: 320px;
+	padding-bottom: 18px;
+}
+.personalCabinet > div > .left{
+	width: 20%;
+	padding-right: 30px;
+	box-sizing: border-box;
+}
+.personalCabinet > div > .right{
+	width: 80%;
+	box-sizing: border-box;
+	position: relative;
+}
+.menu_profile__active{
+	background-color: darkslateblue !important;
+	color:white !important;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right{
+	padding-top: 14px;
+	padding-left: 19px;		
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right{
+	background-color: #555d69fa;	
+	position: relative;
+	color: white;
+	padding-bottom: 17px;
+	border-radius: 10px;
+}
+ul#personalCabinetMenu{
+	font-size: 20px;
+	font-weight: bold;
+}
+ul#personalCabinetMenu > li > a,
+ul#personalCabinetMenu > li > span{
+	line-height: 44px;
+	background-color: #555d69fa;
+	border-radius: 10px;
+	display: block;
+	cursor: pointer;
+}
+ul#personalCabinetMenu > li.active a{
+	background-color: #f8c90f;
+	color: white;	
+}
+ul#personalCabinetMenu > *:nth-child(1n + 2){
+	margin-top: 5px;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData{
+	width: 437px;
+	padding-bottom: 11px;
+	border-bottom: 1px solid #d9d9d9;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData label{
+	font-size: 20px;
+	font-weight: bold;
+	height: 37px;
+	line-height: 34px;
+	display: block;
+	clear: both;
+	float: left;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData label:nth-of-type(1n + 2){
+	margin-top: 8px;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData input:nth-of-type(1n + 2){
+	margin-top: 8px;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData select{
+	margin-top: 8px;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData input[type = 'text'],
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData select{
+	display: block;
+	height: 37px;
+	line-height: 37px;
+	box-sizing: border-box;
+	border: 1px solid #e8e8e8;
+	border-radius: 10px;
+	background-color: #555d69fa;
+	color: white;
+	width: 225px;	
+	padding-left: 15px;
+	float: right;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData input[type = 'checkbox']{
+	margin-top: 0;
+	display: inline-block;
+	margin-right: 8px;
+	vertical-align: baseline;
+	margin-top: 17px;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData input[type="text"][disabled],
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData select[disabled]{
+	background-color: transparent;
+	float: left;
+	margin-left: 5px;
+	font-weight: bold;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData label.forCheckbox{
+	float: none;
+	display: inline-block;
+	width: auto;
+	color: #676767;
+	font-size: 18px;
+	font-weight: normal;
+	height: auto;
+	line-height: normal;
+	margin-top: 17px;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData label[for = 'confirmPassword'],
+.presonalCabinetMainBlock.personalCabinet > div > .right .userData input#confirmPassword{
+	display: none;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .saveChangeButton{
+	position: absolute;
+	top: 25px;
+	right: 24px;
+	color: white;
+	line-height: 49px;
+	text-align: center;
+	padding: 0 60px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .saveChangeButton.save{
+	background-color: #44b759;	
+	border-radius: 10px;
+}
+.presonalCabinetMainBlock.personalCabinet > div > .right .saveChangeButton.change{
+	background-color: #44b759;
+	padding: 0 24px;
+	border-radius: 10px;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser{
+	padding-top: 40px;
+	margin-top: 10px;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li{
+    border: 1px solid #c8c8c8;
+    box-sizing: border-box;
+    float: left;
+    height: 110px;
+    margin-right: 18px;
+    position: relative;
+    width: 150px;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li:last-of-type{
+	margin-right: 0;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li .bottomInfoWrapper{
+	line-height: 52px;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.customerStatus .bottomInfoWrapper{
+	line-height: normal;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li .pictureWrapper{
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.freeTrip .pictureWrapper{
+	top: -17px;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.treepsNum .pictureWrapper{
+	top: -17px;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.customerStatus .pictureWrapper{
+	top: -26px;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.discount .pictureWrapper{
+	top: -23px;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.bonusPoints .pictureWrapper{
+	top: -28px;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li .picture{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.treepsNum .picture{
+    background-image: url("../images/personalCabinet/1.png");
+    height: 35px;
+    width: 50px;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.freeTrip .picture{
+    background-image: url("../images/personalCabinet/2.png");
+    height: 35px;
+    width: 50px;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.discount .picture{
+    background-image: url("../images/personalCabinet/3.png");
+    height: 46px;
+    width: 46px;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.customerStatus .picture{
+    background-image: url("../images/personalCabinet/4.png");
+    height: 44px;
+    width: 35px;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.bonusPoints .picture{
+	background-image: url("../images/personalCabinet/5.png");
+	width: 42px;
+	height: 48px;
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li .picture{
+	padding: 0 5px;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li > .inscriptionWrapper{
+    display: table-cell;
+    height: 90px;
+    text-align: center;
+    vertical-align: middle;
+    width: 139px;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li > .inscriptionWrapper .nameInscription{
+    color: #5a5a5a;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 1em;
+    vertical-align: middle;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.customerStatus > .bottomInfoWrapper{
+    box-sizing: border-box;
+    padding-top: 13px;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li > .bottomInfoWrapper{
+    bottom: 0;
+    height: 52px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li > .bottomInfoWrapper > div{
+    color: #009746;
+    font-size: 30px;
+    font-weight: bold;
+    vertical-align: middle;	
+}
+.presonalCabinetMainBlock.personalCabinet ul.infoForUser > li.customerStatus > .bottomInfoWrapper > div{
+    background-color: #d1d1d1;
+    color: darkslateblue;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 21px;
+	height: 25px;
+    padding: 0 8px;
+	font-weight: normal;	
+}
+.presonalCabinetMainBlock.personalCabinet p.thereIsTheBus{
+	line-height: 35px;
+	height: 35px;
+	background-repeat: no-repeat;
+	background-position: left center;	
+	background-image: url('../images/personalCabinet/miniBus.png');
+	margin-top: 35px;	
+	position: relative;	
+}
+.presonalCabinetMainBlock.personalCabinet p.thereIsTheBus > a{
+	position: absolute;
+	left: 77px;
+	bottom: 5px;
+	line-height: 1em;
+	color: #ff9000;
+	font-size: 20px;
+	text-transform: uppercase;
+	border-bottom: 1px dashed #ff9000;
+	display: inline-block;
+	vertical-align: -5px;
+}
+.ticketWidth{
+	background-color: #555d69fa;
+	border-radius: 10px;
+}
+.presonalCabinetMainBlock.personalCabinet{
+	margin-bottom: 70px;
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li{
+	float: left;
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li:nth-of-type(1n + 2){
+	margin-left: 10px;
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li > a{
+	display: block;
+	line-height: 42px;
+	width: 180px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	background-color: #555d69fa;
+	cursor: pointer;
+}
+.personalCabinet.myTickets > div > .right .switchMinibusesButtonsList > li > a.active{
+	background-color: #009746;
+	color: white;
+	font-weight: bold;
+}
+.personalCabinet.myTickets table.userRoutsShedule{
+	margin-top: 19px;
+	font-size: 20px;
+	display: none;
+}
+
+.personalCabinet.myTickets table.userRoutsShedule col:nth-of-type(1){width: 46px}
+.personalCabinet.myTickets table.userRoutsShedule col:nth-of-type(2){width: 215px}
+.personalCabinet.myTickets table.userRoutsShedule col:nth-of-type(3){width: 147px}
+.personalCabinet.myTickets table.userRoutsShedule col:nth-of-type(4){width: 157px}
+.personalCabinet.myTickets table.userRoutsShedule col:nth-of-type(5){width: 122px}
+.personalCabinet.myTickets table.userRoutsShedule td,
+.personalCabinet.myTickets table.userRoutsShedule th{
+	height: 36px;	
+}
+.personalCabinet.myTickets table.userRoutsShedule th{
+	text-align: left;
+	background-color: #555d69fa;
+	border-radius: 10px;
+	border: 1px solid white;
+	line-height: 1em;
+}
+.personalCabinet.myTickets table.userRoutsShedule td{
+	position: relative;
+}
+.personalCabinet.myTickets table.userRoutsShedule th:first-of-type,
+.personalCabinet.myTickets table.userRoutsShedule td:first-of-type{
+	text-align: center;
+}
+.personalCabinet.myTickets table.userRoutsShedule th:nth-of-type(1n + 2),
+.personalCabinet.myTickets table.userRoutsShedule td:nth-of-type(1n + 2){
+	padding-left: 5px;
+}
+.personalCabinet .completedTrip{
+	font-size: 20px;
+	color: #a83e3e;	
+}
+.personalCabinet.myTickets .completedTrip{
+	margin-top: 16px;
+}
+.personalCabinet.myTickets .removeRow,
+.personalCabinet.myTickets .purse,
+.personalCabinet.myTickets .confirmation{
+	cursor: pointer;
+	border-radius: 10px;
+}
+.personalCabinet.myTickets .confirmation{
+	background-position: center-center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url('/images/ticks/tick2.png');
+	top: 0; 
+	right: -155px;
+/* background-color: rgba(219,245,129,0.8);	 */
+
+}
+.personalCabinet.myTickets .removeRow{
+	text-align: center;
+	line-height: 31px;
+	font-size: 33px;
+	font-weight: bold;
+	color: white;
+	background-color: #a83e3e;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+}
+.personalCabinet.myTickets .purse{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('../images/purse.png');
+	background-color: #44b759;
+	top: 0;
+	right: -103px;
+}	
+.personalCabinet.myTickets .giveReview{
+	height: 30px;
+	line-height: 28px;
+	width: 91px;
+	top: 2px;
+	padding: 5px;
+	color: white;
+	font-size: 19px;
+	box-sizing: border-box;
+	padding-left: 29px;
+	background-color: seagreen;
+	border-radius: 10px;
+	font-weight: bold;
+	background-image: url('../images/pencil.png');
+	background-repeat: no-repeat;
+	background-position: 8px center;
+	cursor: pointer;	
+	transition-property: background-color, background-position, box-shadow;
+	transition-duration: 0.7s;
+}
+.switchMinibusesButtonsList > li > a {
+	border-radius: 10px;
+}
+.personalCabinet.myTickets .giveReview:hover{
+	background-color: #535992;
+	background-position: 12px;
+	box-shadow: 0 0 0 1px #535992;
+}
+.personalCabinet.myTickets .reviewPopup{
+	position: absolute;
+	left: 0;
+	top: -19px;	
+	width: 682px;
+	box-sizing: border-box;
+	background-color: #555d69;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	padding-left: 19px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	z-index: 1;
+}
+.personalCabinet.myTickets .reviewPopup .title{
+	font-size: 23px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+textarea{
+	padding: 0;
+}
+.personalCabinet.myTickets .reviewPopup textarea{
+	width: 100%;
+	height: 192px;
+	border: 1px solid #eeeeee;
+	border-radius: 10px;
+	background-color: #555d69fa;
+	font-size: 16px;
+	font-family: inherit;
+	line-height: normal;
+	margin-bottom: 11px;
+	resize: none;
+}
+.personalCabinet.myTickets .evaluationTitle{
+	font-size: 19px;
+	float: left;
+}
+.personalCabinet.myTickets .gradeStars{
+	float: left;
+	margin-bottom: 0;
+	padding-top: 1px;
+	margin-left: 5px;
+}
+.personalCabinet.myTickets .gradeStars li{
+	cursor: pointer;
+}
+.personalCabinet.myTickets .reviewPopup .sendReviewButt{
+	position: absolute;
+	bottom: 9px;
+	right: 20px;
+	font-size: 19px;
+	color: white;
+	height: 33px;
+	line-height: 32px;
+	padding: 0 23px;
+	box-sizing: border-box;
+	background-color: seagreen;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.personalCabinet.myTickets .reviewPopup .closeButt{
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 32px;
+	width: 35px;
+	line-height: 31px;
+	background-color: rgb(57, 170, 106);
+	text-align: center;
+	border-radius: 10px;
+	font-size: 23px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 0 4px 0 0;
+}
+/*-- myTickets end-- */
+/*-- rewardPoints --*/
+.personalCabinet.rewardPoints{
+	margin-bottom: 70px;
+}
+.personalCabinet.rewardPoints .pointsCount{
+	font-size: 24px;
+	color: #313131;	
+}	
+.personalCabinet.rewardPoints .pointsCount span{
+	color: #ff9000;
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+.personalCabinet.rewardPoints  table.pointsInfo{
+	border-collapse: collapse;
+	color: #4f4f4f;
+	font-size: 20px;
+	margin-top: 13px;
+	text-align: left;
+	width: 100%;
+}
+.personalCabinet.rewardPoints  table.pointsInfo col:nth-of-type(1){width: 150px;}
+.personalCabinet.rewardPoints  table.pointsInfo col:nth-of-type(2){width: 530px;}
+.personalCabinet.rewardPoints  table.pointsInfo thead{
+	background-color: #f7f7f7;
+	color: #5a5a5a;
+	border-bottom: 1px solid #c2c2c2;	
+}
+.personalCabinet.rewardPoints  table.pointsInfo th{
+	height: 42px;		
+	padding-left: 14px;
+}
+.personalCabinet.rewardPoints  table.pointsInfo td{
+	height: 36px;
+	padding-left: 14px;
+}
+.personalCabinet.rewardPoints  table.pointsInfo tr{
+	border-bottom: 1px solid #dbdbdb;	
+}
+.personalCabinet.rewardPoints  table.pointsInfo tr:last-of-type{
+	border-bottom: none;
+}
+.personalCabinet.rewardPoints  table.pointsInfo tr:nth-of-type(even){
+	background-color: #f7f7f7;
+}
+/*-- rewardPoints end--*/
+/*-- minibusLocation --*/
+.personalCabinet.minibusLocation{
+	margin-bottom: 38px;
+}
+.personalCabinet.minibusLocation .completedTrip{
+	line-height: 1em;
+	margin-bottom: 20px;
+}
+.personalCabinet.minibusLocation iframe{
+	width: 100%;
+	height: 340px;
+}
+/*-- minibusLocation end --*/
+/*-- popup of ticket page --*/
+.personalCabinet .popupWrapper{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 3;
+	display: none;
+}	
+.personalCabinet .popupWrapper .popup{
+	width: 650px;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: #555d69fa;
+	box-sizing: border-box;
+	padding: 30px 20px 30px 20px;	
+}
+.personalCabinet .popupWrapper .popup .question{
+	margin-bottom: 30px;
+	font-size: 20px;
+	text-align: center;
+}
+.personalCabinet .popupWrapper .popup .buttWrapp{
+	text-align: center;
+}
+.personalCabinet .popupWrapper .popup .butt{
+	display: inline-block;
+	padding: 0 40px;
+	line-height: 40px;
+	color: white;
+	font-size: 21px;	
+	font-weight: bold;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.personalCabinet .popupWrapper .popup .butt.yes{
+	background-color: #44b759;
+	border-radius: 10px;
+}
+.personalCabinet .popupWrapper .popup .butt.no{
+	background-color: #ff0000;
+	margin-left: 30px;
+	border-radius: 10px;
+}
+/*-- popup of ticket page end--*/
+/*-- reviews --*/
+.personalCabinet.reviews{
+	margin-bottom: 34px;
+}
+.personalCabinet.reviews .reviewsTable{
+	color: #5a5a5a;
+	border-collapse: collapse;
+}
+.personalCabinet.reviews .reviewsTable colgroup col:nth-of-type(1){width: 36px;}
+.personalCabinet.reviews .reviewsTable colgroup col:nth-of-type(2){width: 175px;}
+.personalCabinet.reviews .reviewsTable colgroup col:nth-of-type(3){width: 139px;}
+.personalCabinet.reviews .reviewsTable thead{
+	font-weight: bold;
+	font-size: 21px;
+	text-align: left;
+	height: 35px;
+	background-color: #f7f7f7;
+}
+th{
+	padding: 0;
+}
+.personalCabinet.reviews .reviewsTable tbody{
+	font-size: 21px;
+}
+.personalCabinet.reviews .reviewsTable td, .personalCabinet.reviews .reviewsTable th{
+	padding-left: 10px;
+	border: 1px solid #cecece;
+}
+.personalCabinet.reviews .reviewsTable td:first-of-type,
+.personalCabinet.reviews .reviewsTable th:first-of-type{
+	text-align: center;
+	padding-left: 0;
+}
+.personalCabinet.reviews .reviewsTable td:last-of-type{
+	padding-bottom: 20px;
+	padding-top: 12px;
+	padding-right: 35px;
+}
+.personalCabinet .gradeStars{
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.personalCabinet .gradeStars > li{
+	float: left;
+	width: 23px;
+	height: 22px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('../images/grayStar.png');		
+}
+.personalCabinet .gradeStars > li:nth-of-type(1n + 2){
+	margin-left: 4px;
+}
+.personalCabinet .gradeStars > li.golden{
+	background-image: url('../images/goldenStar.png');	
+}
+.return-checkbox {
+	cursor: pointer;
+}
+
+.d-none	{
+	display: none;
+}
+
+/*-- reviews end --*/
+
+
+
+
+
+
+
+

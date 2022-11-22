@@ -1,0 +1,1 @@
+<a href="{{ $url }}" target="_blank"><span class="label label-warning"><i class="fa fa-hand-o-right"></i> {{trans('admin.filter.go')}}</span></a>

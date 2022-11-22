@@ -1,0 +1,421 @@
+input{
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+body > .orderPage{
+	background-color: white;
+	padding-top: 0;
+}
+.mainOrderBlock{
+	font-size: 18px;
+	color: #404040;
+	padding-bottom: 28px;
+	width: 1170px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+.mainOrderBlock p.title{
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 1.9em;
+}
+.mainOrderBlock > .left,
+.mainOrderBlock > .right,
+.mainOrderBlock{
+	background-color: white;
+}
+.mainOrderBlock > .left{
+	width: 502px;
+	box-sizing: border-box;
+	padding-right: 22px;
+}
+.mainOrderBlock > .right{
+	width: 668px;
+	box-sizing: border-box;
+}
+.mainOrderBlock > .left > .narrow{
+	width: 572px;
+}
+.mainOrderBlock > .left .authorizationButtons .popupButton{
+	display: block;
+	color: white;
+	font-size: 24px;
+	line-height: 43px;
+	height: 45px;
+	cursor: pointer;
+	text-align: center;
+}
+.mainOrderBlock > .left .authorizationButtons{
+	padding-bottom: 45px;
+}
+.mainOrderBlock > .left .enterButWrapp{
+	float: left;
+	position: relative;
+}
+.mainOrderBlock > .left .registButWrapp{
+	float: right;
+	position: relative;
+} 
+.mainOrderBlock > .left .authorizationButtons .enterBut{
+	width: 182px;
+	background-color: #f8c90f;
+	position: relative;
+}
+.mainOrderBlock > .left .authorizationButtons .registBut{
+	width: 278px;
+	background-color: #ff4200;
+	position: relative;
+}
+.mainOrderBlock > .left .authorizationButtons .registBut .arrowBlock{
+	position: absolute;
+	width: 60px;
+	height: 26px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('../images/orderPage/registrationArrow.png');
+	top: -25px;
+	right: -42px;
+}
+.mainOrderBlock > .left ul.flightInfo{
+	border-top: 1px dashed #d1d1d1;
+	border-bottom: 1px dashed #d1d1d1;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	margin-bottom: 5px;
+}
+.mainOrderBlock > .left ul.flightInfo li{
+	line-height: 26px;	
+}
+.mainOrderBlock > .left ul.flightInfo .value{
+	font-weight: bold;
+	margin-left: 5px;
+}
+.mainOrderBlock > .left .placeNum{
+	font-weight: bold;
+	clear: both;
+}
+.mainOrderBlock > .left ul.infoForUser{
+	padding-top: 40px;
+}
+.mainOrderBlock > .left ul.infoForUser > li{
+	width: 139px;
+	height: 110px;
+	box-sizing: border-box;
+	border: 1px solid #c8c8c8;
+	float: left;
+	margin-right: 13px;
+	position: relative;	
+}
+.mainOrderBlock > .left ul.infoForUser > li > .inscriptionWrapper{
+	height: 90px;
+	text-align: center;	
+	display: table-cell;
+	vertical-align: middle;
+	width: 139px;
+}
+.mainOrderBlock > .left ul.infoForUser > li > .inscriptionWrapper .nameInscription{
+	line-height: 1em;
+	vertical-align: middle;
+	color: #5a5a5a;
+	display: inline-block;
+	font-size: 17px;
+}
+.mainOrderBlock > .left ul.infoForUser > li > .bottomInfoWrapper{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 52px;
+	text-align: center;	
+}
+.mainOrderBlock > .left ul.infoForUser > li:nth-of-type(1n + 2){
+	line-height: 52px;	
+}
+.mainOrderBlock > .left ul.infoForUser > li.customerStatus > .bottomInfoWrapper{
+	box-sizing: border-box;
+	padding-top: 13px;
+}
+.mainOrderBlock > .left ul.infoForUser > li.customerStatus > .bottomInfoWrapper > div{
+	color: white;
+	font-size: 18px;
+	line-height: 25px;
+	padding: 0 8px;
+	background-color: #d1d1d1;
+	display: inline-block;
+}
+.mainOrderBlock > .left ul.infoForUser > li:nth-of-type(1n + 2) > .bottomInfoWrapper > div{
+	vertical-align: middle;
+	color: #ff9000;
+	font-size: 30px;
+	font-weight: bold;
+}
+.mainOrderBlock > .left ul.infoForUser > li .pictureWrapper{
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.mainOrderBlock > .left ul.infoForUser > li .picture{
+	display: inline-block;	
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: white;
+}
+.mainOrderBlock > .left ul.infoForUser > li.customerStatus .pictureWrapper{
+	top: -26px;
+}
+.mainOrderBlock > .left ul.infoForUser > li.customerStatus .picture{
+	height: 44px;
+	width: 35px;	
+	background-image: url(../images/orderPage/1.png);		
+}
+.mainOrderBlock > .left ul.infoForUser > li.discount .pictureWrapper{
+	top: -23px;
+}
+.mainOrderBlock > .left ul.infoForUser > li.discount .picture{
+	height: 46px;
+	width: 46px;
+	background-image: url(../images/orderPage/2.png);		
+}
+.mainOrderBlock > .left ul.infoForUser > li.freeTrip .pictureWrapper{
+	top: -17px;
+}
+.mainOrderBlock > .left ul.infoForUser > li.freeTrip .picture{
+	height: 35px;
+	width: 50px;
+	background-image: url(../images/orderPage/3.png);	
+}
+.mainOrderBlock > .right .mainTitle{
+	color: #464646;
+	font-size: 34px;
+	margin-bottom: 28px;
+	font-weight: bold;
+	margin-top: -10px;
+}
+.mainOrderBlock > .right .mainTitle span.numeral{
+	font-size: 51px;
+	font-family: raleway, sans-serif;
+	color: #f8c90f;
+	font-weight: 800;
+}
+.mainOrderBlock > .right .mainTitle span.underline{
+	text-decoration: underline;
+}
+.mainOrderBlock > .right ul.paymentMethod > li .listTitle{
+	line-height: 50px;
+	background-color: #f2f2f2;
+	padding-left: 50px;
+	border-bottom: 1px dashed #b8b8b8;
+}
+.mainOrderBlock > .right ul.paymentMethod > li:first-of-type .listTitle{
+	border-top: 1px solid #3b3b3b;
+}
+.mainOrderBlock > .right ul.paymentMethod > li .listTitle{
+	background-repeat: no-repeat;
+	background-image: url(../images/orderPage/marker.png);
+	background-position: 18px center;
+	cursor: pointer;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.active .listTitle{
+	background-image: url(../images/orderPage/activeMarker.png);	
+}
+.mainOrderBlock > .right ul.paymentMethod > li .innerList{
+	padding-left: 35px;
+	padding-top: 17px;
+	padding-bottom: 17px;	
+}
+.mainOrderBlock > .right ul.paymentMethod > li .innerList > li{
+	background-repeat: no-repeat;
+	background-image: url(../images/orderPage/marker.png);
+	background-position: 18px center;
+	cursor: pointer;	
+	line-height: 31px;
+	padding-left: 50px;	
+}
+.mainOrderBlock > .right ul.paymentMethod > li .innerList > li.active{
+	background-image: url(../images/orderPage/activeMarker.png);	
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm input[type = 'text'],
+.mainOrderBlock > .right .unregisteredUserForm input[type = 'text']{
+	width: 265px;
+	height: 33px;
+	box-sizing: border-box;
+	border: 1px solid #888888;
+	line-height: 32px;
+	padding-left: 5px;
+}
+.mainOrderBlock > .right .unregisteredUserForm input[type = 'text']{
+	display: block;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm > div,
+.mainOrderBlock > .right .unregisteredUserForm > div{
+	width: 286px;
+	box-sizing: border-box;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm > div.right{
+	padding-left: 21px;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm label,
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm input,
+.mainOrderBlock > .right .unregisteredUserForm label,
+.mainOrderBlock > .right .unregisteredUserForm input{
+	display: block;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm label,
+.mainOrderBlock > .right .unregisteredUserForm label{
+	font-size: 16px;
+	line-height: 1.9em;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm label:nth-of-type(1n + 2){
+	margin-top: 11px;	
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm label.mandatory::before,
+.mainOrderBlock > .right .unregisteredUserForm label.mandatory::before{
+	content: '*';
+	color: red;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.forLegalEntities .legalEntitiesForm{
+	padding-bottom: 30px;
+	padding-top: 23px;
+}
+.mainOrderBlock > .right .installmentForm .inputWrapper{
+	position: relative;
+	height: 39px;
+	width: 350px;	
+}
+.mainOrderBlock > .right .installmentForm  input[type = 'text']{	
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 39px;
+	border: 1px solid #bababa;
+	color: inherit;	
+	box-sizing: border-box;
+	padding-left: 5px;	
+}
+.mainOrderBlock > .right .installmentForm .inputWrapper:nth-of-type(1n + 2){
+	margin-top: 9px;
+}
+.mainOrderBlock > .right .installmentForm .enterButton{
+	width: 60px;
+	height: 39px;
+	line-height: 39px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: white;
+	font-family: raleway, sans-serif;
+	font-size: 19px;
+	text-align: center;
+	font-weight: 600;
+	cursor: pointer;
+}
+.mainOrderBlock > .right .installmentForm .inputWrapper:nth-of-type(1) .enterButton{
+	background-color: #d1d1d1;
+}
+.mainOrderBlock > .right .installmentForm .inputWrapper:nth-of-type(2) .enterButton{
+	background-color: #6bd43e;
+}
+.mainOrderBlock > .right ul.paymentMethod > li > .latentBlock{
+	display: none;
+}
+.mainOrderBlock > .right ul.paymentMethod > li.active > .latentBlock{
+	display: block;
+}
+.mainOrderBlock > .right ul.paymentMethod{
+	margin-bottom: 18px;
+}
+.mainOrderBlock > .right .discountsSumInfo{
+	font-size: 18px;
+	color: #ff4200;
+	border-bottom: 1px solid #383838;
+	padding-bottom: 7px;
+	padding-top: 15px;
+}
+.mainOrderBlock > .right > .narrow ul.purse{
+	width: 345px;
+	color: black;
+	padding-top: 25px;
+	padding-bottom: 30px;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li{
+	height: 69px;
+	clear: both;
+	line-height: 69px;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .left{
+	padding-left: 62px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url('../images/orderPage/purse.png');
+}
+.mainOrderBlock > .right > .narrow ul.purse  .red{
+	color: red;
+}
+.mainOrderBlock > .right > .narrow ul.purse  div.lineThrough{
+	text-decoration: line-through;
+	display: inline-block;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .left .multipiler{
+	font-size: 29px;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .left .multipilerInscr{
+	font-size: 22px;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .right{
+	font-size: 29px;
+	position: relative;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .right .ruble{
+	font-size: 17px;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .right .underInscription{
+	/*position: absolute;*/
+	right: 0;
+	bottom: -7px;
+	color: #868686;
+	font-size: 19px;
+	line-height: normal;
+	white-space: nowrap;
+}
+.mainOrderBlock > .right > .narrow ul.purse > li > .right .underInscription .ruble{
+	font-size: 15px;
+}
+.mainOrderBlock > .right > .narrow div.inTotal{
+	color: black;
+	width: 345px;
+	clear: both;
+	line-height: 35px;
+	padding-bottom: 22px;
+}
+.mainOrderBlock > .right > .narrow div.inTotal > .left{
+	font-size: 24px;
+}
+.mainOrderBlock > .right > .narrow div.inTotal > .right{
+	font-size: 29px;
+}
+.mainOrderBlock > .right > .narrow div.inTotal > .right .ruble{
+	font-size: 17px;
+}
+.mainOrderBlock > .right .confirmReservations{
+	border: none;
+	background: none;
+	font-family: inherit;
+	line-height: 44px;
+	color: white;
+	font-size: 24px;
+	padding: 0 40px;
+	display: inline-block;
+	background-color: #44b759;
+	cursor: pointer;	
+}
+
+
+
+
+
+
+
+

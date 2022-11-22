@@ -1,0 +1,14 @@
+body .reservationsWindWrapp_embedded {
+    padding: 0;
+    text-align: unset;
+}
+
+body .reservationsWindWrapp_embedded form#reservations {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+}
+
+body .reservationsWindWrapp_embedded .reservRoundWrapp {
+    display: none;
+}

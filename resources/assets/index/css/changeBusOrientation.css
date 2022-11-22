@@ -1,0 +1,123 @@
+.busBodeyWrapp.vertical{
+	
+}
+.busBodeyWrapp.vertical .busBodey{
+	width: 180px;
+}
+.busBodeyWrapp.vertical .busBodey{
+	height: auto;
+}
+.sheduleBlock div.shedule > div.busRow > div .busBodeyWrapp.vertical{
+	padding: 0 17px;
+}
+.busLayoutBlock .busBodeyWrapp.vertical .busBodey .seats{
+    padding-right: 18px;
+    padding-top: 165px;	
+	padding-left: 0;	
+}
+.busBodeyWrapp.vertical .cell{
+	clear: none !important;
+	margin: 0 5px 18px 0;
+}
+.busBodeyWrapp.vertical .cell:nth-of-type(4n + 1){
+	clear: both !important;
+}
+.busLayoutBlock .busBodeyWrapp.vertical .busBodey{
+	padding-right: 0;
+	padding-bottom: 49px;
+}
+.busLayoutBlock .busBodeyWrapp.vertical .busBodey::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.busBodeyWrapp.vertical .busBodey .frontPart{
+	bottom: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-image: url("../images/minibus/frontPartV.png");
+	width: auto;
+	height: 222px;	
+}
+.busBodeyWrapp.vertical .busBodey .backPart{
+	top: auto;
+	left: 0;
+	background-image: url("../images/minibus/backPartV.png");
+	width: auto;
+	height: 49px;
+}
+.busBodeyWrapp.vertical .busBodey .centralPart{
+	background-image: url("../images/minibus/centralPartV.png");
+	top: 56px;
+	bottom: 27px;
+	right: 0;
+	left: 0;	
+}
+.busBodeyWrapp.vertical .busBodey .mirror{
+	width: 17px;
+	height: 13px;
+	top: 117px;
+	left: auto;
+}
+.busBodeyWrapp.vertical .busBodey .leftMirror{
+	left: -16px;
+	background-image: url("../images/minibus/leftMirrorV.png");	
+}
+.busBodeyWrapp.vertical .busBodey .rightMirror{
+	right: -16px;
+	background-image: url("../images/minibus/rightMirrorV.png");	
+}
+/*- 5 rows of seats -*/
+.busBodeyWrapp.vertical .fiveRowsOfSeats .cell:nth-of-type(4n+1){
+	clear: none !important;
+}
+.busBodeyWrapp.vertical .fiveRowsOfSeats .cell:nth-of-type(5n+1){
+	clear: both !important;
+}
+.busLayoutBlock .busBodeyWrapp.vertical .busBodey.fiveRowsOfSeats{
+	width: 215px;
+	padding-bottom: 58px;
+}
+.busLayoutBlock .busBodeyWrapp.vertical .busBodey.fiveRowsOfSeats .seats{
+	padding-top: 197px;
+}
+.busBodeyWrapp.vertical .busBodey.fiveRowsOfSeats .frontPart{
+	height: 265px;
+}
+.busBodeyWrapp.vertical .busBodey.fiveRowsOfSeats .backPart{
+	height: 59px;
+}
+.busBodeyWrapp.vertical .busBodey.fiveRowsOfSeats .mirror{
+	top: 134px;
+}
+/*- 5 rows of seats end-*/
+/*- 5 rows of seats -*/
+.busBodeyWrapp.vertical .threeRowsOfSeats .cell:nth-of-type(4n+1){
+	clear: none !important;
+}
+.busBodeyWrapp.vertical .threeRowsOfSeats .cell:nth-of-type(3n+1){
+	clear: both !important;
+}
+.busLayoutBlock .busBodeyWrapp.vertical .busBodey.threeRowsOfSeats{
+	width: 145px;
+	padding-bottom: 39px;
+}
+.busLayoutBlock .busBodeyWrapp.vertical .busBodey.threeRowsOfSeats .seats{
+	padding-top: 132px;
+}
+.busBodeyWrapp.vertical .busBodey.threeRowsOfSeats .frontPart{
+	height: 178px;
+}
+.busBodeyWrapp.vertical .busBodey.threeRowsOfSeats .backPart{
+	height: 39px;
+}
+.busBodeyWrapp.vertical .busBodey.threeRowsOfSeats .mirror{
+	top: 89px;
+}
+/*- 5 rows of seats end -*/
+
+
+
+
+

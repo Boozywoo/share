@@ -1,0 +1,1460 @@
+@font-face{
+	font-family: raleway;
+	src: url('../fonts/raleway/ttf/Raleway-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: raleway;
+	src: url('../fonts/raleway/ttf/Raleway-Regular-Italic.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face{
+	font-family: raleway;
+	src: url('../fonts/raleway/ttf/Raleway-Medium.ttf');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face{
+	font-family: raleway;
+	src: url('../fonts/raleway/ttf/Raleway-SemiBold.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face{
+	font-family: raleway;
+	src: url('../fonts/raleway/ttf/Raleway-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face{
+	font-family: raleway;
+	src: url('../fonts/raleway/ttf/Raleway-Bold-Italic.ttf');
+	font-weight: italic;
+	font-style: bold;
+}
+@font-face{
+	font-family: raleway;
+	src: url('../fonts/raleway/ttf/Raleway-ExtraBold.ttf');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face{
+	font-family: raleway;
+	src: url('../fonts/raleway/ttf/Raleway-Black.ttf');
+	font-weight: 900;
+	font-style: normal;
+}
+/*	normal - 400;
+	medium - 500;	
+	semibold - 600;
+	bold - 700;	
+	extrabold - 800;
+	black - 900;
+*/
+/* -- COMMON STYLES -- */
+body{
+	font-family: calibri, sans-serif;
+	color: #323232;
+	font-size: 16px;	
+}
+html body, html ul{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+p{
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+h1,h2,h3,h4,h5{
+	margin: 0;
+	padding: 0;	
+}
+h2{
+	font-family: raleway, sans-serif;
+	font-size: 35px;
+	text-align: center;
+	font-weight: 500;
+	line-height: 1em;
+	padding-bottom: 17px;	
+	position: relative;	
+}
+input{
+	border: none;
+	padding: 0;
+	border-radius: 0;
+	margin: 0;
+}
+div.autoHeight{
+	height: auto;
+}
+.headerLineWrapper{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.headerLineWrapper::after{
+	content: '';
+	display: block;
+	height: 1px;
+	width: 76px;
+	background-color: #f8c90f; 	
+	margin: 0 auto;
+}
+.owrCars .headerLineWrapper::after, .systemOfDiscounts .headerLineWrapper::after{
+	background-color: #ff9000;
+}
+.mainWidth{
+	width: 1170px;
+	margin: 0 auto;
+}
+.thirdMainWidth{
+	width: 1262px;
+	margin: 0 auto;
+}
+.left{
+	float: left;	
+}
+.right{
+	float: right;
+}
+.span{
+	display: inline-block;
+}
+.golden{
+	color: #f8c90f;
+}
+/* -- COMMON STYLES END -- */
+/* -- top block -- */
+.topBlock{
+	height: 924px;
+	background-image: url('../images/mainTopBackground.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	position: relative;
+	box-sizing: border-box;
+}
+
+/* -- registrationContacts -- */
+.registrationContactsWrapper{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 60px;
+}	
+.topBlock .registrationContacts{
+	line-height: 60px;
+	font-family: raleway;
+	font-weight: 800;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+	padding-bottom: 10px;	
+}
+.topBlock .registrationContacts > .contacts{
+	padding-top: 10px;
+}
+.topBlock .registrationContacts .contacts{
+	
+}	
+.topBlock .registrationContacts .contacts  p.span{
+	line-height: 1em;
+	vertical-align: middle;	
+}
+.topBlock .registrationContacts .contacts  p.span:nth-of-type(1){
+	color: #f8c90f;
+	font-size: 48px;
+	position: relative;
+	top: -7px;
+}
+.topBlock .registrationContacts .contacts  p.span:nth-of-type(2){
+	color: white;
+	font-size: 17px;
+	margin-left: 12px;
+}
+.topBlock .registration{
+	line-height: normal;
+	position: relative;
+}
+.topBlock .registration > div > ul{
+	margin-top: 23px;
+}
+.topBlock .registration > div > ul > li{
+	float: left;
+}
+.topBlock .registration > div > ul > li > a{
+	text-transform: uppercase;
+	font-size: 16px;
+	cursor: pointer;
+}
+.topBlock .registration > div > ul > li:first-of-type{
+	color: white;
+	padding-right: 10px;
+	position: relative;	
+	margin-left: 5px;
+}
+.topBlock .registration > div > ul > li:first-of-type::after{
+	content: '';
+	display: block;
+	width: 2px;
+	height: 16px;
+	position: absolute;
+	right: 0;
+	bottom: 3px;
+	background-color: white;
+}
+.topBlock .registration > div > ul > li:nth-of-type(2){
+	color: #f8c90f;
+	padding-left: 7px;
+}
+.topBlock .registration > div > ul > li:nth-of-type(3){
+	clear: both;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.topBlock .registration > div > ul > li:nth-of-type(3) > a{
+	animation-name: downloadApplButton;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	display: block;
+	background-color: rgba(0,0,0,0.4);
+	padding: 0 5px; 
+	border-radius: 2px;
+}
+@keyframes downloadApplButton{
+	from{
+		color: white;
+	}50%{
+		color: #f8c90f;
+		transform: scale(1.1);
+		box-shadow: 0 0 1px 1px #7d529e;
+	}to{
+		color: white;
+	}
+}
+/*-- registration in order page --*/
+.mainOrderBlock .registrationFormWrapperPU{
+	display: none;
+	font-size: 16px;
+    left: -76px;
+    top: 62px;	
+	text-align: left;
+}
+/*-- registration in order page end --*/
+
+.registrationFormWrapperPU{
+	border-radius: 3px;
+	background-color: white;
+	width: 432px;
+	box-sizing: border-box;
+	padding: 0 11px 12px 15px;
+	position: absolute;
+	z-index: 1;
+	font-weight: normal;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.3);	
+	display: none;	
+}
+.topBlock .registrationFormWrapperPU{
+	top: 32px;
+	left: -200px;	
+}
+.registrationFormWrapperPU::before{
+	display: inline-block;
+	position: absolute;
+	content: '';
+	left: 205px;
+	top: -9px;
+	border-bottom: 9px solid white;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;	
+}
+.registrationFormWrapperPU .registraitonForm{
+	overflow: hidden;
+}
+.registrationFormWrapperPU .registraitonForm input[type = 'text']{
+	height: 30px;
+	width: 184px;
+	box-sizing: border-box;
+	border: 1px solid #c3c3c3;
+	font-family: calibri, sans-serif;
+	color: #acacac;
+	font-size: 16px;
+	padding-left: 7px;
+	border-radius: 3px;
+	margin-top: 12px;	
+}
+.registrationFormWrapperPU .registraitonForm input[type = 'text']::-moz-placeholder{
+	color: #8d8c8c; 
+}
+.registrationFormWrapperPU .registraitonForm input[type = 'text']::-webkit-input-placeholder{
+	color: #8d8c8c;
+}
+.registrationFormWrapperPU .acceptanceOfConditions{
+	font-size: 14px;
+	color: #676767;
+	font-family: calibri, sans-serif;
+	font-weight: normal;
+	width: 165px;
+	line-height: 1em;
+	margin-top: 12px;
+}
+.registrationFormWrapperPU .acceptanceOfConditions input[type = 'checkbox']{
+	margin-right: 6px;
+}
+.registrationFormWrapperPU .acceptanceOfConditions a{
+	color: #f8c90f;
+	text-decoration: underline;
+}
+.registrationFormWrapperPU .bottomBlock{
+	padding-top: 11px;
+	font-family: calibri, sans-serif;
+	clear: both;
+}
+.registrationFormWrapperPU .statusTitle{
+	font-size: 14px;
+	color: #676767;
+	margin-bottom: 3px;
+}
+.registrationFormWrapperPU .status{
+	font-size: 12px;
+	color: #797979;
+	overflow: hidden;
+}
+.registrationFormWrapperPU .status > li{
+	float: left;
+}
+.registrationFormWrapperPU .status > li > a{
+	line-height: 25px;
+	border: 1px solid #f8c90f;	
+	cursor: pointer;
+	line-height: 25px;
+	display: block;
+	padding: 0 4px;
+	transition-property: color, background-color;
+	transition-duration: 0.7s;	
+}
+.registrationFormWrapperPU .status > li:nth-of-type(2) > a{
+	padding: 0 6px;
+}
+.registrationFormWrapperPU .status > li:nth-of-type(3) > a{
+	padding: 0 6px;
+}
+.registrationFormWrapperPU .status > li:nth-of-type(1n + 2) > a{
+	border-left: none;	
+}
+.registrationFormWrapperPU input[type = 'submit'].register{
+	background: none;
+	color: white;
+	background-color: #ff9000;
+	line-height: normal;
+	height: 28px;
+	box-sizing: border-box;
+	font-family: calibri, sans-serif;
+	border-radius: 3px;
+	border: 1px solid rgba(255,144,0,0.5);
+	background-clip: padding-box;
+	cursor: pointer;
+	width: 147px;
+	padding-bottom: 2px;
+}
+.registrationFormWrapperPU .status > li > a.active, .topBlock .registration .status > li > a:hover{
+	background-color: #f8c90f;
+	color: white;
+}
+.registrationFormWrapperPU .bottomBorder{
+	clear: both;
+	padding-top: 11px;
+	margin-bottom: 9px;
+}
+.registrationFormWrapperPU .bottomBorder::after{
+	box-sizing: content-box;
+	content: '';
+	display: block;
+	width: 200px;
+	height: 1px;
+	margin: 0 auto;
+	background-color: #ededed;
+	border-bottom: 1px solid #f6f6f6; 
+}
+.registrationFormWrapperPU .enterInscription{
+	color: #969696;	
+	text-align: center;
+	margin-bottom: 6px;
+}
+.registrationFormWrapperPU .enterFromSocial{
+	display: inline-block;
+	overflow: hidden;
+}
+.registrationFormWrapperPU .enterFromSocialWrapp{
+	text-align: center;	
+}
+.registrationFormWrapperPU ul.enterFromSocial > li{
+	float: left;
+}
+.registrationFormWrapperPU ul.enterFromSocial{
+	box-shadow: 0 0 1px rgba(248,201,15,0.8);
+	border-radius: 3px;
+}
+.registrationFormWrapperPU ul.enterFromSocial > li > a{
+	display: block;
+	box-sizing: content-box;
+	line-height: 19px;
+	height: 19px;
+	width: 55px;
+	border: 1px solid #f8c90f;
+	cursor: pointer;
+	color: #969696;
+	transition-property: color, background-color;
+	transition-duration: 0.7s;
+}
+.registrationFormWrapperPU ul.enterFromSocial > li > a:hover,
+.registrationFormWrapperPU ul.enterFromSocial > li > a.active{
+	color: white;
+	background-color: #f8c90f;
+}
+.registrationFormWrapperPU ul.enterFromSocial > li.gPlus > a > span{
+	display: inline-block;
+	line-height: 1em;
+	position: relative;
+	top: -1px;
+}
+.registrationFormWrapperPU ul.enterFromSocial > li:nth-of-type(1n + 2) > a{
+	border-left: none;
+}
+.registrationFormWrapperPU ul.enterFromSocial > li:first-of-type > a{
+	border-radius: 2px 0 0 2px;
+}
+.registrationFormWrapperPU ul.enterFromSocial > li:last-of-type > a{
+	border-radius: 0 2px 2px 0;
+}
+	/* -- registrationContacts end -- */	
+	/*-- authorization popup -- */
+
+.mainOrderBlock .entrfFormWrapperPU{
+    display: block;
+    font-size: 16px;
+    left: -20px;
+    top: 62px;
+	display: none;
+}
+.entrfFormWrapperPU{
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    display: none;
+    font-weight: normal;
+    padding: 0 11px 12px 15px;
+    position: absolute;
+    width: 214px;
+    z-index: 1;	
+}
+.entrfFormWrapperPU::before{
+    border-bottom: 9px solid white;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    content: "";
+    display: inline-block;
+    left: 99px;
+    position: absolute;
+    top: -9px;	
+}
+.entrfFormWrapperPU .enterForm input[type='text']{
+    border: 1px solid #c3c3c3;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #acacac;
+    font-family: calibri,sans-serif;
+    font-size: 16px;
+    height: 30px;
+    margin-top: 12px;
+    padding-left: 7px;
+    width: 184px;	
+}
+.entrfFormWrapperPU .enterForm input[type='text']:first-of-type{
+	margin-top: 17px;
+}
+.entrfFormWrapperPU .enterForm input[type = 'submit'].enterButton{
+    background: #ff9000 none repeat scroll 0 0 padding-box;
+    border: 1px solid rgba(255, 144, 0, 0.5);
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-family: calibri,sans-serif;
+    line-height: 25px;
+	width: 85px;
+	margin-top: 12px;
+	float: left;
+}
+.entrfFormWrapperPU p.remember{
+    color: #676767;
+    font-family: calibri,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1em;
+    margin-top: 12px;
+	height: 28px;
+	line-height: 28px;
+}
+.entrfFormWrapperPU p.remember input,
+.entrfFormWrapperPU p.remember label{
+	vertical-align: middle;
+}
+.entrfFormWrapperPU p.remember input{
+	margin-right: 3px;
+}
+.entrfFormWrapperPU p.remember label{
+	position: relative;
+	top: -1px;
+	display: inline-block;
+	cursor: pointer;
+}
+.entrfFormWrapperPU .enterInscription{
+    color: #969696;
+    margin-bottom: 9px;
+    text-align: center;	
+	clear: both;
+	margin-top: 6px;
+}				
+.entrfFormWrapperPU .divigingLineWrapp{
+	width: 100%;
+	height: 2px;
+	position: relative;
+	margin-top: 11px;
+}
+.entrfFormWrapperPU .divigingLine{
+	left: -6px;
+	right: -6px;
+	position: absolute;
+	top: 0;
+	height: 1px;
+	background-color: #ededed;
+	box-shadow: 0 1px 0 #f6f6f6;
+}
+.entrfFormWrapperPU .enterFromSocialWrapp{
+	text-align: center;
+}
+.entrfFormWrapperPU ul.enterFromSocial{
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(248, 201, 15, 0.8);
+    display: inline-block;
+    overflow: hidden;	
+}
+.entrfFormWrapperPU ul.enterFromSocial > li{
+	float: left;
+}
+.entrfFormWrapperPU ul.enterFromSocial > li:first-of-type > a{
+    border-radius: 2px 0 0 2px;	
+}
+.entrfFormWrapperPU ul.enterFromSocial > li > a{
+    border: 1px solid #f8c90f;
+    box-sizing: content-box;
+    color: #969696;
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    line-height: 19px;
+    transition-duration: 0.7s;
+    transition-property: color, background-color;
+    width: 55px;	
+}
+.entrfFormWrapperPU ul.enterFromSocial > li:nth-of-type(n+2) > a{
+    border-left: medium none;	
+}
+.entrfFormWrapperPU ul.enterFromSocial > li > a:hover, .entrfFormWrapperPU ul.enterFromSocial > li > a.active{
+    background-color: #f8c90f;
+    color: white;	
+}
+.entrfFormWrapperPU ul.enterFromSocial > li:last-of-type > a{
+    border-radius: 0 2px 2px 0;	
+}
+.entrfFormWrapperPU ul.enterFromSocial > li.gPlus > a > span{
+    display: inline-block;
+    line-height: 1em;
+    position: relative;
+    top: -1px;	
+}
+	/*-- authorization popup end -- */	
+	/*-- authorization popup on order page -- */	
+	
+	/*-- authorization popup on order page end -- */	
+.topBlock .entrfFormWrapperPU{
+//	display: block;
+	top: 32px;
+	left: 50px;
+	position: absolute;
+	font-family: calibri, sans-serif;
+}	
+	/* -- menu and logo-- */
+.menuAndLogoWrapp{
+	background-color: white;	
+	box-shadow: 0 1px 9px rgb(103,103,103);
+}	
+.menuAndLogoWrapp .menuAndLogo, .menuAndLogoWrapp .menuAndLogo > div{
+	overflow: hidden;
+}
+.menuAndLogoWrapp .menuAndLogo .topLogo > div{
+	padding-top: 10px;
+	padding-bottom: 8px;
+}
+.menuAndLogoWrapp .menuAndLogo .topLogo img{
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+	height: 100px;
+}
+ul.topMenu{
+	overflow: hidden;
+}
+.menuAndLogoWrapp ul.topMenu > li{
+	line-height: 84px;
+	float: left;
+	margin: 0 12px;
+}
+.menuAndLogoWrapp ul.topMenu > li:first-of-type{
+	margin-left: 0;
+}
+.menuAndLogoWrapp ul.topMenu > li:last-of-type{
+	margin-right: 0;
+}
+.menuAndLogoWrapp ul.topMenu > li > a, .menuAndLogoWrapp ul.topMenu > li > span{
+	line-height: normal;
+	vertical-align: middle;	
+	color: #323232;	
+	font-size: 16px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: raleway, sans-serif;
+	font-weight: 800;	
+	transition-property: color;
+	transition-duration: 0.3s;
+	position: relative;	
+	cursor: pointer;
+}
+.menuAndLogoWrapp ul.topMenu > li.sale > a,
+.menuAndLogoWrapp ul.topMenu > li.sale > span{
+	color: #ec0606;
+}
+.menuAndLogoWrapp ul.topMenu > li > a:hover, .menuAndLogoWrapp  ul.topMenu > li > span:hover,
+.menuAndLogoWrapp ul.topMenu > li.active > a, .menuAndLogoWrapp ul.topMenu > li.active > span{
+	color: #ff9000;
+}
+.menuAndLogoWrapp ul.topMenu > li > a::before, .menuAndLogoWrapp ul.topMenu > li > span::before{
+	content: '';
+	display: block;	
+	opacity: 0;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: -14px;
+	height: 1px;
+	background-color: #ffd399;	
+	transition-property: opacity, bottom, left, right;
+	transition-duration: 0.3s;
+}
+.menuAndLogoWrapp ul.topMenu > li > a:hover::before, .menuAndLogoWrapp ul.topMenu > li > span:hover::before,
+.menuAndLogoWrapp ul.topMenu > li.active > a::before, .menuAndLogoWrapp ul.topMenu > li.active > span::before{
+	bottom: -8px;
+	opacity: 1;
+	left: 10px;
+	right: 10px;	
+	transition-duration: 1s;
+}
+	/* -- menu and logo end -- */	
+	/* -- top information -- */
+.topBlock .topInformation{
+	width: 1350px;	
+	margin: 0 auto;
+	font-weight: 800;
+	font-family: raleway,sans-serif;
+	color: white;
+	text-shadow: -10px 0 15px rgba(0,0,0,0.73);
+}	
+.topBlock .topInformation .firstBlock{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 49.5px;	
+	text-align: center;
+	background-color: rgba(30,30,30,0.7); 	
+}
+.topBlock .topInformation .secondBlock{
+	padding-top: 20px;
+	font-size: 55.5px;
+	/*changePosition*/
+	position: relative;	
+    top: 460px;	
+	top: 446px;
+}
+.topBlock .topInformation .secondBlock p.bonusPoints{
+	background-color: rgba(30,30,30,0.7); 
+	padding: 0 10px 10px 10px;
+	line-height: 1em;	
+}
+.topBlock .topInformation .secondBlock .pointsNumber{
+	font-size: 82px;
+}
+.topBlock .topInformation .secondBlock .right{
+    left: 22px;
+    padding-top: 12px;
+    position: relative;
+}
+.topBlock .topInformation .secondBlock .registrationButton,
+.topBlock .singleRegistrationButtonWrapp .registrationButton{
+	display: block;
+	line-height: 52px;
+	color: white;
+	padding: 0 13px;
+	font-size: 16px;
+	text-transform: uppercase;
+	border-radius: 3px;
+	background-color: #ff4200;
+	cursor: pointer;
+	background-clip: padding-box;
+	border: 1px solid rgba(155,66,0,0.5);
+	position: relative;
+	text-shadow: none;	
+}
+.topBlock .topInformation .secondBlock .registrationArrow{
+	width: 76px;
+	height: 29px;
+	background-image: url('../images/registrationArrow.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: -28px;
+	left: -51px;
+}
+.topBlock .topAdvantages{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.topBlock .topAdvantages ul.advantages{
+    background-color: rgba(30, 30, 30, 0.7);
+    bottom: 0;
+    color: white;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 7px 20px 15px;
+    text-align: center;
+    width: auto;
+}
+.topBlock .topAdvantages ul.advantages > li{
+	display: inline-block;
+	padding-left: 55px;
+	line-height: 44px;
+	background-image: url('../images/okPicture.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: left center;	
+}
+.topBlock .topAdvantages ul.advantages > li:nth-of-type(1n + 2){
+	margin-left: 22px;
+}
+.topBlock .topAdvantages ul.advantages > li > span{
+	line-height: 1em;
+	vertical-align: bottom;
+}
+	/* -- top information end -- */	
+/* -- top block end -- */
+body > .item-page{
+//	padding-top: 40px;
+}
+body > .item-page.mainPage{
+	padding-top: 0;
+}
+.moreBanner .moreInnerBanner{
+	width: 674px;
+	height: 134px;
+	font-family: raleway, serif;
+	font-weight: 600;
+	color: white;
+	background-image: url('../images/advantagesInscriprionBackground.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+	font-size: 35px;
+	box-sizing: border-box;
+	padding-top: 15px;
+	margin: 0 auto;
+	padding: 20px 70px 0 70px;
+}
+.mainAdvantages{
+	width: 945px;
+	margin: 0 auto;	
+	padding-top: 24px;
+}
+.mainAdvantages .leftAdvantagesBlock{
+	float: left;
+	width: 458px;
+}
+.mainAdvantages .rightAdvantagesBlock{
+	float: right;
+	width: 458px;
+}
+.mainAdvantages .leftAdvantages{
+	overflow: hidden;
+}
+.mainAdvantages .rightAdvantages{
+	overflow: hidden;
+}
+.mainAdvantages .leftAdvantages > div{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+}
+.mainAdvantages .leftAdvantages .clarification{
+	position: absolute;
+	right: 6px;
+	bottom: 6px;
+	background-color: #ff8400;
+	color: white;
+	font-size: 20px;
+	line-height: 33px;
+	padding: 0 12px;	
+}
+.mainAdvantages .leftAdvantages .comfort{
+	width: 153px;
+	height: 292px;
+	background-image: url('../images/advantages/comfort.png');
+	margin-left: 2px;
+}
+.mainAdvantages .leftAdvantages .time{
+	width: 294px;
+	height: 145px;
+	background-image: url('../images/advantages/time.png');	
+}
+.mainAdvantages .leftAdvantages .price{
+	width: 294px;
+	height: 145px;	
+	background-image: url('../images/advantages/price.png');	
+	margin-top: 2px;	
+}
+.mainAdvantages .leftAdvantages .discounts{
+	width: 449px;
+	height: 160px;	
+	background-image: url('../images/advantages/discounts.png');	
+	margin-top: 2px;
+	float: right;	
+}
+.rightAdvantagesBlock .advantagesList > li{
+	overflow: hidden;
+}
+.rightAdvantagesBlock .advantagesList > li{
+	margin-top: 40px;
+}
+.rightAdvantagesBlock .advantagesList > li:nth-of-type(1){
+	margin-top: 52px;
+}
+.rightAdvantagesBlock .advantagesList .title,
+.rightAdvantagesBlock .advantagesList .clarif{
+	padding-left: 51px;	
+}
+.rightAdvantagesBlock .advantagesList .title{
+	color: #323232;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: raleway, sans-serif;	
+}
+.rightAdvantagesBlock .advantagesList .clarif{
+	color: #727272;
+	font-size: 16px;
+	margin-top: 4px;
+}
+.rightAdvantagesBlock .advantagesList .advPicture{
+	width: 32px;
+	height: 32px;
+	background-color: #f8c90f;
+	border-radius: 3px;
+	float: left;	
+	margin-top: 5px;
+}
+.mainAdvantages .rightAdvantages .advPicture{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.mainAdvantages .rightAdvantages .price .advPicture{
+	background-image: url('../images/advantages/pictures/price.png');	
+}
+.mainAdvantages .rightAdvantages .time .advPicture{
+	background-image: url('../images/advantages/pictures/time.png');	
+}
+.mainAdvantages .rightAdvantages .comfort .advPicture{
+	background-image: url('../images/advantages/pictures/comfort.png');	
+}
+.mainAdvantages .rightAdvantages .discounts .advPicture{
+	background-image: url('../images/advantages/pictures/discounts.png');	
+}
+.systemOfDiscounts{
+	background-color: #f7f8fa;
+	padding-top: 45px;
+	padding-bottom: 70px;
+}
+.systemOfDiscounts p.title{
+	font-size: 17px;
+	text-align: center;
+	margin-top: 16px;
+	color: #727272;
+}
+.systemOfDiscounts p.title a{
+	color: #ff9000;
+	text-decoration: underline;
+	margin-bottom: 72px;
+}
+.systemOfDiscounts .discounts{
+	margin-top: 60px;
+	overflow: hidden;
+}
+.systemOfDiscounts .discounts > li{
+	float: left;
+	width: 308px;
+	box-sizing: border-box;
+	color: #727272;
+	font-size: 16px;
+}
+.systemOfDiscounts .discounts > li:nth-of-type(1n + 2){
+	margin-left: 10px;
+}
+.systemOfDiscounts .discounts > li .pictureWrapper{
+	height: 87px;
+	background-repeat: no-repeat;
+	background-position: center 60%;	
+}
+.systemOfDiscounts .discounts > li:nth-of-type(1) .pictureWrapper{
+	background-image: url('../images/sales/1.png');
+}
+.systemOfDiscounts .discounts > li:nth-of-type(2) .pictureWrapper{
+	background-image: url('../images/sales/2.png');
+}
+.systemOfDiscounts .discounts > li:nth-of-type(3) .pictureWrapper{
+	background-image: url('../images/sales/3.png');
+	background-position: center top;
+	position: relative;	
+}
+.systemOfDiscounts .discounts > li:nth-of-type(4) .pictureWrapper{
+	background-image: url('../images/sales/4.png');
+}
+.systemOfDiscounts .discounts > li .saleTitle{
+	color: #323232;
+	text-align: center;
+	font-family: raleway;
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 8px;
+}
+.systemOfDiscounts .discounts > li .information{
+	line-height: 1.6em;
+	text-align: center;
+	margin-top: 5px;
+}
+.secondMainWidth{
+	width: 1364px;
+	margin: 0 auto;
+}
+.owrCars{
+	padding-top: 64px;
+	padding-bottom: 68px; 
+}
+.owrCars h2{
+	margin-bottom: 45px;
+}
+.popularFlights{
+	padding-top: 45px;
+	padding-bottom: 75px;
+}
+.popularFlights ul.flightsList{
+	overflow: hidden;
+	margin-top: 42px;
+	padding-bottom: 54px;
+}
+.popularFlights ul.flightsList > li{
+	float: left;
+	width: 322px;
+	height: 434px;	
+	position: relative;
+}
+.popularFlights ul.flightsList > li:nth-of-type(1n + 2){
+	margin-left: 25px;
+}
+.popularFlights ul.flightsList .flightPicture{
+	height: 274px;
+	border-radius: 4px 4px 0 0;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+.popularFlights ul.flightsList:nth-of-type(1) .flightPicture{
+	background-image: url(../images/popularFlights/1.png);
+}
+.popularFlights ul.flightsList .information{
+	height: 160px;
+	border-radius: 0 0 4px 4px;
+	background-color: #292929;
+	padding: 0 30px;
+	font-size: 20px;
+	text-align: center;
+	color: white;		
+}
+.popularFlights ul.flightsList .flightPicture .cost{
+	background-color: #ffd200;
+	line-height: 60px;
+	padding: 0 18px;
+	color: white;
+	font-weight: bold;
+	margin-left: 12px;
+	display: inline-block;
+	font-size: 36px;
+	text-shadow: 5px 5px 3px #e0b900;
+}
+.popularFlights ul.flightsList .flightPicture .cost span.rub{
+	font-size: 24px;
+}
+.popularFlights ul.flightsList .information .title{
+	height: 53px;
+	display: table-cell;
+	width: 262px;
+	vertical-align: middle;
+}
+.popularFlights ul.flightsList .information .title span{
+	display: inline-block;
+	line-height: 1em;
+}
+.popularFlights ul.flightsList .information p.placeTime{
+	line-height: 1em;
+	margin-top: 9px;
+}
+.popularFlights ul.flightsList .information p.date{
+	line-height: 1em;	
+	margin-top: 12px;
+	color: #ffc600;
+	font-weight: bold;
+}
+.popularFlights .reservationButtonWrapp{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.popularFlights .makeAReservation{
+	background-color: #ff4200;
+	line-height: 54px;
+	height: 54px;
+	margin: 0 auto;
+	border-radius: 2px;
+	padding: 0 37px;
+	font-family: raleway;
+	color: white;
+	font-weight: 800;
+	text-transform: uppercase;
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	bottom: -20px;
+}
+.popularFlights .deliveryStatus{
+	color: #6b6b6b;
+	font-size: 20px;
+	text-align: center;
+}
+.popularFlights .deliveryStatus span.star{
+	color: #ff4200;
+	margin-right: 4px;
+}
+.clientsAboutUs{
+	margin-bottom: 80px;
+	position: relative;
+}
+.clientsAboutUs h2{
+	margin-bottom: 57px;	
+}
+.upButton{
+	width: 61px;
+	height: 56px;
+	background-color: #ffd200;
+	background-image: url('../images/upPicture.png');
+	background-position: center center;
+	background-repeat: no-repeat;	
+//	display: block;
+	display: none;
+	border-radius: 4px;
+	cursor: pointer;
+	position: fixed;
+	bottom: 3%;
+	right: 3%;
+	box-shadow: 1px 2px 9px 1px rgba(0,0,0,0.3);
+	z-index: 6;
+}
+footer{
+	height: 434px;
+	box-sizing: border-box;
+	padding-top: 70px;
+	background-image: url('../images/footerBackground.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 16px;
+	color: white;
+}
+footer .blocksWrapper{
+	width: 1364px;
+	margin: 0 auto;
+	position: relative;
+}
+footer .leftBlock{
+	width: 605px;
+	box-sizing: border-box;
+	padding-left: 102px;
+	float: left;
+}
+footer .footerLogo{
+	height: 100px;
+	margin-bottom: 18px;
+}
+footer .centralBlock{
+	width: 375px;
+	padding-left: 67px;
+	box-sizing: border-box;
+	padding-top: 30px;
+	float: left;
+}
+footer .centralBlock .footerContacts{
+	margin-bottom: 25px;	
+}
+footer .title{
+	color: white;
+	font-size: 18px;
+	font-family: raleway, sans-serif;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+footer .centralBlock .adress{
+	padding-left: 30px;
+	line-height: 19px;
+	background-image: url('../images/footerImages/point.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-top: 14px;	
+}
+footer .centralBlock .operators{
+	padding-left: 30px;
+	margin-top: 16px;	
+}
+footer .centralBlock .phone{
+	padding-left: 30px;
+	font-size: 24px;
+	background-image: url('../images/footerImages/handset.png');
+	background-repeat: no-repeat;
+	background-position: left center;	
+}
+footer .centralBlock .socialLinks .title{
+	font-size: 15px;
+}
+footer .centralBlock .socialLinks ul{
+	overflow: hidden;
+	margin-top: 18px;
+}
+footer .centralBlock .socialLinks ul > li{
+	float: left;
+}
+footer .centralBlock .socialLinks ul > li:nth-of-type(1n + 2){
+	margin-left: 6px;
+}
+footer .centralBlock .socialLinks ul > li > a{
+	font-family: raleway, sans-serif;
+	font-size: 15px;
+	display: block;
+	width: 36px;
+	height: 36px;
+	line-height: 34px;
+	border: 1px solid white;
+	border-radius: 18px;
+	text-align: center;
+	cursor: pointer;
+	font-weight: 800;
+}
+footer .centralBlock .socialLinks ul > li:first-of-type > a{
+	font-size: 22px;
+}
+footer .rightBlock{
+	max-width: 384px;
+	float: right;
+	padding-top: 30px;
+}
+footer .paymentMethods p.title{
+	margin-bottom: 15px;
+}
+footer .paymentMethods ul.cards{
+	overflow: hidden;
+	padding-bottom: 4px;
+}
+footer .paymentMethods ul.cards > li{
+	float: left;
+	margin-left: 9px;
+}
+footer .paymentMethods ul.cards > li:nth-of-type(1n + 5){
+	margin-top: 6px;		
+}
+footer .paymentMethods ul.cards > li:nth-of-type(4n + 1){
+	margin-left: 0;
+	clear: both;
+}
+footer .rightBlock .bottomMenu > ul{
+	float: left;
+}
+footer .rightBlock .bottomMenu > ul:first-of-type{
+	margin-right: 27px;
+}
+footer .rightBlock .bottomMenu > ul > li > a, footer .rightBlock .bottomMenu > ul > li > span{
+	font-size: 22px;
+	line-height: 1em;
+	margin-top: 13px;
+	display: block;
+	transition-property: color;
+	transition-duration: 0.7s;	
+}
+footer .rightBlock .bottomMenu > ul > li > a:hover, footer .rightBlock .bottomMenu > ul > li > span:hover{
+	color: #ffd200;
+}
+footer .copyright{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-size: 16px;
+	padding-left: 102px;
+}
+.topBlock .wrapperOfPositionalBlock{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.topBlock .positionalBlock{
+	position: relative;
+}
+.topBlock  .reservationsWrapper{
+	position: absolute;
+	right: 0;
+	bottom: 114px;
+	/*changePosition*/
+	bottom: 240px;
+	bottom: 226px;
+}
+.topBlock  .reservations{
+	background-color: #555d69;
+	width: 296px;
+	box-sizing: border-box;
+	border: 1px solid #535960;
+	border-radius: 2px;
+	padding: 35px 30px 23px 30px;
+	color: white;
+	position: relative;
+	box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.28), inset 0 0 15px -5px rgba(0, 0, 0, 0.5);
+}
+.topBlock  .reservations:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -1px;
+	height: 1px;
+	box-shadow: 0 -1px 5px rgba(255, 255, 255, 1);
+}
+.topBlock  .reservations div.input{
+	width: 100%;
+	display: block;
+	height: 54px;
+	line-height: 54px;	
+	border-radius: 3px;
+	margin-bottom: 14px;
+	background-color: #4c545f;
+	border-right: 1px solid #8d9ba8;
+	border-bottom: 1px solid #8d9ba8;	
+	box-sizing: border-box;
+	color: inherit;
+	font-size: 20px;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 21px rgba(0,0,0,0.21), inset 0 3px 4px rgba(0,0,0,0.65);
+	position: relative;
+	overflow: hidden;
+}
+.topBlock  .reservations .input .buttWrapper{
+	float: right;	
+	padding-top: 16px;
+	padding-right: 13px;
+}
+.topBlock  .reservations .input .resInputBut{
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+.topBlock  .reservations .input p.inscription{
+	float: left;
+}
+.topBlock  .reservations .input.route .resInputBut{
+	background-image: url('../images/reservInputArrows.png');
+	width: 25px;
+	height: 25px;
+}
+.topBlock  .reservations .input.date .resInputBut{
+	background-image: url('../images/reservCalendar.png');	
+	width: 25px;
+	height: 25px;	
+}
+.topBlock  .reservations .resInputBut{
+	box-shadow: 0 0 0 2px #ff9000; 
+	animation-name: changeReservButtons;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	border-radius: 2px;	
+}
+/* animation of reservation buttons */
+	@keyframes changeReservButtons{
+		from{
+			transform: scale(1);
+			box-shadow: 0 0 0 2px #ff9000; 
+		}50%{
+			transform: scale(1.3);
+			box-shadow: 0 0 0 2px #f8cd10; 			
+		}to{
+			transform: scale(1);
+			box-shadow: 0 0 0 2px #ff9000; 			
+		}
+	}
+	
+	
+/* animation of reservation buttons end */
+.topBlock  .reservations .input.date{
+	clear: both;
+}
+.topBlock  .reservations .resButton{
+	width: 114px;
+	height: 54px;
+	display: block;
+	text-align: center;
+	line-height: 51px;
+	font-size: 18px;
+	cursor: pointer;
+	margin-bottom: 14px;
+	border-radius: 3px;
+	background-color: #9e9999;	
+	transition-property: background-color;
+	transition-duration: 0.7s;
+}
+.topBlock  .reservations .resButton:hover,
+.topBlock  .reservations .resButton.active{
+	background-color: #ff9700;	
+}
+.topBlock  .reservations .resButton.today{
+	float: left;
+}
+.topBlock  .reservations .resButton.tomorrow{
+	float: right;
+}
+.topBlock  .reservations .makeAReservation{
+	width: 212px;
+	height: 53px;
+	color: #333333;
+	font-family: raleway, sans-serif;	
+	font-size: #333333;
+	text-transform: uppercase;
+	font-weight: 800;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #9b8e46;
+	background-color: #f9cd10;
+	display: block;
+	line-height: 53px;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-top: 32px;
+}
+.topBlock  .reservations .reservRoundWrapp{
+	position: absolute;
+	left: -65px;
+	top: -58px;	
+	width: 106px;
+	height: 106px;
+	border: 5px solid white;
+	border-radius: 53px;
+	box-sizing: border-box;
+	padding: 3px;
+	z-index: 1;
+}
+.topBlock  .reservations .reservRound{
+	background-color: #ff9000;
+	width: 90px;
+	height: 90px;
+	line-height: 88px;
+	color: white;
+	font-size: 25px;
+	text-transform: uppercase;
+	border-radius: 45px;
+	text-align: center;
+}
+.topBlock  .reservations .paymentMethInscr{
+	position: absolute;
+	color: white;
+	left: -59px;
+	bottom: -32px;
+	font-size: 16px;
+	font-style: italic;
+}
+.topBlock  .reservations .paymentMethInscr .inscrArrow{
+	width: 32px;
+	height: 27px;
+	background-image: url('../images/paymentMethInscrArr.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	left: 119px;
+	top: -25px;	
+}
+.popularFlights ul.flightsList .information .title::before{
+	height: 100%;
+	display: inline-block;
+	content: '';
+	vertical-align: middle;
+}
+.popularFlights ul.flightsList .information .title span{
+	display: inline-block;
+	max-width: 97%;
+	box-sizing: border-box;	
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+

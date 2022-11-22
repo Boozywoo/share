@@ -1,0 +1,178 @@
+.menu_active a{
+	color: #535992!important;
+}
+.menu_profile__active {
+	background-color: #535992;
+}
+.menu_active a:before {
+	bottom: -8px!important;;
+	left: 10px!important;;
+	opacity: 1!important;;
+	right: 10px!important;;
+	transition-duration: 1s!important;;
+}
+
+#android {
+	margin: 10px; 
+	width: 200px;
+}
+
+#ios {
+	margin: 10px; 
+	width: 160px;
+}
+
+.js_bus-overlay {
+	background-color: rgba(204, 204, 204, 0.5);
+	position: absolute;
+	top: 30%;
+	right: 0;
+	left: 40%;
+	bottom: 0;
+	z-index: 999;
+	display: none;
+	border: 5px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 5px solid darkslateblue;
+	width: 50px;
+	height: 50px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+  }
+  @-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+
+.js_get-bus-row-bus {
+	position: relative;
+}
+.js_bus-overlay.small{
+	top: 0;
+	width: 44px;
+	height: 44px;
+}
+.text-center {
+	text-align: center;
+}
+
+.js_orders-count_places {
+	width: 60px;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+.js_orders-count_places_child {
+	padding: 10px;
+	margin-top: 20px;
+}
+
+.select_place_from {
+	padding: 10px;
+	font-size: 18px;
+}
+
+
+.select_place_from select {
+	padding: 10px;
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+.panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border-radius: 4px;
+	border: 1px solid;
+}
+
+.panel-primary>.panel-heading {
+	background-color: seagreen;
+	border-color: seagreen;
+	color: #fff;
+}
+
+.panel-heading {
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.panel-primary {
+	border-color: seagreen;
+}
+
+.panel-body {
+	padding: 15px;
+	color: white;
+}
+
+.js_order-prices .panel {
+	background-color: transparent;
+	border-radius: 0;
+	border: none;
+}
+.js_order-prices .panel-primary {
+  border: none;
+}
+.js_order-prices .panel-primary>.panel-heading {
+  border: none;
+  border-radius: 5px 5px 0 0;
+  background-color: #4aa6b3;
+}
+.js_order-prices .panel-body {
+  background-color: none;
+  border: 1px solid #4aa6b3;
+  border-radius: 0 0 5px 5px;
+}
+.js_order-prices .table-ticket {
+  width: 100%;
+  border-spacing: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.js_order-prices .table-ticket tr:first-child td {
+  border-bottom: 1px dashed #e8e8e8;
+  line-height: 1.4;
+}
+.js_order-prices .table-ticket tr:last-child td {
+  border-top: 1px solid #e8e8e8;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.js_order-prices .table-ticket tr td + td {
+  text-align: right;
+}
+.js_order-prices .table-ticket tr td {
+  border: none;
+  line-height: 1;
+}
+.js_order-prices .table-ticket tr td[colspan] {
+  text-align: center;
+}
+
+.font-bold {
+	font-weight: 600;
+}
+
+.fc-row, hr, tbody, td, th, thead {
+	border-color: #e8e8e8;
+	font-weight: 400;
+}
+
+.table tr td {
+	line-height: 1.42857;
+	padding: 8px;
+	vertical-align: top;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.purse {
+	margin-top: 20px;
+}

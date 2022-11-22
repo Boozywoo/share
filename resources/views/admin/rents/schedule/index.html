@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <meta name="keywords" content="timeslider, time-slider, time slider, rangeslider, range-slider, range slider, jquery, javascript">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/timeSlider.css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            var arr1 =$('.timeSlider');
+            $.each(arr1,function(index,value){
+                var num = $(value).find('#myas1');
+                num.remove();
+                var num = $(value).find('#myas2');
+                num.remove();
+                var num = $(value).find('#myas3');
+                num.remove();
+                var num = $(value).find('#myas4');
+                num.remove();
+                var num = $(value).find('#myas5');
+                num.remove();
+                var num = $(value).find('#myas6');
+                num.remove();
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+<div class="container-fluid" style="padding: 5%">
+    <div class="row">
+        <div class="col-md-9 lft-panel">
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+                    <span class="time"></span>
+                    <div   onselectstart="return false;">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="timeslider1" class="timeSlider">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+                    <div style="" onselectstart="return false;">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="timeslider2" class="timeSlider">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+                    <div style="" onselectstart="return false;">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="timeslider3" class="timeSlider">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+
+                    <div style="" onselectstart="return false;">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="timeslider4" class="timeSlider">
+                        </div>
+                   </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+                    <div style="" onselectstart="return false;">
+                            <div ondrop="drop(event)" ondragover="allowDrop(event)" id="timeslider5" class="timeSlider">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+                    <div style="" onselectstart="return false;">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="timeslider6" class="timeSlider">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+                    <div style="" onselectstart="return false;">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="timeslider7" class="timeSlider">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+
+                </div>
+            </div>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-1 foto">
+                    <i class="fas fa-times"></i>
+                    <img src="img/taxi-driver.png" width="64" alt="">
+                </div>
+                <div class="col-md-2 name">
+                    <p>Иванов Иван <br> +375(29) 123-45-67</p>
+                </div>
+                <div class="col-md-9 race">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3 rght_panel">
+            <div class="row" style="padding: 10px;">
+
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="text-align: center">
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Трансф. 1</a>
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Трансф. 2</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Аренда 3</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Трансф. 4</a>
+                        <a class="nav-link" id="v-pills-eks-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Экскурсия 5</a>
+                        <a class="nav-link" id="v-pills-eks2-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Экскурсия 6</a>
+                    </div>
+
+
+                    <div class="tab-content" id="v-pills-tabContent" style="text-align: left;">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" style="">
+                            <div class=" nv-rght">
+                                <div class="col-md-12">
+                                    <p>Дата: <br>
+                                        24.01.2019</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Время: <br>
+                                        12:21 - 18:21</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип рейса: <br>
+                                        Трансфера</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Путь: <br>
+                                        Минск - Витебск</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Мест: <br>
+                                        8</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип машины: <br>
+                                        Минивен</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-bottom">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Автомобиль:</p>
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class=" nv-last">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Водитель:</p>
+                                    <select class="form-control" id="exampleSelect2">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button type="button" style="width: 100%"  class="btn btn-success">Применить фильтр</button>
+                                    <button type="button" style="width: 100%" class="btn btn-success">Сохранить</button>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class=" nv-rght">
+                                <div class="col-md-12">
+                                    <p>Дата: <br>
+                                        24.01.2019</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Время: <br>
+                                        12:21 - 18:21</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип рейса: <br>
+                                        Трансфера</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Путь: <br>
+                                        Минск - Витебск</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Мест: <br>
+                                        8</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип машины: <br>
+                                        Минивен</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-bottom">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Автомобиль:</p>
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class=" nv-last">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Водитель:</p>
+                                    <select class="form-control" id="exampleSelect2">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button type="button" style="width: 100%"  class="btn btn-success">Применить фильтр</button>
+                                    <button type="button" style="width: 100%" class="btn btn-success">Сохранить</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <div class=" nv-rght">
+                                <div class="col-md-12">
+                                    <p>Дата: <br>
+                                        24.01.2019</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Время: <br>
+                                        12:21 - 18:21</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип рейса: <br>
+                                        Трансфера</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Путь: <br>
+                                        Минск - Витебск</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Мест: <br>
+                                        8</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип машины: <br>
+                                        Минивен</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-bottom">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Автомобиль:</p>
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class=" nv-last">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Водитель:</p>
+                                    <select class="form-control" id="exampleSelect2">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button type="button" style="width: 100%"  class="btn btn-success">Применить фильтр</button>
+                                    <button type="button" style="width: 100%" class="btn btn-success">Сохранить</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            <div class=" nv-rght">
+                                <div class="col-md-12">
+                                    <p>Дата: <br>
+                                        24.01.2019</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Время: <br>
+                                        12:21 - 18:21</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип рейса: <br>
+                                        Трансфера</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Путь: <br>
+                                        Минск - Витебск</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Мест: <br>
+                                        8</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип машины: <br>
+                                        Минивен</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-bottom">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Автомобиль:</p>
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class=" nv-last">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Водитель:</p>
+                                    <select class="form-control" id="exampleSelect2">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button type="button" style="width: 100%"  class="btn btn-success">Применить фильтр</button>
+                                    <button type="button" style="width: 100%" class="btn btn-success">Сохранить</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-eks" role="tabpanel" aria-labelledby="v-pills-eks-tab">
+                            <div class=" nv-rght">
+                                <div class="col-md-12">
+                                    <p>Дата: <br>
+                                        24.01.2019</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Время: <br>
+                                        12:21 - 18:21</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип рейса: <br>
+                                        Трансфера</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Путь: <br>
+                                        Минск - Витебск</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Мест: <br>
+                                        8</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип машины: <br>
+                                        Минивен</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-bottom">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Автомобиль:</p>
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class=" nv-last">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Водитель:</p>
+                                    <select class="form-control" id="exampleSelect2">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button type="button" style="width: 100%"  class="btn btn-success">Применить фильтр</button>
+                                    <button type="button" style="width: 100%" class="btn btn-success">Сохранить</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-eks2" role="tabpanel" aria-labelledby="v-pills-eks2-tab">
+                            <div class=" nv-rght">
+                                <div class="col-md-12">
+                                    <p>Дата: <br>
+                                        24.01.2019</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Время: <br>
+                                        12:21 - 18:21</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип рейса: <br>
+                                        Трансфера</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Путь: <br>
+                                        Минск - Витебск</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Мест: <br>
+                                        8</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-center">
+                                <div class="col-md-12">
+                                    <p>Тип машины: <br>
+                                        Минивен</p>
+                                </div>
+
+                            </div>
+                            <div class=" nv-bottom">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Автомобиль:</p>
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class=" nv-last">
+                                <div class="col-md-12">
+                                    <p style="margin-bottom: -1px">Водитель:</p>
+                                    <select class="form-control" id="exampleSelect2">
+                                        <option>Выбрать</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button type="button" style="width: 100%"  class="btn btn-success">Применить фильтр</button>
+                                    <button type="button" style="width: 100%" class="btn btn-success">Сохранить</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--<div class="main-block" style="margin-left: 100px">-->
+
+    <!--<div class="l-txt"><i class="fas fa-map-marker-alt"></i><span class="main-txt">Минск</span></div>-->
+    <!--<button type="button" class="btn btn-success main-button">В пути</button>-->
+    <!--<div class="r-txt"><i class="fas fa-map-marker-alt"></i><span class="main-txt2">Витебск</span></div>-->
+    <!--<select class="form-control" >-->
+        <!--<option>OPEL FRONTERA</option>-->
+        <!--<option>2</option>-->
+        <!--<option>3</option>-->
+        <!--<option>4</option>-->
+        <!--<option>5</option>-->
+    <!--</select>-->
+<!--</div>-->
+
+
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="js/divslider.js"></script>
+
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/underscore.js"></script>
+<script type="text/javascript" src="js/timeSlider.js"></script>
+<script type="text/javascript">
+    var defaultTime1=["10:8-13:36"];
+    var defaultTime2=["2:9-5:45"];
+    var defaultTime3=["17:34-21:32"];
+    var defaultTime4=["10:8-13:36"];
+    var defaultEvents1=[1,2,3];
+    var timeS1=new TimeSlider({
+        id:"timeslider1",
+        language:"en",
+        defaultTime:defaultTime1,
+       // defaultEvents:defaultEvents1
+    });
+    var timeS2=new TimeSlider({
+        id:"timeslider2",
+        language:"en",
+        defaultTime:defaultTime2
+    });
+
+    var timeS3=new TimeSlider({
+        id:"timeslider3",
+        language:"en",
+        defaultTime:defaultTime3
+    });
+
+    var timeS4=new TimeSlider({
+        id:"timeslider4",
+        language:"en",
+        defaultTime:defaultTime4
+    });
+
+    var timeS5=new TimeSlider({
+        id:"timeslider5",
+        language:"en"
+    });
+
+    var timeS6=new TimeSlider({
+        id:"timeslider6",
+        language:"en"
+    });
+
+    var timeS7=new TimeSlider({
+        id:"timeslider7",
+        language:"en"
+    });
+
+
+    // $("#getTime").click(function(){
+    //     $("#content").empty();
+    //     _.forEach(timeS1.get().times,function(item,index){
+    //         var event=timeS1.get().events[index]+1;
+    //         var time='<span>'+item+'</span> <span>事件'+event+'</span></br>';
+    //         $("#content").append(time)
+    //     })
+    // })
+    //
+    // $("#setTime").click(function(){
+    //     timeS1.set({
+    //         setTimeArray:["2:30-14:43","15:40-18:30"]
+    //
+    //     })
+    // })
+
+
+
+
+  /*  var current_time = (new Date()).getTime() + ((new Date()).getTimezoneOffset() * 60 * 1000 * -1);
+    $(document).ready(function () {
+        (function () {
+            $('#version').text('Version: '+ $.fn.TimeSlider.VERSION);
+            $('#zoom-slider123').slider({
+                min: 1,
+                max: 24,
+                value: 24,
+                step: 0,
+                slide: function(event, ui) {
+                    $('#slider123').TimeSlider({hours_per_ruler: ui.value});
+                }
+            });
+
+
+            $('#slider1').TimeSlider({
+                start_timestamp: current_time - 3600 * 12 * 1000,
+                init_cells: [
+                    {
+                        '_id': 'c1',
+                        'start': (current_time - (3600 * 5.4 * 1000) + 1234),
+                        'stop': current_time - 3600 * 3.2 * 1000,
+                        'style': {
+                            'background-color': '#76C4FF'
+                        }
+                    },
+                    {
+                        '_id': 'c2',
+                        'start': (current_time - (3600 * 2.1 * 1000)),
+                    }
+                ]
+            });
+            $('#slider2').TimeSlider({
+                start_timestamp: current_time - 3600 * 12 * 1000,
+                init_cells: [
+                    {
+                        '_id': 'c1',
+                        'start': (current_time - (3600 * -1 * 1000) + 1234),
+                        'stop': current_time - 3600 * -5.2 * 1000,
+                        'style': {
+                            'background-color': '#76C4FF'
+                        }
+                    },
+
+                ]
+            });
+            $('#slider3').TimeSlider({
+                start_timestamp: current_time - 3600 * 12 * 1000,
+
+            });
+            $('#slider4').TimeSlider({
+                start_timestamp: current_time - 3600 * 12 * 1000,
+
+            });
+            $('#slider5').TimeSlider({
+                start_timestamp: current_time - 3600 * 12 * 1000,
+
+            });
+
+        })();
+    });*/
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
+</html>

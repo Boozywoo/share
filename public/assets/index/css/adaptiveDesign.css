@@ -1,0 +1,1042 @@
+.menuAndLogoWrapp ul.topMenu > li > .hiddenForDesctop,
+.menuAndLogoWrapp ul.topMenu > li.hiddenForDesctop::before{
+	display: none;
+}
+@media(max-width: 767px){
+	body{
+		background-position: top;
+	}
+	.divigingLine {
+		margin-top: 10px;
+	}
+	.modal-content {
+		width: 50% !important;
+		height: 17%;
+	}
+	#logo-result {
+		visibility: hidden !important;
+	}
+	.menuAndLogoWrapp ul.topMenu > li > .hiddenForDesctop{
+		display: inline-block;
+	}
+	.menuAndLogoWrapp ul.topMenu > li.hiddenForDesctop::before{
+		display: inline-block;
+	}
+	.menuAndLogoWrapp ul.topMenu > li > .hiddenForMobile,
+	.menuAndLogoWrapp ul.topMenu > li.hiddenForMobile::before{
+		display: none;
+	}
+	}
+	footer .leftBlock{
+		text-align: center;
+	}
+	footer .leftBlock p{
+		text-align: justify;
+	}
+	.presonalCabinetMainBlock.personalCabinet > div > .right .saveChangeButton{
+		display: block;
+	}
+	/*- shoHideMainMenu -*/
+	.menuAndLogoWrapp .showHideMainMenuButtWrapp{
+		padding-top: 0.8em;
+		padding-bottom: 10px;
+		display: none;
+		position: absolute;
+		left: 5%;
+	}
+	.menuAndLogoWrapp .showHideMainMenuButtWrapp .showHideMainMenuButt{
+		cursor: pointer;
+		display: inline-block;
+		height: 25px;
+		position: relative;
+		width: 30px;
+	}
+	.menuAndLogoWrapp .showHideMainMenuButt > div{
+		background-color: #323232;
+		border-radius: 2px;
+		height: 5px;
+		left: 0;
+		position: absolute;
+		transition-duration: 0.3s;
+		transition-property: top, bottom;
+		width: 100%;	
+	}
+	.menuAndLogoWrapp .showHideMainMenuButt > div:nth-of-type(1){
+		top: 0
+	}
+	.menuAndLogoWrapp .showHideMainMenuButt > div:nth-of-type(2){
+		left: 0;
+		top: 10px;	
+	}
+	.menuAndLogoWrapp .showHideMainMenuButt > div:nth-of-type(3){
+		bottom: 0;
+	}
+	.menuAndLogoWrapp .showHideMainMenuButt:hover > div:nth-of-type(1),
+	.menuAndLogoWrapp .showHideMainMenuButt:active > div:nth-of-type(1){
+		top: 3px;
+	}
+	.menuAndLogoWrapp .showHideMainMenuButt:hover > div:nth-of-type(3),
+	.menuAndLogoWrapp .showHideMainMenuButt:active > div:nth-of-type(3){
+		bottom: 3px;
+	}
+	/*- shoHideMainMenu end -*/
+	.popularFlights ul.flightsList .information .title{
+		display: block;
+		width: auto;
+	}
+	.systemOfDiscounts .discounts > li{
+		padding: 0 15px;
+	}
+/*--*/
+@media (max-width: 1800px){
+	footer .leftBlock{
+		padding-left: 0;
+		width: 503px;
+	}
+	footer .copyright{
+		padding-left: 0;
+	}
+	footer .centralBlock{
+		margin-left: 67px;
+		padding-left: 0;
+	}
+	footer .blocksWrapper{
+		width: auto;	
+	}
+	footer .rightBlock{
+		float: left;
+	}
+	footer{
+		padding-left: 15%;
+	}	
+}
+@media screen and (min-width: 800px) {
+	.visModWrapp {
+		margin-right: 1em;
+	}
+}
+@media (max-width: 1700px){
+	footer{
+		padding-left: 10%;
+	}	
+}
+@media (max-width: 1479px){
+	footer{
+		padding-left: 7%;
+	}	
+}
+@media (max-width: 1367px){
+	footer .centralBlock{
+		padding-right: 40px;
+	}	
+	footer .copyright{
+		right: 0;
+		display: block;
+	}	
+	footer .blocksWrapper .copyright > div > p{
+		display: inline-block;
+	}
+	footer .blocksWrapper .copyright > div {
+		text-align: center;
+	}
+	footer .blocksWrapper > div{
+		padding-bottom: 40px;
+	}
+	footer div.copyright{
+		padding-bottom: 0;
+	}
+	footer{
+		padding-left: 0;
+	}
+	footer{
+		text-align: center;
+	}
+	footer .blocksWrapper > div{
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+@media (max-width: 1340px){
+	.topBlock .entrfFormWrapperPU{
+		right: 1%;	
+	}	
+}
+@media (max-width: 400px){
+	#android {
+		width: 180px !important;
+	}
+	
+	#ios {
+		width: 145px !important;
+	}
+}
+@media (max-width: 330px){
+	#android {
+		margin: 0 !important;
+		width: 160px !important;
+	}
+	#ios {
+		margin: 0 !important;
+		width: 125px !important;
+	}
+}
+@media (max-width: 1279px) and (min-width: 768px){
+	body .reservationsWindWrapp{
+		padding-top: 125px;
+	}	
+	.mainOrderBlock .registrationFormWrapperPU{
+		left: 0;
+	}
+	.mainOrderBlock .entrfFormWrapperPU{
+		left: 0;
+	}
+}
+@media (max-width: 1279px) and (min-width: 980px){
+	footer .blocksWrapper{
+		padding-left: 10%;
+	}	
+	footer .blocksWrapper > div:nth-of-type(1),	
+	footer .blocksWrapper > div:nth-of-type(2),	
+	footer .blocksWrapper > div:nth-of-type(3){
+		float: left;
+		display: block;
+		box-sizing: bordrr-box;
+	}	
+	footer .leftBlock{
+		width: 28%;
+	}
+	footer .centralBlock{
+		margin-left: 6%;
+		width: 26%;
+	}
+}
+@media (max-width: 1279px){
+	.reservationsWindWrapp form#reservations > div:nth-of-type(4){
+		clear: both;
+	}
+	.reservationsWindWrapp form#reservations > div:nth-of-type(2),
+	.reservationsWindWrapp form#reservations > div:nth-of-type(4){
+		padding-left: 0;
+	}
+	.reservationsWindWrapp .dateButtons {
+		padding-bottom: 35px;
+	}
+}
+@media (max-width: 1279px) and (min-width: 740px){
+	.reservationsWindWrapp form#reservations{
+		padding-top: 1.5em;
+	}	
+	.topBlock .reservationsWindWrapp .anyPaymentMeths{
+		bottom: auto;
+		top: -67px;
+		left: 50px;
+		white-space: nowrap;
+	}
+	.topBlock .reservationsWindWrapp .anyPaymentMeths .inscriptArrow{
+		transform: rotate(180deg);
+		top: auto;
+		bottom: -33px;
+		left: 48px;
+	}	
+}
+@media (max-width: 979px) and (min-width: 768px){
+	footer .blocksWrapper > div:nth-of-type(1),
+	footer .blocksWrapper > div:nth-of-type(2),
+	footer .blocksWrapper > div:nth-of-type(3){
+		float: left;
+	}
+	footer .blocksWrapper > div:nth-of-type(1),
+	footer .blocksWrapper > div:nth-of-type(2){
+		width: 50%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	footer .blocksWrapper > div:nth-of-type(2){
+		margin-left: 0;
+	}
+	footer .blocksWrapper > div:nth-of-type(3){
+		width: 100%;
+		max-width: none;
+		text-align: center;
+	}
+	footer .blocksWrapper > div:nth-of-type(3) > div{
+		display: inline-block;
+		float: none;
+	}
+} 
+@media (max-width: 569px){
+	.row-reg {
+		margin-top: 17%;
+	}
+	.phone-reg {	
+		margin-left: -30%;
+	}
+	.phone-reg > input {
+		width: 20% !important;
+	}
+}
+@media (max-width: 979px){
+	.topBlock .registrationContacts .custom{
+		line-height: 20px;
+	}	
+	footer{
+		padding-bottom: 50px;
+		height: auto;
+	}
+	.phone-reg > input {
+		width: 23% !important;
+	}
+	.row-reg {
+		margin-top: 15%;
+	}
+	.phone-reg {
+		padding: 0;
+		margin-left: -35%;
+	}	
+	.familiarized {
+		margin-left: 45% !important;
+	}
+	.register {
+		margin-right: 0;
+	}
+}
+@media (max-width: 767px){
+	body .reservationsWindWrapp{
+	/* //	padding-top: 110px;	 */
+		padding-top: 60px;
+	}
+	.print{
+		display: none;
+	}
+	.topBlock .reservations .reservRoundWrapp{
+		box-shadow:  0 0 2px 2px rgba(100,100,100,0.8);	
+	}
+	.owrCars{
+		display: none;
+	}	
+	footer{
+		padding-top: 0;	
+	}
+	footer .blocksWrapper{
+		padding: 0 10%;
+	} 
+	footer .blocksWrapper > div:nth-of-type(3){
+		max-width: none;
+	}	
+	footer .blocksWrapper > div:nth-of-type(n){
+		display: block;
+		float: none;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	footer .blocksWrapper > div:nth-of-type(n){
+		padding: 0;
+		padding-top: 30px;	
+	}
+	footer .blocksWrapper > div:nth-last-of-type(2){
+		padding-bottom: 30px;
+	}
+	footer .blocksWrapper > div:nth-of-type(n) > div{
+		display: inline-block;
+		text-align: left;
+	}
+	footer .blocksWrapper > div:nth-of-type(1) > div{
+		text-align: center;
+	}
+	footer .blocksWrapper > div:nth-of-type(1) > div > p{
+		text-align: justify;
+	}
+
+	footer .blocksWrapper > div:nth-of-type(2) > div{
+		display: block;
+		float: none;
+		width: 100%;
+		margin: 0;
+		text-align: center;	
+	}
+	footer .blocksWrapper > div:nth-of-type(2) > div > *{
+		display: inline-block;
+		width: auto;
+		text-align: left;
+	}
+	footer .footerContacts .title,
+	footer .paymentMethods .title{
+		text-align: center;
+	} 
+	footer .rightBlock .socialLinks ul{
+		text-align: center;
+	}
+	footer .rightBlock .socialLinks ul > li{
+		display: inline-block;
+		float: none;
+		vertical-align: middle;
+	}
+	footer .paymentMethods ul.cards{
+		text-align: center;
+	}
+	footer .paymentMethods ul.cards > li:nth-of-type(1n){
+		display: inline-block;
+		float: none;
+		margin-left: 9px;
+	}
+	.topBlock .registration .custom.userInfo{
+		line-height: 50px;
+	}
+}
+@media (max-width: 1599px){
+	.secondMainWidth{
+		width: auto;
+		box-sizing: border-box;
+	}
+}
+@media (max-width: 1500px) and (min-width: 1368px){
+	.popularFlights ul.flightsList{
+		text-align: center;
+	}		
+	.popularFlights ul.flightsList > li{
+		float: none;
+		display: inline-block;
+	}
+	.popularFlights ul.flightsList .flightPicture{
+		text-align: left;
+	}
+}
+@media (max-width: 1450px){
+	.topBlock .topInformation{
+		width: auto;
+		box-sizing: border-box;
+	}
+
+	.topBlock .topInformation .secondBlock .registrationButton{
+		display: inline-block;
+	}
+	.topBlock .topInformation .secondBlock .right{
+		right: 10%;
+		padding-top: 12px;
+		position: absolute;
+		left: auto;
+		bottom: -70px;
+	}
+	.topBlock .reservationsWrapper{
+		bottom: 276px;
+	}
+	.topBlock .topInformation .secondBlock{
+		top: 486px;
+	}
+	.topBlock .topInformation .secondBlock .registrationArrow{
+		top: -30px;
+		left: 20px;
+		background-image: url("../images/registrationArrowB.png");
+	}
+	.topBlock .topInformation .secondBlock{
+		text-align: center;
+	}
+	.topBlock .topInformation .secondBlock > div{
+		position: relative;
+	}
+	.topBlock .topInformation .secondBlock > div > div{
+		display: inline-block;
+		float: none;
+	}
+	.topBlock .topInformation .secondBlock p.bonusPoints{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+@media (max-width: 1367px){
+	.popularFlights .secondMainWidth{
+		width: auto;
+	} 
+}
+@media (max-width: 1367px) and (min-width: 1080px){
+	.popularFlights ul.flightsList > li{
+		width: 23%;
+	}
+	.popularFlights ul.flightsList > li:nth-of-type(n){
+		margin-left: 2%;
+	}
+	.popularFlights ul.flightsList > li:nth-of-type(1){
+		margin-left: 1%;
+	}
+	.popularFlights ul.flightsList > li:nth-of-type(4n + 4){
+		margin-right: 1%;
+	}	
+	footer .blocksWrapper{
+		width: auto;
+	}
+}
+@media (max-width: 1279px) {
+	.topBlock .reservationsWrapper {
+		bottom: 295px
+	}
+
+	.topBlock .registrationFormWrapperPU {
+		left: -170px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+
+	.topBlock .topInformation .secondBlock p.bonusPoints {
+		line-height: 1.5em;
+	}
+
+	.topBlock .topInformation .secondBlock {
+		padding-top: 20px;
+	}
+
+	.mainWidth {
+		width: auto;
+		box-sizing: border-box;
+	}
+
+	.myTickets .item-page.mainWidth {
+		padding-right: 45px;
+	}
+
+	.topBlock .topInformation {
+		width: auto;
+	}
+
+	.menuAndLogoWrapp ul.topMenu > li > a, .menuAndLogoWrapp ul.topMenu > li > span {
+		font-size: 14px;
+	}
+
+	.topBlock .topInformation .firstBlock {
+		font-size: 30px;
+		text-align: center;
+	}
+
+	.topBlock .reservationsWrapper {
+		right: 4%;
+	}
+
+	.topBlock .topInformation .secondBlock {
+		font-size: 30px;
+	}
+
+	.topBlock .topInformation {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+
+	.topBlock .topAdvantages ul.advantages {
+		font-size: 20px;
+	}
+
+	.systemOfDiscounts ul.thirdMainWidth {
+		width: 90%;
+	}
+
+	.systemOfDiscounts ul.thirdMainWidth > li {
+		width: 24%;
+		box-sizing: border-box;
+		text-align: justify;
+		padding: 0 5px;
+	}
+
+	.popularFlights .makeAReservation {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.popularFlights .reservationButtonWrapp {
+		padding: 0 10%;
+	}
+
+	.popularFlights ul.flightsList .information {
+		font-size: 18px;
+	}
+
+	.popularFlights .makeAReservation {
+		font-size: 15px;
+		padding: 0;
+	}
+
+	@media (max-width: 1261px) {
+		.thirdMainWidth {
+			width: auto;
+		}
+	}
+	@media (max-width: 1169px) {
+		.mainWidth {
+			width: auto;
+		}
+	}
+	@media (max-width: 1079px) {
+		.menuAndLogoWrapp ul.topMenu > li {
+			line-height: 32px;
+		}
+
+		.menuAndLogoWrapp ul.topMenu > li::before {
+			content: '';
+			display: inline-block;
+			height: 32px;
+			vertical-align: middle;
+		}
+
+		.menuAndLogoWrapp ul.topMenu > li > * {
+			vertical-align: middle;
+		}
+
+		.menuAndLogoWrapp ul.topMenu {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+		.menuAndLogoWrapp ul.topMenu {
+			text-align: center;
+		}
+
+		.menuAndLogoWrapp .menuAndLogo > div.right {
+			float: none;
+		}
+
+		.menuAndLogoWrapp ul.topMenu > li {
+			float: none;
+			display: inline-block;
+		}
+
+		.menuAndLogoWrapp ul.topMenu > li:first-of-type {
+			margin: 0 12px;
+		}
+
+		.topBlock .topInformation {
+			padding-left: 3%;
+			padding-right: 3%;
+		}
+
+		.topBlock .reservationsWrapper {
+			right: 3%;
+		}
+	}
+	@media (max-width: 1079px) and (min-width: 560px) {
+		.popularFlights ul.flightsList > li:nth-of-type(2n + 3) {
+			clear: both;
+		}
+		.breadCrumbs {
+			width: auto !important;
+		}
+		.popularFlights ul.flightsList > li:nth-of-type(1n + 3) {
+			margin-top: 40px;
+		}
+
+		.popularFlights ul.flightsList > li:nth-of-type(1n) {
+			width: 35%;
+			margin-left: 10%;
+		}
+	}
+	@media (max-width: 767px) and (min-width: 560px) {
+		.popularFlights ul.flightsList > li:nth-of-type(1n) {
+			width: 45%;
+			margin-left: 3%;
+		}
+	}
+	@media (max-width: 559px) {
+		.popularFlights ul.flightsList > li {
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.popularFlights ul.flightsList > li:nth-of-type(1n + 2) {
+			margin-left: 0;
+			margin-top: 40px;
+		}
+
+		.popularFlights ul.flightsList {
+			padding-left: 15%;
+			padding-right: 15%;
+		}
+	}
+	@media (max-width: 979px) {
+		.mainAdvantages {
+			width: 748px;
+		}
+
+		.mainAdvantages .rightAdvantagesBlock {
+			width: 290px;
+			box-sizing: border-box;
+			padding-left: 20px;
+		}
+	}
+	@media (max-width: 940px) {
+		.topBlock .topAdvantages ul.advantages > li:nth-of-type(n) {
+			margin-left: 0;
+			text-align: left;
+			padding-left: 60px;
+		}
+
+		.topBlock .topAdvantages ul.advantages > li {
+			display: block;
+		}
+
+		.topBlock .reservationsWrapper {
+			bottom: 390px;
+		}
+		
+		.row{
+			width: 100%;
+		}
+
+		div.personalCabinetSM {
+			padding-left: 1%;
+			padding-right: 1%;
+		}
+
+		.topBlock .reservations .paymentMethInscr {
+			background-color: rgba(30, 30, 30, 0.7);
+			line-height: 1.4em;
+			padding: 0 6px;
+		}
+
+		.systemOfDiscounts ul.thirdMainWidth > li {
+			width: 50%;
+			padding: 0 15px;
+		}
+
+		.systemOfDiscounts ul.thirdMainWidth > li:nth-of-type(1n + 3) {
+			margin-top: 25px;
+		}
+
+		.systemOfDiscounts .discounts > li:nth-of-type(1n) {
+			margin-left: 0;
+		}
+
+		.systemOfDiscounts ul.thirdMainWidth > li:nth-of-type(2n + 3) {
+			clear: both;
+		}
+
+		.systemOfDiscounts .discounts > li .information {
+			line-height: 1.4em;
+		}
+
+		.moreBanner .moreInnerBanner {
+			font-size: 30px;
+		}
+
+		.moreBanner .moreInnerBanner {
+			width: 570px;
+			height: 113px;
+		}
+
+		.systemOfDiscounts .discounts {
+			margin-top: 25px;
+		}
+	}
+	@media (max-width: 850px) {
+		.topBlock .topInformation .secondBlock {
+			font-size: 25px;
+		}
+
+		.menuAndLogoWrapp ul.topMenu > li > a, .menuAndLogoWrapp ul.topMenu > li > span {
+			font-size: 13px;
+		}
+
+		.topBlock .topInformation .firstBlock {
+			font-size: 28px;
+		}
+
+		.topBlock .reservationsWrapper {
+			bottom: 390px;
+		}
+
+		.topBlock .topInformation .secondBlock p.bonusPoints {
+			line-height: 1.6em;
+		}
+
+		.topBlock .topInformation .secondBlock p.bonusPoints {
+			padding-top: 5px;
+			padding-bottom: 10px;
+		}
+		.makeAReservation {
+			width: 219px;
+		}
+		.visModWrapp, .withVerCentEl {
+			margin: 0;
+			margin-bottom: 0.5em;
+			margin-left: 0.5em;
+			width: 14.5em !important;
+		}
+		.mainOrderBlock{
+			text-align: left;
+		}
+		.mainOrderBlock > .right .confirmReservations {
+			width: 50%;
+			text-align: center;
+		}
+	}
+	@media (max-width: 739px) {
+		.field-phone {
+			width: 100% !important;
+		}
+		.reservationsWindWrapp form#reservations > div:nth-of-type(1n + 2) {
+			float: none;
+			margin-bottom: 14px;
+			margin-right: 10px;
+			margin-left: 10px;		
+		}
+		.reservationsWindWrapp form#reservations > div.withVerCentEl {
+			line-height: normal;
+			height: auto;
+			width: 11em;
+		}
+		.registration {
+			width: 100%;
+		}
+		.topBlock .registrationContacts {
+			margin: 0;
+		}
+		.withVerCentEl {
+			display: block;
+			margin-left: auto;
+			margin-right: auto
+		}
+
+		.reservationsWindWrapp form#reservations > div:nth-of-type(n+3) {
+			padding-left: 0;
+		}
+
+		.reservationsWindWrapp form#reservations > br {
+			display: none;
+		}
+
+		.topBlock .reservationsWindWrapp .anyPaymentMeths {
+			background-color: rgba(30, 30, 30, 0.7);
+			line-height: 1.4em;
+			padding: 0 6px;
+		}
+	}
+	@media (max-width: 500px) {
+		.topBlock .registrationFormWrapperPU {
+			left: -125px;
+		}
+		.js_bus-overlay {
+			left: 30%;
+		}
+		.topLogo {
+			display: none;
+		}
+	}
+	@media (max-width: 480px) {
+		.popularFlights ul.flightsList {
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+	}
+	@media (max-width: 479px) {
+		.systemOfDiscounts ul.thirdMainWidth > li {
+			width: 100%;
+		}
+		.w-20 {
+			width: 31.6%;
+			padding: 1px;
+		}
+		.w-40 {
+			width: 100%;
+		}
+		.divigingLineWrapp {
+			margin-top: 0px !important;
+		}
+	}
+	@media (max-width: 767px) {
+		.topBlock .registrationContacts .custom.userInfo {
+			background-position: left 37%;
+		}
+
+		.reservationsWindWrapp {
+			padding-top: 80px;
+			padding-bottom: 20px;
+		}
+
+		.topBlock .registration > div > ul {
+			margin-top: 10px;
+		}
+
+		h2 {
+			font-size: 28px;
+		}
+
+		.systemOfDiscounts p.title {
+			padding: 0 20px;
+		}
+
+		.mainAdvantages {
+			width: auto;
+		}
+
+		.mainAdvantages .leftAdvantagesBlock {
+			float: none;
+			margin: 0 auto;
+		}
+
+		.mainAdvantages .rightAdvantagesBlock {
+			float: none;
+			width: 458px;
+			margin: 0 auto;
+			padding-left: 0;
+		}
+
+		.topBlock .registrationContacts > div {
+			float: none;
+		}
+
+		.topBlock .registrationContacts > .registration {
+			display: inline-block;
+		}
+
+		.topBlock .registrationContacts {
+			text-align: center;
+			padding-bottom: 10px;
+		}
+
+		.topBlock .registrationContacts > .registration > div > ul,
+		.topBlock .registrationContacts > .registration > div > .myAccountLinkWrapper {
+			display: inline-block;
+		}
+
+		.topBlock .registrationContacts > br {
+			display: none;
+		}
+
+		.topBlock .topInformation .secondBlock {
+			position: static;
+			padding-top: 20px;
+		}
+
+		.topBlock {
+			height: auto;
+		}
+
+		.topBlock .topAdvantages {
+			position: static;
+			padding-top: 20px;
+		}
+
+		.topBlock .topInformation .secondBlock .right {
+			position: static;
+		}
+
+		.topBlock .wrapperOfPositionalBlock,
+		.topBlock .positionalBlock,
+		.topBlock .reservationsWrapper {
+			position: static;
+		}
+
+		.wrapperOfPositionalBlock .positionalBlock {
+			padding: 0;
+		}
+
+		.topBlock .wrapperOfPositionalBlock {
+			text-align: center;
+			padding-top: 40px;
+			padding-bottom: 20px;
+		}
+
+		.topBlock .topInformation .secondBlock .registrationArrow {
+			display: none;
+		}
+
+		.topBlock .wrapperOfPositionalBlock .reservations {
+			display: inline-block;
+		}
+
+		.systemOfDiscounts, .moreBanner, .mainAdvantages, .systemOfDiscounts, .popularFlights {
+			display: none;
+		}
+	}
+	@media (max-width: 475px) {
+		body .reservationsWindWrapp {
+		/* / / padding-top: 60 px; */
+			padding-top: 20px;
+		}
+
+		.mainAdvantages .rightAdvantagesBlock {
+			width: auto;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.mainAdvantages .leftAdvantagesBlock .leftAdvantages > div {
+			width: 100%;
+			float: none;
+			height: 145px;
+		}
+
+		.mainAdvantages .leftAdvantagesBlock {
+			width: auto;
+		}
+
+		.mainAdvantages .leftAdvantages .comfort {
+			margin-left: 0;
+			background-image: url("../images/advantages/comfortB.png");
+		}
+
+		.mainAdvantages .leftAdvantages .time {
+			margin-top: 2px;
+		}
+
+		.mainAdvantages .leftAdvantages {
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+
+		.reservRoundWrapp {
+			display: none;
+		}
+
+		.reservationsWindWrapp {
+			padding-top: 40px;
+		}
+	@media (max-width: 589px) {
+		.moreBanner > div {
+			padding: 0 5%;
+		}
+
+		.moreBanner .moreInnerBanner {
+			width: 100%;
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+	}
+	@media (max-width: 589px) {
+		.moreBanner .moreInnerBanner {
+			font-size: 25px;
+		}
+	}
+	@media (max-width: 440px) {
+		.moreBanner .moreInnerBanner {
+			font-size: 21px;
+		}
+
+		.topBlock .reservations .reservRoundWrapp {
+			display: none;
+		}
+
+		.topBlock .reservations .paymentMethInscr {
+			left: 45px;
+		}
+
+		.topBlock .wrapperOfPositionalBlock {
+			padding-top: 20px;
+		}
+	}
+	@media (max-width: 429px) {
+		.topBlock .topAdvantages ul.advantages {
+			font-size: 17px;
+		}
+
+		.topBlock .topAdvantages ul.advantages > li {
+			background-size: 37px auto;
+			vertical-align: middle;
+		}
+
+		.topBlock .topAdvantages ul.advantages > li:nth-of-type(n) {
+			padding-left: 50px;
+		}
+	}
+}
+
+}
